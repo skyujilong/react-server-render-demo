@@ -3,11 +3,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
-import store from '../mods/data/store';
+import create from '../mods/data/store';
 import App from '../mods/ui/testapp';
 const render = Component => {
     ReactDOM.render(
-        <Provider store={store}>
+        <Provider store={create()}>
             <AppContainer>
                 <Component />
             </AppContainer>
