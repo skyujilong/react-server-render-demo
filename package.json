@@ -5,7 +5,7 @@
     "main": "app/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node ./server/app.js"
+        "start": "node ./app/index.js"
     },
     "repository": {
         "type": "git",
@@ -28,6 +28,9 @@
         "lodash": "^4.17.4",
         "koa-static": "^2.1.0",
         "thunkify": "^2.1.2",
-        "koa-ejs":"^2.0.1"
+        "koa-ejs":"^2.0.1",
+        "react":"^16.2.0",
+        "react-redux":"^5.0.6",
+        "redux":"^3.7.2"
     }
 }

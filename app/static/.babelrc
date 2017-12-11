@@ -1,0 +1,15 @@
+{
+    "presets": [
+        ["env", {
+            "module": false
+        }],
+        "react"
+    ],
+    "plugins": [
+        "react-hot-loader/babel",
+        ["import", {
+            "libraryName": "antd",
+            "style": "css"
+        }]
+    ]
+}
