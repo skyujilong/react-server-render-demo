@@ -23,7 +23,10 @@ module.exports = {
         stats: {
             colors: true
         },
-        quiet: false
+        quiet: false,
+        proxy:{
+            '/api':'http://localhost:3000'
+        }
     }
 
 };

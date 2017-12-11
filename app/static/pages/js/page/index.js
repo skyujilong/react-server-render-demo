@@ -1,24 +1,26 @@
 // main.js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
-
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { AppContainer } from 'react-hot-loader';
+import store from '../mods/data/store';
+import App from '../mods/ui/testapp';
 const render = Component => {
     ReactDOM.render(
-        <AppContainer>
-            <Component />
-        </AppContainer>,
+        <Provider store={store}>
+            <AppContainer>
+                <Component />
+            </AppContainer>
+        </Provider>,
         document.getElementById('root'),
     )
 }
 
-function Text() {
-    return (<div>helloworld!</div>);
-}
+console.log(App);
 
-render(Text)
+render(App)
 
 // Webpack Hot Module Replacement API
 if (module.hot) {
-    module.hot.accept(() => { render(Text) })
+    module.hot.accept('../mods/ui/testapp',() => { render(App) })
 }

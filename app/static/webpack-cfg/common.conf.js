@@ -11,6 +11,7 @@ let spriteAlias = (() => {
 })();
 module.exports = {
     module: {
+        //将不会解析这些组件
         noParse: /jquery|zepto/
     },
     resolve: {
