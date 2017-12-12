@@ -88,6 +88,7 @@ module.exports = {
             name: "manifest",
             minChunks: Infinity
         }),
+        /* 简单注销压缩系统
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false,
@@ -104,6 +105,7 @@ module.exports = {
                 except: ['$', 'exports', 'require']
             },
         }),
+        */
         //新版本loader中的内容不进行UglifyJsPlugin压缩了，这里兼容一下老版本的loader
         new webpack.LoaderOptionsPlugin({
             minimize: true,

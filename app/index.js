@@ -50,10 +50,7 @@ router.get('/',function * (next){
                     </script>
                 </head>
                 <body>
-                    HELLO WORLD
-                    <div id="root">
-                        ${html}
-                    </div>
+                    <div id="root">${html}</div>
                     <script src="http://test.sina.com.cn/js/manifest.js"></script>
                     <script src="http://test.sina.com.cn/js/vendor.js"></script>
                     <script src="http://test.sina.com.cn/js/index.js"></script>

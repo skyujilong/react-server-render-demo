@@ -1,1 +1,384 @@
-webpackJsonp([1],{29:function(e,exports,t){"use strict";"use store";function r(e){return(0,s.createStore)(a,e,(0,s.applyMiddleware)(o["default"]))}Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=r;var n=t(74),o=function(e){return e&&e.__esModule?e:{default:e}}(n),s=t(26),i=t(34),a=(0,s.combineReducers)({info:i.info});!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&(__REACT_HOT_LOADER__.register(a,"rootReducers","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/store.js"),__REACT_HOT_LOADER__.register(r,"create","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/store.js"))}()},30:function(e,exports,t){"use strict";function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function n(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function o(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}function s(e){return{title:e.info.title}}function i(e){return{getInfo:function(){for(var t=arguments.length,r=Array(t),n=0;n<t;n++)r[n]=arguments[n];e((0,p.getInfo)(r))}}}Object.defineProperty(exports,"__esModule",{value:!0});var a=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),u=t(2),c=function(e){return e&&e.__esModule?e:{default:e}}(u),_=t(11),p=t(33),d=function(e){function t(e){return r(this,t),n(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e))}return o(t,e),a(t,[{key:"componentWillMount",value:function(){this.props.getInfo}},{key:"componentWillReceiveProps",value:function(){}},{key:"shouldComponentUpdate",value:function(){return!0}},{key:"render",value:function(){var e=this.props.title;return c["default"].createElement("div",null,c["default"].createElement("p",null,e),c["default"].createElement("p",null,"hehe!2"))}},{key:"componentDidUpdate",value:function(){}},{key:"componentDidMount",value:function(){}}]),t}(u.Component),f=(0,_.connect)(s,i)(d);exports["default"]=f;!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&(__REACT_HOT_LOADER__.register(d,"App","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/ui/testapp/index.jsx"),__REACT_HOT_LOADER__.register(s,"mapStateToProps","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/ui/testapp/index.jsx"),__REACT_HOT_LOADER__.register(i,"mapDispatchToProps","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/ui/testapp/index.jsx"),__REACT_HOT_LOADER__.register(f,"default","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/ui/testapp/index.jsx"))}()},33:function(e,exports,t){"use strict";function r(){return{type:"reqInfo"}}function n(e){return{type:"reqInfoSucc",data:e}}function o(){return{type:"reqInfoErr"}}function s(e){return function(e){e(r()),(0,a["default"])("//test.sina.com.cn/api/info").then(function(e){return e.json()}).then(function(t){e(200===t.code?n():o())},function(t){e(o())})}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.getInfo=s;var i=t(46),a=function(e){return e&&e.__esModule?e:{default:e}}(i);!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&(__REACT_HOT_LOADER__.register(r,"reqInfo","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/action.js"),__REACT_HOT_LOADER__.register(n,"reqInfoSucc","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/action.js"),__REACT_HOT_LOADER__.register(o,"reqInfoErr","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/action.js"),__REACT_HOT_LOADER__.register(s,"getInfo","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/action.js"))}()},34:function(e,exports,t){"use strict";function r(){var e=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{title:"hello world"},t=arguments[1];return""===t.type?{info:t.data}:e}Object.defineProperty(exports,"__esModule",{value:!0}),exports.info=r;!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&__REACT_HOT_LOADER__.register(r,"info","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/reducers.js")}()},36:function(e,exports,t){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}var n=t(2),o=r(n),s=t(31),i=r(s),a=t(11),u=t(32),c=t(29),_=r(c),p=t(30),d=r(p),f=function(e){i["default"].hydrate(o["default"].createElement(a.Provider,{store:(0,_["default"])(window.__initState__)},o["default"].createElement(u.AppContainer,null,o["default"].createElement(e,null))),document.getElementById("root"))};f(d["default"]);!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&__REACT_HOT_LOADER__.register(f,"render","/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/page/index.js")}()}},[36]);
+webpackJsonp([1],{
+
+/***/ 29:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+'use store';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = create;
+
+var _reduxThunk = __webpack_require__(74);
+
+var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
+
+var _redux = __webpack_require__(26);
+
+var _reducers = __webpack_require__(34);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var rootReducers = (0, _redux.combineReducers)({
+    info: _reducers.info
+});
+// let store = createStore(rootReducers, applyMiddleware(ReduxThunk));
+function create(preloadedState) {
+    return (0, _redux.createStore)(rootReducers, preloadedState, (0, _redux.applyMiddleware)(_reduxThunk2.default));
+};
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(rootReducers, 'rootReducers', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/store.js');
+
+    __REACT_HOT_LOADER__.register(create, 'create', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/store.js');
+}();
+
+;
+
+/***/ }),
+
+/***/ 30:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(11);
+
+var _action = __webpack_require__(33);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var App = function (_Component) {
+    _inherits(App, _Component);
+
+    //添加生命周期测试
+    /**
+     * 初始化构造器
+     * @param {*} props 
+     */
+    function App(props) {
+        _classCallCheck(this, App);
+
+        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+        console.log('constructor');
+        return _this;
+    }
+    /**
+     * 将要开始挂在
+     */
+
+
+    _createClass(App, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            console.log('componentWillMount');
+            var getInfo = this.props.getInfo;
+            // getInfo('hello');
+        }
+        /**
+         * 获取将要变更的props 与 store
+         */
+
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps() {
+            console.log('componentWillReceiveProps');
+        }
+
+        /**
+         * 组件是否要变更，走渲染逻辑（渲染前，回进行dom比对）
+         */
+
+    }, {
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate() {
+            console.log('shouldComponentUpdate');
+            return true;
+        }
+
+        /**
+         * 渲染进行中
+         */
+
+    }, {
+        key: 'render',
+        value: function render() {
+            console.log('render');
+            var title = this.props.title;
+
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    title
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'hehe!2'
+                )
+            );
+        }
+        /**
+         * 组件更新完毕
+         */
+
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate() {
+            console.log('componentDidUpdate');
+        }
+
+        /**
+         * 挂载完毕
+         */
+
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            console.log('componentDidMount');
+        }
+    }]);
+
+    return App;
+}(_react.Component);
+
+function mapStateToProps(state) {
+    return {
+        title: state.info.title
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        getInfo: function getInfo() {
+            for (var _len = arguments.length, rest = Array(_len), _key = 0; _key < _len; _key++) {
+                rest[_key] = arguments[_key];
+            }
+
+            dispatch((0, _action.getInfo)(rest));
+        }
+    };
+}
+
+var _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);
+
+exports.default = _default;
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(App, 'App', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/ui/testapp/index.jsx');
+
+    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/ui/testapp/index.jsx');
+
+    __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/ui/testapp/index.jsx');
+
+    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/ui/testapp/index.jsx');
+}();
+
+;
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getInfo = getInfo;
+
+var _isomorphicFetch = __webpack_require__(46);
+
+var _isomorphicFetch2 = _interopRequireDefault(_isomorphicFetch);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function reqInfo() {
+    return {
+        type: 'reqInfo'
+    };
+}
+function reqInfoSucc(data) {
+    return {
+        type: 'reqInfoSucc',
+        data: data
+    };
+}
+function reqInfoErr() {
+    return {
+        type: 'reqInfoErr'
+    };
+}
+
+function getInfo(args) {
+    //采用thunk中间件，因此这里return 
+    return function (dispatch) {
+        dispatch(reqInfo());
+        (0, _isomorphicFetch2.default)('//test.sina.com.cn/api/info').then(function (res) {
+            return res.json();
+        }).then(function (res) {
+            if (res.code === 200) {
+                dispatch(reqInfoSucc());
+            } else {
+                dispatch(reqInfoErr());
+            }
+        }, function (res) {
+            dispatch(reqInfoErr());
+        });
+    };
+}
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(reqInfo, 'reqInfo', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/action.js');
+
+    __REACT_HOT_LOADER__.register(reqInfoSucc, 'reqInfoSucc', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/action.js');
+
+    __REACT_HOT_LOADER__.register(reqInfoErr, 'reqInfoErr', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/action.js');
+
+    __REACT_HOT_LOADER__.register(getInfo, 'getInfo', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/action.js');
+}();
+
+;
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.info = info;
+function info() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { title: 'hello world' };
+    var action = arguments[1];
+
+    if (action.type === '') {
+        return { info: action.data };
+    } else {
+        return state;
+    }
+}
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(info, 'info', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/mods/data/reducers.js');
+}();
+
+;
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(31);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactRedux = __webpack_require__(11);
+
+var _reactHotLoader = __webpack_require__(32);
+
+var _store = __webpack_require__(29);
+
+var _store2 = _interopRequireDefault(_store);
+
+var _testapp = __webpack_require__(30);
+
+var _testapp2 = _interopRequireDefault(_testapp);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// main.js
+var render = function render(Component) {
+    _reactDom2.default.hydrate(
+    // 全局函数  初始化的state内容
+    _react2.default.createElement(
+        _reactRedux.Provider,
+        { store: (0, _store2.default)(window.__initState__) },
+        _react2.default.createElement(
+            _reactHotLoader.AppContainer,
+            null,
+            _react2.default.createElement(Component, null)
+        )
+    ), document.getElementById('root'));
+};
+
+render(_testapp2.default);
+
+// Webpack Hot Module Replacement API
+if (false) {
+    module.hot.accept('../mods/ui/testapp', function () {
+        render(_testapp2.default);
+    });
+}
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(render, 'render', '/Users/jilong5/git-workspace/react-server-render-demo/app/static/pages/js/page/index.js');
+}();
+
+;
+
+/***/ })
+
+},[36]);

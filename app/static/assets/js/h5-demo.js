@@ -1,1 +1,22 @@
-webpackJsonp([3],{35:function(c,exports,n){"use strict"}},[35]);
+webpackJsonp([3],{
+
+/***/ 35:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+console.log('hello h5');
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+}();
+
+;
+
+/***/ })
+
+},[35]);
