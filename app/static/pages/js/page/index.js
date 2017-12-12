@@ -1,12 +1,13 @@
 // main.js
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, { hydrate} from 'react-dom';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import create from '../mods/data/store';
 import App from '../mods/ui/testapp';
+console.log(hydrate);
 const render = Component => {
-    ReactDOM.render(
+    ReactDOM.hydrate(
         <Provider store={create()}>
             <AppContainer>
                 <Component />
