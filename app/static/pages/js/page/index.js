@@ -1,14 +1,15 @@
 // main.js
 import React from 'react';
-import ReactDOM, { hydrate} from 'react-dom';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import create from '../mods/data/store';
 import App from '../mods/ui/testapp';
-console.log(hydrate);
+
 const render = Component => {
     ReactDOM.hydrate(
-        <Provider store={create()}>
+        // 全局函数  初始化的state内容
+        <Provider store={create(window.__initState__)}>
             <AppContainer>
                 <Component />
             </AppContainer>
@@ -17,7 +18,7 @@ const render = Component => {
     )
 }
 
-console.log(App);
+
 
 render(App)
 

@@ -4,7 +4,7 @@ module.exports = {
     publicPath: 'http://test.sina.com.cn/', //已http或者https开头的绝对地址
     onLinePublicPath: 'http://test.sina.com.cn/', //线上静态资源地址
     onLineImgPublicPath:'http://test.sina.com.cn/',//线上img的资源地址
-    md5: true, // 线上环境是否md5版本化， 默认是true，不启用可以用false
+    md5: false, // 线上环境是否md5版本化， 默认是true，不启用可以用false
     //雪碧图的配资
     sprites: [{
         //生成雪碧图的文件名字，该文件夹在pages下生成，eg: pages/sprite/normal,
