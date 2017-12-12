@@ -51,6 +51,13 @@ router.get('/',function * (next){
                 </head>
                 <body>
                     <div id="root">${html}</div>
+                    <script>
+                        // 添加这个click事件，进行测试，是否body上的节点进行渲染了2次。 实际证明上述节点并没有渲染2次。
+                        // 但是react的生命周期走了两次，一次是在服务器端，一次是在浏览器端，节点还能响应点击事件，证明react进行了vdom节点的比较对，发现没有不一致，所以不进行实际dom的渲染操作。
+                        document.querySelector('p').addEventListener('click',function(){
+                            console.log('click...');
+                        },false);
+                    </script>
                     <script src="http://test.sina.com.cn/js/manifest.js"></script>
                     <script src="http://test.sina.com.cn/js/vendor.js"></script>
                     <script src="http://test.sina.com.cn/js/index.js"></script>
