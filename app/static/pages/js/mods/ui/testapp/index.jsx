@@ -19,7 +19,7 @@ class App extends Component{
     componentWillMount(){
         console.log('componentWillMount');
         let {getInfo} = this.props;
-        // getInfo('hello');
+        getInfo('hello');
     }
     /**
      * 获取将要变更的props 与 store

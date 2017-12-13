@@ -91,7 +91,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/" + ({"0":"vendor","1":"index","2":"pc-demo","3":"h5-demo"}[chunkId]||chunkId) + "-chunk-" + {"0":"549a11","1":"c2c696","2":"b63d76","3":"c41bc3"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "js/" + ({"0":"vendor","1":"index","2":"pc-demo","3":"h5-demo"}[chunkId]||chunkId) + "-chunk-" + {"0":"549a11","1":"08315b","2":"b63d76","3":"c41bc3"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {

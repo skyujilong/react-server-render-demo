@@ -22,16 +22,20 @@ export function getInfo(args){
     //采用thunk中间件，因此这里return 
     return function(dispatch){
         dispatch(reqInfo());
-        fetch('//test.sina.com.cn/api/info').then((res)=>{
+        console.log(fetch);
+        fetch('http://test.sina.com.cn/api/info').then((res)=>{
+            console.log('fetching ..........');
             return res.json();
         }).then((res)=>{
             if(res.code === 200){
-                dispatch(reqInfoSucc());
+                dispatch(reqInfoSucc(res.data));
             }else{
                 dispatch(reqInfoErr());
             }
         },(res)=>{
             dispatch(reqInfoErr());
+        }).catch((e)=>{
+            console.log(e);
         }); 
     }
 }

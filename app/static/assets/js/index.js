@@ -99,7 +99,8 @@ var App = function (_Component) {
         value: function componentWillMount() {
             console.log('componentWillMount');
             var getInfo = this.props.getInfo;
-            // getInfo('hello');
+
+            getInfo('hello');
         }
         /**
          * 获取将要变更的props 与 store
@@ -249,16 +250,20 @@ function getInfo(args) {
     //采用thunk中间件，因此这里return 
     return function (dispatch) {
         dispatch(reqInfo());
-        (0, _isomorphicFetch2.default)('//test.sina.com.cn/api/info').then(function (res) {
+        console.log(_isomorphicFetch2.default);
+        (0, _isomorphicFetch2.default)('http://test.sina.com.cn/api/info').then(function (res) {
+            console.log('fetching ..........');
             return res.json();
         }).then(function (res) {
             if (res.code === 200) {
-                dispatch(reqInfoSucc());
+                dispatch(reqInfoSucc(res.data));
             } else {
                 dispatch(reqInfoErr());
             }
         }, function (res) {
             dispatch(reqInfoErr());
+        }).catch(function (e) {
+            console.log(e);
         });
     };
 }

@@ -26,7 +26,7 @@ app.use(logger());
 app.use(serve(path.resolve(__dirname, 'static', 'assets')));
 // app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));
 router.get('/',function * (next){
-    console.log('get req!');
+    // console.log('get req!');
     let store = create({ info: { title:'hello jilong5!'}});
     let html = ReactDOMServer.renderToString(
         <Provider store={store}>
@@ -66,7 +66,13 @@ router.get('/',function * (next){
     `
     yield next;
 });
-
+router.get('/api/info',function*(next){
+    this.body = JSON.stringify({
+        'code':200,
+        'data':'hello jilong5!'
+    })
+    yield next;
+});
 app.use(router.routes());
 app.use(router.allowedMethods());
 app.listen(80, () => {
