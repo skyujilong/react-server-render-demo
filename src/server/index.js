@@ -10,8 +10,8 @@ const render = require('koa-ejs');
 const ReactDOMServer = require('react-dom/server');
 import React from 'React';
 import { Provider } from 'react-redux';
-import App from './static/pages/js/mods/ui/testapp/index';
-import create from './static/pages/js/mods/data/store'
+import App from '../client/pages/js/mods/ui/testapp/index';
+import create from '../client/pages/js/mods/data/store'
 //中间件配置位置
 app.use(logger());
 //ejs配置
@@ -24,7 +24,7 @@ app.use(logger());
 //     open:'{{',
 //     close:'}}'
 // });
-app.use(serve(path.resolve(__dirname, 'static', 'assets')));
+app.use(serve(path.resolve(__dirname, '..', 'assets')));
 // app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));
 router.get('/',function * (next){
     // console.log('get req!');
