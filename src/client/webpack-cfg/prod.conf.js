@@ -19,12 +19,23 @@ module.exports = {
             test: /\.(js|jsx)$/,
             exclude: /(node_modules|bower_components)/,
             loader: 'babel-loader'
-        },{
+        }, {
             // css资源
             test: /\.(scss|css)$/,
             use: extractTextPlugin.extract({
                 fallback: 'style-loader',
-                use: ['css-loader', 'postcss-loader', 'sass-loader']
+                use: [{
+                    loader: 'css-loader'
+                }, {
+                    loader: 'postcss-loader',
+                    options: {
+                        config: {
+                            path: path.resolve(__dirname, '..', 'postcss.config.js')
+                        }
+                    }
+                }, {
+                    loader: 'sass-loader'
+                }]
             })
         }, {
             // 图片资源
@@ -74,7 +85,7 @@ module.exports = {
              * @param  {Number} count  模块被引用的次数
              * @return {Boolean}       返回boolean类型，如果是true，将进行提取
              */
-            minChunks: function(module, count) {
+            minChunks: function (module, count) {
                 // This prevents stylesheet resources with the .css or .scss extension
                 // from being moved from their original chunk to the vendor chunk
                 if (module.resource && (/^.*\.(css|scss)$/).test(module.resource)) {

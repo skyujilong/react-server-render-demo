@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import create from '../mods/data/store';
 import App from '../mods/ui/testapp';
-
+import "../../scss/base.scss";
 const render = Component => {
     // 当判断是 hot模式的时候 不是服务器渲染模式 采用render api
     if(module.hot){

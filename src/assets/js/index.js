@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 29:
+/***/ 121:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12,13 +12,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = create;
 
-var _reduxThunk = __webpack_require__(74);
+var _reduxThunk = __webpack_require__(122);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _redux = __webpack_require__(26);
+var _redux = __webpack_require__(53);
 
-var _reducers = __webpack_require__(34);
+var _reducers = __webpack_require__(123);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45,7 +45,41 @@ var _temp = function () {
 
 /***/ }),
 
-/***/ 30:
+/***/ 123:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.info = info;
+function info() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { title: 'hello world2333' };
+    var action = arguments[1];
+
+    if (action.type === '') {
+        return { info: action.data };
+    } else {
+        return state;
+    }
+}
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(info, 'info', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/pages/js/mods/data/reducers.js');
+}();
+
+;
+
+/***/ }),
+
+/***/ 124:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55,15 +89,19 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _button = __webpack_require__(125);
+
+var _button2 = _interopRequireDefault(_button);
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(11);
+var _reactRedux = __webpack_require__(50);
 
-var _action = __webpack_require__(33);
+var _action = __webpack_require__(172);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -144,6 +182,11 @@ var App = function (_Component) {
                     'p',
                     null,
                     'hehe!2'
+                ),
+                _react2.default.createElement(
+                    _button2.default,
+                    { type: 'primary' },
+                    'hello jilong5!'
                 )
             );
         }
@@ -211,7 +254,7 @@ var _temp = function () {
 
 /***/ }),
 
-/***/ 33:
+/***/ 172:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -222,7 +265,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getInfo = getInfo;
 
-var _isomorphicFetch = __webpack_require__(46);
+var _isomorphicFetch = __webpack_require__(173);
 
 var _isomorphicFetch2 = _interopRequireDefault(_isomorphicFetch);
 
@@ -286,69 +329,43 @@ var _temp = function () {
 
 /***/ }),
 
-/***/ 34:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 175:
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.info = info;
-function info() {
-    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { title: 'hello world2333' };
-    var action = arguments[1];
-
-    if (action.type === '') {
-        return { info: action.data };
-    } else {
-        return state;
-    }
-}
-;
-
-var _temp = function () {
-    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-        return;
-    }
-
-    __REACT_HOT_LOADER__.register(info, 'info', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/pages/js/mods/data/reducers.js');
-}();
-
-;
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 36:
+/***/ 76:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(31);
+var _reactDom = __webpack_require__(79);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRedux = __webpack_require__(11);
+var _reactRedux = __webpack_require__(50);
 
-var _reactHotLoader = __webpack_require__(32);
+var _reactHotLoader = __webpack_require__(116);
 
-var _store = __webpack_require__(29);
+var _store = __webpack_require__(121);
 
 var _store2 = _interopRequireDefault(_store);
 
-var _testapp = __webpack_require__(30);
+var _testapp = __webpack_require__(124);
 
 var _testapp2 = _interopRequireDefault(_testapp);
 
+__webpack_require__(175);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// main.js
 var render = function render(Component) {
     // 当判断是 hot模式的时候 不是服务器渲染模式 采用render api
     if (false) {
@@ -376,7 +393,8 @@ var render = function render(Component) {
             )
         ), document.getElementById('root'));
     }
-};
+}; // main.js
+
 
 render(_testapp2.default);
 
@@ -400,4 +418,4 @@ var _temp = function () {
 
 /***/ })
 
-},[36]);
+},[76]);

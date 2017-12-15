@@ -20,7 +20,21 @@ module.exports = {
             test: /\.(scss|css)$/,
             use: extractTextPlugin.extract({
                 fallback: 'style-loader',
-                use: ['css-loader?sourceMap', 'postcss-loader?sourceMap=inline', 'sass-loader']
+                use: [{
+                    loader: 'css-loader',
+                    options: {
+                        sourceMap: true
+                    }
+                }, {
+                    loader: 'postcss-loader',
+                    options: {
+                        config: {
+                            path: path.resolve(__dirname, '..', 'postcss.config.js')
+                        }
+                    }
+                }, {
+                    loader: 'sass-loader'
+                }]
             })
         }, {
             // 图片资源

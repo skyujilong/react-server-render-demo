@@ -91,7 +91,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/" + ({"0":"vendor","1":"index","2":"pc-demo","3":"h5-demo"}[chunkId]||chunkId) + "-chunk-" + {"0":"549a11","1":"4fdfd6","2":"b63d76","3":"c41bc3"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "js/" + ({"0":"vendor","1":"index","2":"pc-demo","3":"h5-demo"}[chunkId]||chunkId) + "-chunk-" + {"0":"4c9fce","1":"c057fd","2":"373002","3":"a09913"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -116,9 +116,6 @@
 /******/
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
 /******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {

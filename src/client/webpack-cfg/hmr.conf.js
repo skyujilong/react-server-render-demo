@@ -6,16 +6,35 @@ const path = require('path');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
-    devtool:'eval',
+    devtool: 'eval',
     module: {
         rules: [{
             test: /\.(js|jsx)$/,
             exclude: /(node_modules|bower_components)/,
             loader: 'babel-loader'
-        },{
+        }, {
             // css资源
             test: /\.(scss|css)$/,
-            use: ['style-loader?sourceMap', 'css-loader?sourceMap', 'postcss-loader?sourceMap=inline', 'sass-loader']
+            use: [{
+                loader: 'style-loader',
+                options: {
+                    sourceMap: true
+                }
+            }, {
+                loader: 'css-loader',
+                options: {
+                    sourceMap: true
+                }
+            }, {
+                loader: 'postcss-loader',
+                options: {
+                    config: {
+                        path: path.resolve(__dirname, '..', 'postcss.config.js')
+                    }
+                }
+            }, {
+                loader: 'sass-loader'
+            }]
         }, {
             // 图片资源
             test: /\.(png|jpeg|jpg|gif)$/,

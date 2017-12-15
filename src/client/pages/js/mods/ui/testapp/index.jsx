@@ -2,6 +2,7 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import { getInfo}  from '../../data/action';
+import {Button} from 'antd';
 class App extends Component{
 
     //添加生命周期测试
@@ -45,6 +46,7 @@ class App extends Component{
             <div>
                 <p>{title}</p>
                 <p>hehe!2</p>
+                <Button type="primary">hello jilong5!</Button>
             </div>
         );
     }
