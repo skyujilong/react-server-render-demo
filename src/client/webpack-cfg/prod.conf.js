@@ -12,7 +12,6 @@ let extractTextPlugin = new ExtractTextPlugin(cssName);
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const TinyPngWebpackPlugin = require('tinypng-webpack-plugin');
 const webpack = require('webpack');
-console.log(path.resolve(__dirname, '..', '..', '..', 'assets'));
 module.exports = {
     module: {
         rules: [{
@@ -65,15 +64,15 @@ module.exports = {
         }]
     },
     output: {
-        path: path.resolve(__dirname, '../../', 'assets'),
+        path: path.resolve(__dirname, '../../assets/static'),
         filename: jsName,
         publicPath: config.onLinePublicPath,
         chunkFilename: 'js/[name]-chunk-[chunkhash:6].js'
     },
     plugins: [
         extractTextPlugin,
-        new CleanWebpackPlugin(['assets'], {
-            root: path.resolve(__dirname, '../../')
+        new CleanWebpackPlugin(['static'], {
+            root: path.resolve(__dirname, '../../assets')
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',

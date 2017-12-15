@@ -1,5 +1,4 @@
 'use strict';
-require('babel-core/register');
 const logger = require('koa-logger');
 const koa = require('koa');
 const app = koa();
@@ -24,7 +23,7 @@ app.use(logger());
 //     open:'{{',
 //     close:'}}'
 // });
-app.use(serve(path.resolve(__dirname, '..', 'assets')));
+app.use(serve(path.resolve(__dirname, '..', 'static')));
 // app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));
 router.get('/',function * (next){
     // console.log('get req!');
@@ -46,6 +45,7 @@ router.get('/',function * (next){
                 <head>
                     <meta charset="utf-8">
                     <title>TODO</title>
+                    <link href="http://test.sina.com.cn/css/index.css" rel="stylesheet">
                     <script>
                         __initState__ = ${JSON.stringify(store.getState())};
                     </script>

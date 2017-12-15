@@ -3,6 +3,7 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import { getInfo}  from '../../data/action';
 import {Button} from 'antd';
+import './test.scss';   
 class App extends Component{
 
     //添加生命周期测试
