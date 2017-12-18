@@ -16,3 +16,9 @@ react server render demo
 1. 服务器端依然走了下面的几个声明周期constructor、componentWillMount、render,而client端则会走整个完整的生命周期，因此你在componentWillMount中发送的请求，会在服务器与client端都会发送，也就是说请求了二次服务器（通过编程手段应该能有予以取消）。
 2. 因为如上生命周期的问题，因此vdom上的diff依然会发生，不过，取消了实际dom上的操作。（只不过，实际dom上的操作耗费时间更多！）
 3. 前端需要懂得开发服务器相关的知识。
+
+
+## TODO
+1. 解决server端打包与client打包，常量配置相关内容。
+2. 添加路由相关配置
+3. 添加动画相关测试实践
