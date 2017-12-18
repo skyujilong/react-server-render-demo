@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import { getInfo}  from '../../data/action';
 import {Button} from 'antd';
 import './test.scss';   
+import * as testimg from "../../../../img/testimg.jpg";
+
 class App extends Component{
 
     //添加生命周期测试
@@ -48,6 +50,8 @@ class App extends Component{
                 <p>{title}</p>
                 <p>hehe!2</p>
                 <Button type="primary">hello jilong5!</Button>
+                {/* suppressHydrationWarning 为true的时候不尽兴详细的dom或者属性对比，这个只能用在展示层的组件，就是没有children的组件 */}
+                <img suppressHydrationWarning={true} src={testimg.default} alt=""/>
             </div>
         );
     }

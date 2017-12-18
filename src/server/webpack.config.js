@@ -22,7 +22,10 @@ module.exports = {
             test: /\.(png|jpeg|jpg|gif)$/,
             loader: 'url-loader',
             options: {
-                emitFile: false
+                emitFile: false,
+                limit: 1,
+                name: 'img/[name].[ext]',
+                publicPath: 'http://test.sina.com.cn/'
             }
         }]
     },
