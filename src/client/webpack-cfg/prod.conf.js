@@ -64,7 +64,7 @@ module.exports = {
         }]
     },
     output: {
-        path: path.resolve(__dirname, '../../assets/static'),
+        path: path.resolve(__dirname, '../../../assets/static'),
         filename: jsName,
         publicPath: config.onLinePublicPath,
         chunkFilename: 'js/[name]-chunk-[chunkhash:6].js'
@@ -72,7 +72,7 @@ module.exports = {
     plugins: [
         extractTextPlugin,
         new CleanWebpackPlugin(['static'], {
-            root: path.resolve(__dirname, '../../assets')
+            root: path.resolve(__dirname, '../../../assets/')
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',

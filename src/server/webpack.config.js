@@ -30,7 +30,7 @@ module.exports = {
         }]
     },
     output: {
-        path: path.resolve(__dirname, '../', 'assets/server'),
+        path: path.resolve(__dirname, '../../assets/server'),
         filename: '[name].js',
         publicPath: '/',
         chunkFilename: 'js/[name]-chunk-[chunkhash:6].js',
@@ -38,7 +38,7 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['server'], {
-            root: path.resolve(__dirname, '../assets/')
+            root: path.resolve(__dirname, '../../assets')
         })
     ],
     target: 'node',
