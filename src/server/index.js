@@ -10,7 +10,8 @@ const ReactDOMServer = require('react-dom/server');
 import React from 'React';
 import { Provider } from 'react-redux';
 import App from '../client/pages/js/mods/ui/testapp/index';
-import create from '../client/pages/js/mods/data/store'
+import create from '../client/pages/js/mods/data/store';
+import {getInfo} from '../client/pages/js/mods/data/action';
 //中间件配置位置
 app.use(logger());
 //ejs配置
@@ -27,7 +28,12 @@ app.use(serve(path.resolve(__dirname, '..', 'static')));
 // app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));
 router.get('/',function * (next){
     // console.log('get req!');
-    let store = create({ info: { title:'hello jilong5!'}});
+    let store = create({ info: { title:'hello world!'}});
+    //想要在redux-thunk中完全的同构，需要进行在action中，return promise
+    yield getInfo('haha')(store.dispatch);
+    console.log(store.getState());
+    // TODO: redux 异步同构
+
     let html = ReactDOMServer.renderToString(
         <Provider store={store}>
             <App />

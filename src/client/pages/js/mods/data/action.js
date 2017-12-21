@@ -23,7 +23,7 @@ export function getInfo(args){
     return function(dispatch){
         dispatch(reqInfo());
         console.log(fetch);
-        fetch('http://test.sina.com.cn/api/info').then((res)=>{
+        return fetch('http://test.sina.com.cn/api/info').then((res)=>{
             console.log('fetching ..........');
             return res.json();
         }).then((res)=>{
