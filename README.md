@@ -22,3 +22,8 @@ react server render demo
 1. 解决server端打包与client打包，常量配置相关内容。
 2. 添加路由相关配置
 3. 添加动画相关测试实践
+## 优化方案
+1. 采用高版本react 16
+2. 采用react prod环境变量
+3. 配置babel的一个两个优化组件
+4. 采用高版本的node来作为服务器 比如8.9
