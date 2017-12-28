@@ -25,6 +25,7 @@ app.use(logger());
 //     close:'}}'
 // });
 app.use(serve(path.resolve(__dirname, '..', 'static')));
+console.log(path.resolve(__dirname, '..', 'static'));
 // app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));
 router.get('/',function * (next){
     // console.log('get req!');

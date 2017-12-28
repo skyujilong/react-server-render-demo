@@ -7,7 +7,8 @@ module.exports = {
     entry: {
         index: path.resolve(__dirname, 'index.js')
     },
-    context: path.resolve(__dirname, '../client/pages/'),
+    //target node的时候 context决定了 你的__filename 以及__dirname的值，目前context定在当前的webpack配置文件下，就是index.js同目录，那么你需要cd到同样的目录下 进行node index.js 前面如果有其他路径，会导致路径解析不准确。
+    context: path.resolve(__dirname),
     module: {
         rules: [{
             test: /\.(js|jsx)$/,
@@ -43,7 +44,8 @@ module.exports = {
     ],
     target: 'node',
     node:{
-        __dirname:false
+        __dirname:true,
+        __filename:true
     },
     resolve: require('../client/webpack-cfg/resolve.conf').resolve,
     externals: [nodeExternals()]
