@@ -12,8 +12,7 @@ let HtmlWebpackPlugin = require('html-webpack-plugin');
  * @return {Array}           返回htmlplugin的实例
  */
 module.exports = (entryObj) => {
-    let htmlDir = path.resolve(__dirname, '..', 'pages', 'html');
-    console.log(htmlDir);
+    let htmlDir = path.resolve(__dirname, '..', '..', 'client', 'html');
     let entryHtml = glob.sync(htmlDir + '/*.html');
     let r = [];
     entryHtml.forEach((filePath) => {
@@ -27,7 +26,7 @@ module.exports = (entryObj) => {
 
             conf.chunks = ['manifest', 'vendor', filename];
             //确保顺序为 manifest vendor filename
-            conf.chunksSortMode = function(a, b) {
+            conf.chunksSortMode = function (a, b) {
 
                 let chunkA = a.names[0];
                 let chunkB = b.names[0];

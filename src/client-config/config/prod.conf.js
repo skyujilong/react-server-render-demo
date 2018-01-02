@@ -1,7 +1,7 @@
 // dev开发基础模式
 'use strict'
 const path = require('path');
-const config = require('./../config.js');
+const config = require('../../common-config/config.js');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // 配置是否md5版本化
 let cssName = config.md5 ? 'css/[name]-[contenthash:6].css' : 'css/[name].css';
@@ -29,7 +29,7 @@ module.exports = {
                     loader: 'postcss-loader',
                     options: {
                         config: {
-                            path: path.resolve(__dirname, '..', 'postcss.config.js')
+                            path: path.resolve(__dirname, 'postcss.config.js')
                         }
                     }
                 }, {
@@ -98,7 +98,7 @@ module.exports = {
             name: "manifest",
             minChunks: Infinity
         }),
-        /* 简单注销压缩系统
+        /* 简单注销压缩系统*/
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false,
@@ -115,7 +115,6 @@ module.exports = {
                 except: ['$', 'exports', 'require']
             },
         }),
-        */
         //新版本loader中的内容不进行UglifyJsPlugin压缩了，这里兼容一下老版本的loader
         new webpack.LoaderOptionsPlugin({
             minimize: true,
@@ -124,9 +123,9 @@ module.exports = {
                 context: path.resolve(__dirname, '..')
             }
         }),
-        //压缩本地图片的方法
-        // new TinyPngWebpackPlugin({
-        //     key: config.tinyPngKeys
-        // })
+        // 压缩本地图片的方法
+        new TinyPngWebpackPlugin({
+            key: config.tinyPngKeys
+        })
     ]
 };

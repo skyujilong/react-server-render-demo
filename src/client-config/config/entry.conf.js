@@ -11,7 +11,7 @@ const path = require("path");
  */
 module.exports = {
     entry: (() => {
-        let jsDir = path.resolve(__dirname, '..', 'pages', 'js', 'page');
+        let jsDir = path.resolve(__dirname, '..', '..', 'client', 'js', 'page');
         let entryFiles = glob.sync(jsDir + '/*.js');
         let map = {};
         entryFiles.forEach((filePath) => {

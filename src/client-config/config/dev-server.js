@@ -7,7 +7,7 @@ let path = require("path");
 
 module.exports = {
     devServer: {
-        contentBase: path.resolve(__dirname, '..', 'pages', 'js', 'page'),
+        contentBase: path.resolve(__dirname, '../../client'),
         filename: "js/[name].js",
         //当有H5 history api的时候启用该方法。
         historyApiFallback: false,

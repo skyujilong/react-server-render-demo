@@ -1,7 +1,7 @@
 // dev开发基础模式
 'use strict'
 const path = require('path');
-const config = require('../config.js');
+const config = require('../../common-config/config.js');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 let extractTextPlugin = new ExtractTextPlugin('css/[name].css');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -29,7 +29,7 @@ module.exports = {
                     loader: 'postcss-loader',
                     options: {
                         config: {
-                            path: path.resolve(__dirname, '..', 'postcss.config.js')
+                            path: path.resolve(__dirname, 'postcss.config.js')
                         }
                     }
                 }, {
