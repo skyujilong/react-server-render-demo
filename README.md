@@ -28,6 +28,7 @@ react server render demo
 1. 解决server端打包与client打包，常量配置相关内容。
 2. 添加路由相关配置
 3. 添加动画相关测试实践
+4. 文件结构调整。根目录下要有两套webpack文件
 ## 优化方案
 1. 采用高版本react 16
 2. 采用react prod环境变量
