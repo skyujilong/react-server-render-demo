@@ -1,3 +1,7 @@
+@import '~normal-sprite';
 p{
     font-size: 14px;
+}
+.demomao{
+    @include sprite($demomao);
 }

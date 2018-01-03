@@ -38,5 +38,9 @@ render(App);
 
 // Webpack Hot Module Replacement API
 if (module.hot) {
-    module.hot.accept('../mods/ui/testapp',() => { render(App) })
+    module.hot.accept('../mods/ui/testapp',() => { render(App) });
+    module.hot.accept('../mods/data/reducers',()=>{
+        const nextRootReducer = require('../mods/data/reducers');
+        store.replaceReducer(nextRootReducer);
+    });
 }
