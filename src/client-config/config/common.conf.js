@@ -2,14 +2,6 @@
 const path = require('path');
 const config = require('../../common-config/config.js');
 //雪碧图生成的快捷路径
-// let spriteAlias = (() => {
-//     let obj = {};
-//     config.sprites.forEach((item) => {
-//         obj[item.name] = path.join(__dirname, '../../', 'client', 'img', item.name + '-sprite.png')
-//     });
-//     return obj;
-// })();
-
 function spriteAlias() {
     let spritesList = config.sprites;
     let scssPath = path.resolve(__dirname, '../../client/scss/');

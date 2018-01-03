@@ -3,12 +3,26 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
+// function spriteAlias() {
+//     let spritesList = config.sprites;
+//     let scssPath = path.resolve(__dirname, '../../client/scss/');
+//     let imgPath = path.resolve(__dirname, '../../client/img/');
+//     let alias = {};
+//     spritesList.forEach((item) => {
+//         alias[`${item.name}-sprite`] = path.join(scssPath, `${item.name}-sprite.scss`);
+//         alias[item.name] = path.join(imgPath, `${item.name}-sprite.png`);
+//     });
+//     return alias;
+// }
+
+
+
 module.exports = {
     entry: {
-        index: path.resolve(__dirname, 'index.js')
+        index: path.resolve(__dirname, '../server/index.js')
     },
     //target node的时候 context决定了 你的__filename 以及__dirname的值，目前context定在当前的webpack配置文件下，就是index.js同目录，那么你需要cd到同样的目录下 进行node index.js 前面如果有其他路径，会导致路径解析不准确。
-    context: path.resolve(__dirname),
+    context: path.resolve(__dirname,'../server/'),
     module: {
         rules: [{
             test: /\.(js|jsx)$/,
@@ -47,6 +61,8 @@ module.exports = {
         __dirname: true,
         __filename: true
     },
-    resolve: require('../client/webpack-cfg/resolve.conf').resolve,
+    resolve: {
+        extensions: ['.js', '.jsx', '.json', '.css', '.jpeg', '.png', '.jpg', '.tpl']
+    },
     externals: [nodeExternals()]
 }
