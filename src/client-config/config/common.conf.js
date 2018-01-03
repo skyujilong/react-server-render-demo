@@ -30,7 +30,7 @@ module.exports = {
     },
     resolve: {
         modules: ["node_modules"],
-        extensions: ['.js', , '.jsx', '.json', '.css', '.jpeg', '.png', '.jpg', '.tpl'],
+        extensions: ['.js', '.jsx', '.json', '.css', '.jpeg', '.png', '.jpg', '.tpl'],
         alias: Object.assign({
             /**
              * 自定义的别名在这里写
