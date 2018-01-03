@@ -2,21 +2,6 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
-
-// function spriteAlias() {
-//     let spritesList = config.sprites;
-//     let scssPath = path.resolve(__dirname, '../../client/scss/');
-//     let imgPath = path.resolve(__dirname, '../../client/img/');
-//     let alias = {};
-//     spritesList.forEach((item) => {
-//         alias[`${item.name}-sprite`] = path.join(scssPath, `${item.name}-sprite.scss`);
-//         alias[item.name] = path.join(imgPath, `${item.name}-sprite.png`);
-//     });
-//     return alias;
-// }
-
-
-
 module.exports = {
     entry: {
         index: path.resolve(__dirname, '../server/index.js')
