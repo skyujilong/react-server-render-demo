@@ -7,7 +7,7 @@ import './test.scss';
 import * as testimg from "../../../../img/testimg.jpg";
 
 // syntax-dynamic-import 采用babel的这个组件来启动 动态import
-import('./dynamic.js').then((dynamic)=>{
+import('./dynamic.js').then((dynamic) => {
     // 采用动态import方式构建 异步路由
     console.log(dynamic.default);
 });

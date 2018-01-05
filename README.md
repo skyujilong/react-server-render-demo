@@ -35,3 +35,4 @@ react server render demo
 2. 采用react prod环境变量
 3. 配置babel的一个两个优化组件
 4. 采用高版本的node来作为服务器 比如8.9
+5. 代码分割，采用一个react的高阶函数，同时屏蔽掉全局对象判断是否是后台环境，还是前端的环境，判断如果是后端的环境，将会当时就加载promise引入的包，之后替换到this.state.renderCompent中。

@@ -124,8 +124,8 @@ module.exports = {
             }
         }),
         // 压缩本地图片的方法
-        new TinyPngWebpackPlugin({
-            key: config.tinyPngKeys
-        })
+        // new TinyPngWebpackPlugin({
+        //     key: config.tinyPngKeys
+        // })
     ]
 };
