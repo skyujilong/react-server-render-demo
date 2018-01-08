@@ -71,6 +71,9 @@ module.exports = {
         new OpenBrowserPlugin({
             url: 'http://test.sina.com.cn/'
         }),
+        new webpack.DefinePlugin({
+            __isomorphic__: false
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             /**

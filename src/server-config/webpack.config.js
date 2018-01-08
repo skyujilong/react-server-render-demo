@@ -2,6 +2,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
+const webpack = require('webpack');
 module.exports = {
     entry: {
         index: path.resolve(__dirname, '../server/index.js')
@@ -39,6 +40,9 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['server'], {
             root: path.resolve(__dirname, '../../assets')
+        }),
+        new webpack.DefinePlugin({
+            __isomorphic__ : true
         })
     ],
     target: 'node',

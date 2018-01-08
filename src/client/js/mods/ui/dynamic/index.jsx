@@ -11,7 +11,7 @@ export default class Dynmaic extends Component {
             component: null
         };
         //服务器环境，率先load 新的模块
-        if(!!window){
+        if (__isomorphic__){
             this.load();
         }
        
@@ -19,9 +19,14 @@ export default class Dynmaic extends Component {
     load(){
         let { pComponent } = this.props;
         pComponent.then((m) => {
-            this.setState({
-                Component: m.default || m
-            });
+            if(__isomorphic__){
+                this.state.Component = m.default || m;
+            }else{
+                this.setState({
+                    Component: m.default || m
+                });
+            }
+            
         }, () => {
             console.log('error........');
         });

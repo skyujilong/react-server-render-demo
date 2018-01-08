@@ -123,6 +123,9 @@ module.exports = {
                 context: path.resolve(__dirname, '..')
             }
         }),
+        new webpack.DefinePlugin({
+            __isomorphic__: false
+        }),
         // 压缩本地图片的方法
         // new TinyPngWebpackPlugin({
         //     key: config.tinyPngKeys
