@@ -5,12 +5,13 @@ import { getInfo}  from '../../data/action';
 import {Button} from 'antd';
 import './test.scss';   
 import * as testimg from "../../../../img/testimg.jpg";
-
+import Dynmaic from '../dynamic';
 // syntax-dynamic-import 采用babel的这个组件来启动 动态import
-import('./dynamic.js').then((dynamic) => {
-    // 采用动态import方式构建 异步路由
-    console.log(dynamic.default);
-});
+// import('./dynamic.js').then((dynamic) => {
+//     // 采用动态import方式构建 异步路由
+//     console.log(dynamic.default);
+// });
+
 
 // require.ensure(['./dynamic.js'],function(require){
 //     const dynamic = require('./dynamic');
@@ -65,6 +66,7 @@ class App extends Component{
                 {/* <img suppressHydrationWarning={true} src={testimg.default} alt=""/> */}
                 <img src={testimg.default} alt="" />
                 <div className={'demomao helloworld'}></div>
+                <Dynmaic pComponent={import('./dynamic.js')}/>
             </div>
         );
     }
