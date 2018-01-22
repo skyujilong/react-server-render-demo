@@ -13,7 +13,7 @@ import dynamic from '../dynamic/fn';
 //     console.log(dynamic.default);
 // });
 
-let Demo = dynamic(import('./dynamic.js'));
+let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.js'));
 
 class App extends Component{
 

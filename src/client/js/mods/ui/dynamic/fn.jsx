@@ -4,49 +4,37 @@ import React, {
 } from 'react';
 
 export default function dynamic(p) {
-    let __p;
-    if(__isomorphic__){
-        //TODO loading?
-        p.then((p)=>{
-            __p = p.default || p;
+    let _m;
+    if (__isomorphic__){
+        p.then((m)=>{
+            _m = m.default || m;
+            console.log(_m);
         });
     }
 
-    return class Dynamic extends Component {
+    class Dynamic extends Component {
         constructor(props) {
             super(props);
-            
+            console.log('wtf......222211');
+            console.log(_m);
             this.state = {
                 loaded: false,
-                component: null
+                Component: __isomorphic__ ? _m : null
             };
-            //服务器环境，率先load 新的模块
-            if (__isomorphic__) {
-                this.load();
-            }
-
         }
         load() {
-            if (__p && __isomorphic__){
-                this.state.Component = __p;
-            }else{
-                p.then((m) => {
-
-                    if (__isomorphic__) {
-                        this.state.Component = m.default || m;
-                    } else {
-                        this.setState({
-                            Component: m.default || m
-                        });
-                    }
-                }, () => {
-                    console.log('error........');
+            p.then((m) => {
+                this.setState({
+                    Component: m.default || m
                 });
-            }
-            
+            }, () => {
+                console.log('error........');
+            });
         }
         render() {
             let { Component } = this.state;
+            console.log('wahahah.....');
+            console.log(Component);
             return (
                 <div>
                     {Component ? <Component /> : <p>loading.......</p>}
@@ -56,5 +44,7 @@ export default function dynamic(p) {
         componentDidMount() {
             this.load();
         }
-    }
+    };
+
+    return Dynamic;
 }

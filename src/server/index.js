@@ -67,6 +67,7 @@ router.get('/',function * (next){
                     </script>
                     <script src="http://test.sina.com.cn/js/manifest.js"></script>
                     <script src="http://test.sina.com.cn/js/vendor.js"></script>
+                    <script src="http://test.sina.com.cn/js/dynamic-chunk-697ebf.js"></script>
                     <script src="http://test.sina.com.cn/js/index.js"></script>
                 </body>
             </html>

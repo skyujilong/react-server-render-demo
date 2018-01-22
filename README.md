@@ -30,6 +30,7 @@ react server render demo
 2. 添加路由相关配置
 3. 添加动画相关测试实践
 4. 文件结构调整。根目录下要有两套webpack文件
+5. 代码分离同步方案核心，依托于webpack dynimac import + 在服务器端提前加载这个类库 + 提前将dynimac import生成的js引入到页面上。
 ## 优化方案
 1. 采用高版本react 16
 2. 采用react prod环境变量
