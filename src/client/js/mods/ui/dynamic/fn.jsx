@@ -2,6 +2,10 @@
 import React, {
     Component
 } from 'react';
+/**
+ * 异步模块聚合
+ */
+let moduleList = [];
 
 export default function dynamic(p) {
     let _m;
@@ -47,4 +51,14 @@ export default function dynamic(p) {
     };
 
     return Dynamic;
+}
+
+export function put(key,moudle){
+    /**
+     * 所有在js文件夹下生成的bundle文件 都先如到这个库内
+     */
+    moduleList.push({
+        key,
+        moudle
+    });
 }

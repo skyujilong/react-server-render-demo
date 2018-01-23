@@ -9,6 +9,7 @@
             {
                 "libraryName": "antd"
             }
-        ]
+        ],
+        "syntax-dynamic-import"
     ]
 }

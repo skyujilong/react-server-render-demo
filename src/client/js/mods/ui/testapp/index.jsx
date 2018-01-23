@@ -13,7 +13,7 @@ import dynamic from '../dynamic/fn';
 //     console.log(dynamic.default);
 // });
 
-let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.js'));
+
 
 class App extends Component{
 
@@ -54,6 +54,7 @@ class App extends Component{
      */
     render(){
         let { title } = this.props;
+        let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.js'));
         return (
             <div>
                 <p>{title}</p>

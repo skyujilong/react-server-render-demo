@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import App from '../client/js/mods/ui/testapp/index';
 import create from '../client/js/mods/data/store';
 import {getInfo} from '../client/js/mods/data/action';
+import preload from './pre-load-module';
 //中间件配置位置
 app.use(logger());
 //ejs配置
@@ -81,8 +82,14 @@ router.get('/api/info',function*(next){
     })
     yield next;
 });
+
 app.use(router.routes());
 app.use(router.allowedMethods());
+
+console.log(preload);
+preload.then(function(){
+    console.log('success');
+},function(){})
 app.listen(80, () => {
     console.log('server start on: http://localhost:80');
 });
