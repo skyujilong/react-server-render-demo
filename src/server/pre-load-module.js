@@ -9,11 +9,6 @@ import { inspect } from 'util';
 // import('./demo');
 // console.log(__webpack_require__(35));
 // 可以通过 采用webpack的内置方法，进行操作
-__webpack_require__.e(0).then(__webpack_require__.bind(null,35)).then((m)=>{
-    console.log('-------------');
-    console.log(m);
-    console.log('-------------');
-});
 export default co(function *(){
     let files = yield thunkify(fs.readdir)(path.resolve(__dirname,'js'));
     let modulesNameReg = /^(.*)-chunk-[a-f0-9]{6}\.js$/;
@@ -28,9 +23,18 @@ export default co(function *(){
         if (!result) {
             continue;
         }
-        let codeContext = yield thunkify(fs.readFile)('js/' + fileName,'utf-8');
-        console.log(codeContext);
-        console.log(codeContext.split(/\n/));
+        let codeContent = yield thunkify(fs.readFile)('js/' + fileName,'utf-8');
+        // console.log(codeContent);
+        let listContent = codeContent.split(/\n/);
+        console.log(listContent[0]);
+        console.log(listContent[3]);
+        //chunkId
+        let chunkId = eIdReg.exec(listContent[0])[1];
+        //chunkId中的moduleId
+        let __moduleId = moduleId.exec(listContent[3])[1];
+        //利用webpack的内部方法__webpack_require__ 将依赖进行提前加载
+        let __module = yield __webpack_require__.e(chunkId).then(__webpack_require__.bind(null, __moduleId));
+        //TODO: 将该模块放入到代理list中，进行按需替换到对应的class中
     }
     
 });
