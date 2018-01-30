@@ -86,10 +86,9 @@ router.get('/api/info',function*(next){
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-console.log(preload);
+//提前保证加载完毕异步modules
 preload.then(function(){
-    console.log('success');
+    app.listen(80, () => {
+        console.log('server start on: http://localhost:80');
+    });
 },function(){})
-app.listen(80, () => {
-    console.log('server start on: http://localhost:80');
-});

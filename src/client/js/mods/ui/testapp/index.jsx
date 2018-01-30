@@ -54,7 +54,7 @@ class App extends Component{
      */
     render(){
         let { title } = this.props;
-        let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.js'));
+        let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.js'), 'dynamic');
         return (
             <div>
                 <p>{title}</p>

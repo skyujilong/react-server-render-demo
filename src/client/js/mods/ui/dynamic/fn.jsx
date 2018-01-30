@@ -7,33 +7,38 @@ import React, {
  */
 let moduleList = [];
 
-export default function dynamic(p) {
-    let _m;
-    if (__isomorphic__){
-        p.then((m)=>{
-            _m = m.default || m;
-            console.log(_m);
-        });
-    }
+export default function dynamic(p,key) {
 
     class Dynamic extends Component {
         constructor(props) {
             super(props);
-            console.log('wtf......222211');
-            console.log(_m);
             this.state = {
                 loaded: false,
-                Component: __isomorphic__ ? _m : null
+                Component: null
             };
+            if(__isomorphic__){
+                this.load();
+            }
         }
         load() {
-            p.then((m) => {
-                this.setState({
-                    Component: m.default || m
+            if(__isomorphic__){
+                for (let item of moduleList){
+                    console.log('-----------------');
+                    console.log(item);
+                    if (item.key === key){
+                        this.state.Component = item.module.default || item.module;
+                        break;
+                    }
+                }
+            }else{
+                p.then((m) => {
+                    this.setState({
+                        Component: m.default || m
+                    });
+                }, () => {
+                    console.log('error........');
                 });
-            }, () => {
-                console.log('error........');
-            });
+            }
         }
         render() {
             let { Component } = this.state;
@@ -53,12 +58,12 @@ export default function dynamic(p) {
     return Dynamic;
 }
 
-export function put(key,moudle){
+export function put(key, module){
     /**
      * 所有在js文件夹下生成的bundle文件 都先如到这个库内
      */
     moduleList.push({
         key,
-        moudle
+        module
     });
 }
