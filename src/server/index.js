@@ -64,6 +64,7 @@ router.get('/',function * (next){
     let dynamicScript = [];
     for (let dynamicMoudle of __modules){
         if (dynamicMoudle.isMark){
+            //这里版本号是不同步的 我勒个槽啊，注册的moduleid也是不同的，不过内容是一样的，我们来替换一下这里的版本号
             dynamicScript.push('<script src="http://test.sina.com.cn/js/' + dynamicMoudle.fileName + '"></script>');
         }
     }

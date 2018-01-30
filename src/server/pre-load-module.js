@@ -10,6 +10,7 @@ import { inspect } from 'util';
 // console.log(__webpack_require__(35));
 // 可以通过 采用webpack的内置方法，进行操作
 export default co(function *(){
+    let feFiles = yield thunkify(fs.readdir)(path.resolve(__dirname,'../static/js'));
     let files = yield thunkify(fs.readdir)(path.resolve(__dirname,'js'));
     let modulesNameReg = /^(.*)-chunk-[a-f0-9]{6}\.js$/;
     //获取异步加载模块的id
@@ -18,10 +19,18 @@ export default co(function *(){
     let moduleId = /\/\*\*\*\/\s+(\d+):/;
     let moduleList = [];
     for(let fileName of files){
+        let __feFileName;
         let result = modulesNameReg.exec(fileName);
         if (!result) {
             continue;
         }
+        for (let feFileName of feFiles){
+            let feResult = modulesNameReg.exec(feFileName);
+            if (feResult && feResult[1] === result[1]){
+                __feFileName = feFileName;
+            }
+        }
+
         let codeContent = yield thunkify(fs.readFile)('js/' + fileName,'utf-8');
         // console.log(codeContent);
         let listContent = codeContent.split(/\n/);
@@ -36,7 +45,7 @@ export default co(function *(){
         moduleList.push({
             key: result[1],
             module: __module,
-            fileName: fileName            
+            fileName: __feFileName            
         });
     }
     return moduleList;
