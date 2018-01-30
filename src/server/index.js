@@ -13,6 +13,7 @@ import App from '../client/js/mods/ui/testapp/index';
 import create from '../client/js/mods/data/store';
 import {getInfo} from '../client/js/mods/data/action';
 import preload from './pre-load-module';
+import { initDynamicModule } from '../client/js/mods/ui/dynamic/fn';
 //中间件配置位置
 app.use(logger());
 //ejs配置
@@ -26,20 +27,48 @@ app.use(logger());
 //     close:'}}'
 // });
 app.use(serve(path.resolve(__dirname, '..', 'static')));
+let modules = [];
 // app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));
 router.get('/',function * (next){
+    
+    let __modules = modules.map((item)=>{
+        let __item = {
+            key:item.key,
+            module: item.module,
+            fileName: item.fileName,
+            isMark:false,
+            marked: function(){
+                this.isMark = true;
+            }
+        }
+        return __item;
+    });
+    // 异步模块
+    console.log(__modules);
+
     // console.log('get req!');
     let store = create({ info: { title:'hello world!'}});
     //想要在redux-thunk中完全的同构，需要进行在action中，return promise
     yield store.dispatch(getInfo('haha'));
     console.log(store.getState());
-    // TODO: redux 异步同构
+    //redux 异步同构
 
+    //这里是一个同步操作啊 这里可以进行可以将异步模块注入到dynamic模块中，然后进行渲染标记。之后直出要加载的script标签。
+    initDynamicModule(__modules);
     let html = ReactDOMServer.renderToString(
         <Provider store={store}>
             <App />
         </Provider>
     );
+    //TODO: 判定出来 具体哪个异步模块被使用到了，之后给他的script内容动态插入到页面内，从而实现，整体静态直出。 
+    let dynamicScript = [];
+    for (let dynamicMoudle of __modules){
+        if (dynamicMoudle.isMark){
+            dynamicScript.push('<script src="http://test.sina.com.cn/js/' + dynamicMoudle.fileName + '"></script>');
+        }
+    }
+
+
     // console.log(store.getState());
     // console.log(html);
     // yield this.render('index',{data:{
@@ -68,7 +97,10 @@ router.get('/',function * (next){
                     </script>
                     <script src="http://test.sina.com.cn/js/manifest.js"></script>
                     <script src="http://test.sina.com.cn/js/vendor.js"></script>
+                    <!-- 
                     <script src="http://test.sina.com.cn/js/dynamic-chunk-697ebf.js"></script>
+                    -->
+                    ${dynamicScript.join('')}
                     <script src="http://test.sina.com.cn/js/index.js"></script>
                 </body>
             </html>
@@ -87,7 +119,9 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 
 //提前保证加载完毕异步modules
-preload.then(function(){
+preload.then(function(data){
+    modules = data;
+    //要是将这里的内容
     app.listen(80, () => {
         console.log('server start on: http://localhost:80');
     });

@@ -27,6 +27,9 @@ export default function dynamic(p,key) {
                     console.log(item);
                     if (item.key === key){
                         this.state.Component = item.module.default || item.module;
+                        item.marked();
+                        console.log('faxxxxx');
+                        console.log(item);
                         break;
                     }
                 }
@@ -42,8 +45,6 @@ export default function dynamic(p,key) {
         }
         render() {
             let { Component } = this.state;
-            console.log('wahahah.....');
-            console.log(Component);
             return (
                 <div>
                     {Component ? <Component /> : <p>loading.......</p>}
@@ -58,12 +59,6 @@ export default function dynamic(p,key) {
     return Dynamic;
 }
 
-export function put(key, module){
-    /**
-     * 所有在js文件夹下生成的bundle文件 都先如到这个库内
-     */
-    moduleList.push({
-        key,
-        module
-    });
+export function initDynamicModule(list){
+    moduleList = list;
 }
