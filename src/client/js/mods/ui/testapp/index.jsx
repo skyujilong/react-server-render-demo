@@ -54,7 +54,8 @@ class App extends Component{
      */
     render(){
         let { title } = this.props;
-        let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.js'), 'dynamic');
+        let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.jsx'), 'dynamic');
+        let HelloWorld = dynamic(import(/* webpackChunkName:"other"*/'./other.jsx'),'other');
         return (
             <div>
                 <p>{title}</p>
@@ -66,6 +67,7 @@ class App extends Component{
                 <div className={'demomao helloworld'}></div>
                 {/* <Dynmaic pComponent={import('./dynamic.js')}/> */}
                 <Demo></Demo>
+                <HelloWorld></HelloWorld>
             </div>
         );
     }
