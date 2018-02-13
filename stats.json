@@ -5,31 +5,20 @@ Webpack is watching the files…
   "errors": [],
   "warnings": [],
   "version": "3.10.0",
-  "hash": "a46be2935ba9a9287421",
-  "time": 1894,
+  "hash": "4bf5aece180264ba0447",
+  "time": 2515,
   "publicPath": "/",
   "assetsByChunkName": {
-    "other": "js/other-chunk-58637a.js",
-    "dynamic": "js/dynamic-chunk-471269.js",
+    "dynamic": "js/dynamic-chunk-37e955.js",
+    "other": "js/other-chunk-d314d7.js",
     "index": "index.js"
   },
   "assets": [
     {
-      "name": "js/other-chunk-58637a.js",
-      "size": 1056,
+      "name": "js/dynamic-chunk-37e955.js",
+      "size": 2051,
       "chunks": [
         0
-      ],
-      "chunkNames": [
-        "other"
-      ],
-      "emitted": true
-    },
-    {
-      "name": "js/dynamic-chunk-471269.js",
-      "size": 1041,
-      "chunks": [
-        1
       ],
       "chunkNames": [
         "dynamic"
@@ -37,8 +26,19 @@ Webpack is watching the files…
       "emitted": true
     },
     {
+      "name": "js/other-chunk-d314d7.js",
+      "size": 1056,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "other"
+      ],
+      "emitted": true
+    },
+    {
       "name": "index.js",
-      "size": 81008,
+      "size": 83678,
       "chunks": [
         2
       ],
@@ -66,25 +66,25 @@ Webpack is watching the files…
       "initial": false,
       "entry": false,
       "extraAsync": false,
-      "size": 927,
+      "size": 1678,
       "names": [
-        "other"
+        "dynamic"
       ],
       "files": [
-        "js/other-chunk-58637a.js"
+        "js/dynamic-chunk-37e955.js"
       ],
-      "hash": "58637a32ac7bc1585669",
+      "hash": "37e9550d4797931b15e9",
       "parents": [
         2
       ],
       "modules": [
         {
-          "id": 37,
-          "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/other.jsx",
-          "name": "../client/js/mods/ui/testapp/other.jsx",
-          "index": 20,
+          "id": 36,
+          "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx",
+          "name": "../client/js/mods/ui/testapp/dynamic.jsx",
+          "index": 19,
           "index2": 18,
-          "size": 927,
+          "size": 950,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -97,8 +97,8 @@ Webpack is watching the files…
           "issuerId": 15,
           "issuerName": "../client/js/mods/ui/testapp/index.jsx",
           "profile": {
-            "factory": 108,
-            "building": 39,
+            "factory": 30,
+            "building": 23,
             "dependencies": 0
           },
           "failed": false,
@@ -110,9 +110,228 @@ Webpack is watching the files…
               "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
               "module": "../client/js/mods/ui/testapp/index.jsx",
               "moduleName": "../client/js/mods/ui/testapp/index.jsx",
-              "type": "import()",
+              "type": "cjs require",
+              "userRequest": "./dynamic.jsx",
+              "loc": "111:28-86"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "'use strict';\n// export default function say(){\n//     return 'hello world';\n// }\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.default = Wtf;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _demo = require('./demo2.jsx');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// export default class Wtf extends PureComponent{\n//     render(){\n//         return (\n//             <div>\n//                 wtf!!!!!!\n//             </div>\n//         );\n//     }\n// }\nfunction Wtf() {\n    return _react2.default.createElement(\n        'div',\n        null,\n        'wtf!!!!'\n    );\n}\n;\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(Wtf, 'Wtf', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx');\n}();\n\n;"
+        },
+        {
+          "id": 37,
+          "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testDynamic/dynamic.jsx",
+          "name": "../client/js/mods/ui/testDynamic/dynamic.jsx",
+          "index": 21,
+          "index2": 19,
+          "size": 171,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "issuerId": 15,
+          "issuerName": "../client/js/mods/ui/testapp/index.jsx",
+          "profile": {
+            "factory": 33,
+            "building": 56
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 15,
+              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+              "module": "../client/js/mods/ui/testapp/index.jsx",
+              "moduleName": "../client/js/mods/ui/testapp/index.jsx",
+              "type": "cjs require",
+              "userRequest": "../testDynamic/dynamic.jsx",
+              "loc": "121:28-99"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "'use strict';\n\nconsole.log('hello this is test dynamic module!');\n;\n\nvar _temp = function () {\n  if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n    return;\n  }\n}();\n\n;"
+        },
+        {
+          "id": 38,
+          "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/test.jsx",
+          "name": "../client/js/mods/ui/testapp/test.jsx",
+          "index": 22,
+          "index2": 20,
+          "size": 153,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "issuerId": 15,
+          "issuerName": "../client/js/mods/ui/testapp/index.jsx",
+          "profile": {
+            "factory": 31,
+            "building": 49
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 15,
+              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+              "module": "../client/js/mods/ui/testapp/index.jsx",
+              "moduleName": "../client/js/mods/ui/testapp/index.jsx",
+              "type": "cjs require",
+              "userRequest": "./test.jsx",
+              "loc": "131:28-83"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "'use strict';\n\nconsole.log('this is test.jsx');\n;\n\nvar _temp = function () {\n  if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n    return;\n  }\n}();\n\n;"
+        },
+        {
+          "id": 40,
+          "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/demo2.jsx",
+          "name": "../client/js/mods/ui/testapp/demo2.jsx",
+          "index": 20,
+          "index2": 17,
+          "size": 404,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx",
+          "issuerId": 36,
+          "issuerName": "../client/js/mods/ui/testapp/dynamic.jsx",
+          "profile": {
+            "factory": 37,
+            "building": 409
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 36,
+              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx",
+              "module": "../client/js/mods/ui/testapp/dynamic.jsx",
+              "moduleName": "../client/js/mods/ui/testapp/dynamic.jsx",
+              "type": "cjs require",
+              "userRequest": "./demo2.jsx",
+              "loc": "15:12-34"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 3,
+          "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.test = test;\nconsole.log('demo2');\nfunction test() {}\n;\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(test, 'test', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/demo2.jsx');\n}();\n\n;"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 15,
+          "module": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "moduleName": "../client/js/mods/ui/testapp/index.jsx",
+          "loc": "110:16-117:29",
+          "name": "dynamic",
+          "reasons": []
+        },
+        {
+          "moduleId": 15,
+          "module": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "moduleName": "../client/js/mods/ui/testapp/index.jsx",
+          "loc": "120:16-127:29",
+          "name": "dynamic",
+          "reasons": []
+        },
+        {
+          "moduleId": 15,
+          "module": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "moduleName": "../client/js/mods/ui/testapp/index.jsx",
+          "loc": "130:16-137:29",
+          "name": "dynamic",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "extraAsync": false,
+      "size": 927,
+      "names": [
+        "other"
+      ],
+      "files": [
+        "js/other-chunk-d314d7.js"
+      ],
+      "hash": "d314d7cb451909e9c86a",
+      "parents": [
+        2
+      ],
+      "modules": [
+        {
+          "id": 39,
+          "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/other.jsx",
+          "name": "../client/js/mods/ui/testapp/other.jsx",
+          "index": 23,
+          "index2": 21,
+          "size": 927,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "issuerId": 15,
+          "issuerName": "../client/js/mods/ui/testapp/index.jsx",
+          "profile": {
+            "factory": 32,
+            "building": 40,
+            "dependencies": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 15,
+              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+              "module": "../client/js/mods/ui/testapp/index.jsx",
+              "moduleName": "../client/js/mods/ui/testapp/index.jsx",
+              "type": "cjs require",
               "userRequest": "./other.jsx",
-              "loc": "110:47-98"
+              "loc": "141:28-80"
             }
           ],
           "usedExports": true,
@@ -129,83 +348,8 @@ Webpack is watching the files…
           "module": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
           "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
           "moduleName": "../client/js/mods/ui/testapp/index.jsx",
-          "loc": "110:47-98",
+          "loc": "140:16-147:27",
           "name": "other",
-          "reasons": []
-        }
-      ]
-    },
-    {
-      "id": 1,
-      "rendered": true,
-      "initial": false,
-      "entry": false,
-      "extraAsync": false,
-      "size": 912,
-      "names": [
-        "dynamic"
-      ],
-      "files": [
-        "js/dynamic-chunk-471269.js"
-      ],
-      "hash": "47126912f65a6a16bdbe",
-      "parents": [
-        2
-      ],
-      "modules": [
-        {
-          "id": 36,
-          "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx",
-          "name": "../client/js/mods/ui/testapp/dynamic.jsx",
-          "index": 19,
-          "index2": 17,
-          "size": 912,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            1
-          ],
-          "assets": [],
-          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
-          "issuerId": 15,
-          "issuerName": "../client/js/mods/ui/testapp/index.jsx",
-          "profile": {
-            "factory": 107,
-            "building": 61,
-            "dependencies": 0
-          },
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": 15,
-              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
-              "module": "../client/js/mods/ui/testapp/index.jsx",
-              "moduleName": "../client/js/mods/ui/testapp/index.jsx",
-              "type": "import()",
-              "userRequest": "./dynamic.jsx",
-              "loc": "109:41-98"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 2,
-          "source": "'use strict';\n// export default function say(){\n//     return 'hello world';\n// }\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.default = Wtf;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// export default class Wtf extends PureComponent{\n//     render(){\n//         return (\n//             <div>\n//                 wtf!!!!!!\n//             </div>\n//         );\n//     }\n// }\nfunction Wtf() {\n    return _react2.default.createElement(\n        'div',\n        null,\n        'wtf!!!!'\n    );\n};\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(Wtf, 'Wtf', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx');\n}();\n\n;"
-        }
-      ],
-      "filteredModules": 0,
-      "origins": [
-        {
-          "moduleId": 15,
-          "module": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
-          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
-          "moduleName": "../client/js/mods/ui/testapp/index.jsx",
-          "loc": "109:41-98",
-          "name": "dynamic",
           "reasons": []
         }
       ]
@@ -216,14 +360,14 @@ Webpack is watching the files…
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 75052,
+      "size": 77446,
       "names": [
         "index"
       ],
       "files": [
         "index.js"
       ],
-      "hash": "5b2978dc7c1270d3afce",
+      "hash": "c19de39cdfe7112c821f",
       "parents": [],
       "modules": [
         {
@@ -241,9 +385,9 @@ Webpack is watching the files…
             2
           ],
           "assets": [],
-          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
-          "issuerId": 15,
-          "issuerName": "../client/js/mods/ui/testapp/index.jsx",
+          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/dynamic/fn.jsx",
+          "issuerId": 6,
+          "issuerName": "../client/js/mods/ui/dynamic/fn.jsx",
           "profile": {
             "factory": 0,
             "building": 0
@@ -280,7 +424,7 @@ Webpack is watching the files…
               "loc": "11:13-29"
             },
             {
-              "moduleId": 37,
+              "moduleId": 39,
               "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/other.jsx",
               "module": "../client/js/mods/ui/testapp/other.jsx",
               "moduleName": "../client/js/mods/ui/testapp/other.jsx",
@@ -313,8 +457,8 @@ Webpack is watching the files…
           "issuerId": 10,
           "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/cjs/react.production.min.js",
           "profile": {
-            "factory": 0,
-            "building": 1
+            "factory": 1,
+            "building": 0
           },
           "failed": false,
           "errors": 0,
@@ -363,7 +507,7 @@ Webpack is watching the files…
           "issuerId": 10,
           "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/cjs/react.production.min.js",
           "profile": {
-            "factory": 2,
+            "factory": 1,
             "building": 0
           },
           "failed": false,
@@ -413,8 +557,8 @@ Webpack is watching the files…
           "issuerId": 10,
           "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/cjs/react.production.min.js",
           "profile": {
-            "factory": 2,
-            "building": 1
+            "factory": 1,
+            "building": 0
           },
           "failed": false,
           "errors": 0,
@@ -463,7 +607,7 @@ Webpack is watching the files…
           "issuerId": 8,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 1,
+            "factory": 2,
             "building": 1
           },
           "failed": false,
@@ -513,8 +657,8 @@ Webpack is watching the files…
           "issuerId": 8,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 13,
-            "building": 251
+            "factory": 17,
+            "building": 238
           },
           "failed": false,
           "errors": 0,
@@ -564,9 +708,8 @@ Webpack is watching the files…
           "issuerId": 8,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 63,
-            "building": 453,
-            "dependencies": 0
+            "factory": 54,
+            "building": 359
           },
           "failed": false,
           "errors": 0,
@@ -601,8 +744,8 @@ Webpack is watching the files…
           "id": 7,
           "identifier": "external \"path\"",
           "name": "external \"path\"",
-          "index": 29,
-          "index2": 27,
+          "index": 32,
+          "index2": 30,
           "size": 42,
           "cacheable": false,
           "built": false,
@@ -616,7 +759,7 @@ Webpack is watching the files…
           "issuerId": 8,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 5,
+            "factory": 6,
             "building": 0
           },
           "failed": false,
@@ -652,8 +795,8 @@ Webpack is watching the files…
           "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
           "name": "./index.js",
           "index": 0,
-          "index2": 37,
-          "size": 4731,
+          "index2": 40,
+          "size": 4965,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -666,8 +809,8 @@ Webpack is watching the files…
           "issuerId": null,
           "issuerName": null,
           "profile": {
-            "factory": 31,
-            "building": 700
+            "factory": 27,
+            "building": 1287
           },
           "failed": false,
           "errors": 0,
@@ -677,7 +820,7 @@ Webpack is watching the files…
           "providedExports": null,
           "optimizationBailout": [],
           "depth": 0,
-          "source": "'use strict';\n\nvar _React = require('React');\n\nvar _React2 = _interopRequireDefault(_React);\n\nvar _reactRedux = require('react-redux');\n\nvar _index = require('../client/js/mods/ui/testapp/index');\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _store = require('../client/js/mods/data/store');\n\nvar _store2 = _interopRequireDefault(_store);\n\nvar _action = require('../client/js/mods/data/action');\n\nvar _preLoadModule = require('./pre-load-module');\n\nvar _preLoadModule2 = _interopRequireDefault(_preLoadModule);\n\nvar _fn = require('../client/js/mods/ui/dynamic/fn');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst logger = require('koa-logger');\nconst koa = require('koa');\nconst app = koa();\nconst router = require('koa-router')();\nconst serve = require('koa-static');\nconst path = require('path');\nconst render = require('koa-ejs');\nconst ReactDOMServer = require('react-dom/server');\n\n//中间件配置位置\napp.use(logger());\n//ejs配置\n// render(app, {\n//     root: path.join(__dirname, 'static','assets'),\n//     layout: false,\n//     viewExt: 'html',\n//     cache: false,\n//     debug: true,\n//     open:'{{',\n//     close:'}}'\n// });\napp.use(serve(path.resolve(__dirname, '..', 'static')));\nlet modules = [];\n// app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));\nrouter.get('/', function* (next) {\n\n    let __modules = modules.map(item => {\n        let __item = {\n            key: item.key,\n            module: item.module,\n            fileName: item.fileName,\n            isMark: false,\n            marked: function () {\n                this.isMark = true;\n            }\n        };\n        return __item;\n    });\n    // 异步模块\n    console.log(__modules);\n\n    // console.log('get req!');\n    let store = (0, _store2.default)({ info: { title: 'hello world!' } });\n    //想要在redux-thunk中完全的同构，需要进行在action中，return promise\n    yield store.dispatch((0, _action.getInfo)('haha'));\n    console.log(store.getState());\n    //redux 异步同构\n\n    //这里是一个同步操作啊 这里可以进行可以将异步模块注入到dynamic模块中，然后进行渲染标记。之后直出要加载的script标签。\n    (0, _fn.initDynamicModule)(__modules);\n    let html = ReactDOMServer.renderToString(_React2.default.createElement(\n        _reactRedux.Provider,\n        { store: store },\n        _React2.default.createElement(_index2.default, null)\n    ));\n    //TODO: 判定出来 具体哪个异步模块被使用到了，之后给他的script内容动态插入到页面内，从而实现，整体静态直出。 \n    let dynamicScript = [];\n    for (let dynamicMoudle of __modules) {\n        if (dynamicMoudle.isMark) {\n            //这里版本号是不同步的 我勒个槽啊，注册的moduleid也是不同的，不过内容是一样的，我们来替换一下这里的版本号\n            dynamicScript.push('<script src=\"http://test.sina.com.cn/js/' + dynamicMoudle.fileName + '\"></script>');\n        }\n    }\n\n    // console.log(store.getState());\n    // console.log(html);\n    // yield this.render('index',{data:{\n    //     text:'<span>hello world</span>',\n    //     num:1\n    // }});\n    this.body = `\n        <!DOCTYPE html>\n            <html>\n                <head>\n                    <meta charset=\"utf-8\">\n                    <title>TODO</title>\n                    <link href=\"http://test.sina.com.cn/css/index.css\" rel=\"stylesheet\">\n                    <script>\n                        __initState__ = ${JSON.stringify(store.getState())};\n                    </script>\n                </head>\n                <body>\n                    <div id=\"root\">${html}</div>\n                    <script>\n                        // 添加这个click事件，进行测试，是否body上的节点进行渲染了2次。 实际证明上述节点并没有渲染2次。\n                        // 但是react的生命周期走了两次，一次是在服务器端，一次是在浏览器端，节点还能响应点击事件，证明react进行了vdom节点的比较对，发现没有不一致，所以不进行实际dom的渲染操作。\n                        document.querySelector('p').addEventListener('click',function(){\n                            console.log('click...');\n                        },false);\n                    </script>\n                    <script src=\"http://test.sina.com.cn/js/manifest.js\"></script>\n                    <script src=\"http://test.sina.com.cn/js/vendor.js\"></script>\n                    <!-- \n                    <script src=\"http://test.sina.com.cn/js/dynamic-chunk-697ebf.js\"></script>\n                    -->\n                    ${dynamicScript.join('')}\n                    <script src=\"http://test.sina.com.cn/js/index.js\"></script>\n                </body>\n            </html>\n    `;\n    yield next;\n});\nrouter.get('/api/info', function* (next) {\n    this.body = JSON.stringify({\n        'code': 200,\n        'data': 'hello jilong5!'\n    });\n    yield next;\n});\n\napp.use(router.routes());\napp.use(router.allowedMethods());\n\n//提前保证加载完毕异步modules\n_preLoadModule2.default.then(function (data) {\n    modules = data;\n    //要是将这里的内容\n    app.listen(80, () => {\n        console.log('server start on: http://localhost:80');\n    });\n}, function () {});"
+          "source": "'use strict';\n\nvar _React = require('React');\n\nvar _React2 = _interopRequireDefault(_React);\n\nvar _reactRedux = require('react-redux');\n\nvar _index = require('../client/js/mods/ui/testapp/index');\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _store = require('../client/js/mods/data/store');\n\nvar _store2 = _interopRequireDefault(_store);\n\nvar _action = require('../client/js/mods/data/action');\n\nvar _preLoadModule = require('./pre-load-module');\n\nvar _preLoadModule2 = _interopRequireDefault(_preLoadModule);\n\nvar _fn = require('../client/js/mods/ui/dynamic/fn');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst logger = require('koa-logger');\nconst koa = require('koa');\nconst app = koa();\nconst router = require('koa-router')();\nconst serve = require('koa-static');\nconst path = require('path');\nconst render = require('koa-ejs');\nconst ReactDOMServer = require('react-dom/server');\n\n\n// import(/* webpackChunkName: \"dynamic\" */'../client/js/mods/ui/testapp/dynamic.jsx').then(function(){\n//     console.log('sss');\n// });\n// import(/*webpackChunkName: \"dynamic\"*/'./demo.js').then(function(){\n\n// });\n\n//中间件配置位置\napp.use(logger());\n//ejs配置\n// render(app, {\n//     root: path.join(__dirname, 'static','assets'),\n//     layout: false,\n//     viewExt: 'html',\n//     cache: false,\n//     debug: true,\n//     open:'{{',\n//     close:'}}'\n// });\napp.use(serve(path.resolve(__dirname, '..', 'static')));\nlet modules = [];\n// app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));\nrouter.get('/', function* (next) {\n\n    let __modules = modules.map(item => {\n        let __item = {\n            key: item.key,\n            module: item.module,\n            fileName: item.fileName,\n            isMark: false,\n            marked: function () {\n                this.isMark = true;\n            }\n        };\n        return __item;\n    });\n    // 异步模块\n    console.log(__modules);\n\n    // console.log('get req!');\n    let store = (0, _store2.default)({ info: { title: 'hello world!' } });\n    //想要在redux-thunk中完全的同构，需要进行在action中，return promise\n    yield store.dispatch((0, _action.getInfo)('haha'));\n    console.log(store.getState());\n    //redux 异步同构\n\n    //这里是一个同步操作啊 这里可以进行可以将异步模块注入到dynamic模块中，然后进行渲染标记。之后直出要加载的script标签。\n    (0, _fn.initDynamicModule)(__modules);\n    let html = ReactDOMServer.renderToString(_React2.default.createElement(\n        _reactRedux.Provider,\n        { store: store },\n        _React2.default.createElement(_index2.default, null)\n    ));\n    //TODO: 判定出来 具体哪个异步模块被使用到了，之后给他的script内容动态插入到页面内，从而实现，整体静态直出。 \n    let dynamicScript = [];\n    for (let dynamicMoudle of __modules) {\n        if (dynamicMoudle.isMark) {\n            //这里版本号是不同步的 我勒个槽啊，注册的moduleid也是不同的，不过内容是一样的，我们来替换一下这里的版本号\n            dynamicScript.push('<script src=\"http://test.sina.com.cn/js/' + dynamicMoudle.fileName + '\"></script>');\n        }\n    }\n\n    // console.log(store.getState());\n    // console.log(html);\n    // yield this.render('index',{data:{\n    //     text:'<span>hello world</span>',\n    //     num:1\n    // }});\n    this.body = `\n        <!DOCTYPE html>\n            <html>\n                <head>\n                    <meta charset=\"utf-8\">\n                    <title>TODO</title>\n                    <link href=\"http://test.sina.com.cn/css/index.css\" rel=\"stylesheet\">\n                    <script>\n                        __initState__ = ${JSON.stringify(store.getState())};\n                    </script>\n                </head>\n                <body>\n                    <div id=\"root\">${html}</div>\n                    <script>\n                        // 添加这个click事件，进行测试，是否body上的节点进行渲染了2次。 实际证明上述节点并没有渲染2次。\n                        // 但是react的生命周期走了两次，一次是在服务器端，一次是在浏览器端，节点还能响应点击事件，证明react进行了vdom节点的比较对，发现没有不一致，所以不进行实际dom的渲染操作。\n                        document.querySelector('p').addEventListener('click',function(){\n                            console.log('click...');\n                        },false);\n                    </script>\n                    <script src=\"http://test.sina.com.cn/js/manifest.js\"></script>\n                    <script src=\"http://test.sina.com.cn/js/vendor.js\"></script>\n                    <!-- \n                    <script src=\"http://test.sina.com.cn/js/dynamic-chunk-697ebf.js\"></script>\n                    -->\n                    ${dynamicScript.join('')}\n                    <script src=\"http://test.sina.com.cn/js/index.js\"></script>\n                </body>\n            </html>\n    `;\n    yield next;\n});\nrouter.get('/api/info', function* (next) {\n    this.body = JSON.stringify({\n        'code': 200,\n        'data': 'hello jilong5!'\n    });\n    yield next;\n});\n\napp.use(router.routes());\napp.use(router.allowedMethods());\n\n//提前保证加载完毕异步modules\n_preLoadModule2.default.then(function (data) {\n    // modules = data;\n    // //要是将这里的内容\n    // app.listen(80, () => {\n    //     console.log('server start on: http://localhost:80');\n    // });\n}, function () {});"
         },
         {
           "id": 9,
@@ -698,8 +841,8 @@ Webpack is watching the files…
           "issuerId": 8,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 581,
-            "building": 429
+            "factory": 608,
+            "building": 25
           },
           "failed": false,
           "errors": 0,
@@ -740,8 +883,8 @@ Webpack is watching the files…
           "issuerId": 9,
           "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/index.js",
           "profile": {
-            "factory": 21,
-            "building": 32
+            "factory": 37,
+            "building": 442
           },
           "failed": false,
           "errors": 0,
@@ -782,8 +925,8 @@ Webpack is watching the files…
           "issuerId": 9,
           "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/index.js",
           "profile": {
-            "factory": 21,
-            "building": 80,
+            "factory": 37,
+            "building": 469,
             "dependencies": 1
           },
           "failed": false,
@@ -866,8 +1009,8 @@ Webpack is watching the files…
           "issuerId": 11,
           "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/cjs/react.development.js",
           "profile": {
-            "factory": 0,
-            "building": 1
+            "factory": 1,
+            "building": 0
           },
           "failed": false,
           "errors": 0,
@@ -934,8 +1077,8 @@ Webpack is watching the files…
           "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
           "name": "../client/js/mods/ui/testapp/index.jsx",
           "index": 11,
-          "index2": 19,
-          "size": 6690,
+          "index2": 22,
+          "size": 8607,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -948,9 +1091,9 @@ Webpack is watching the files…
           "issuerId": 8,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 63,
-            "building": 349,
-            "dependencies": 17
+            "factory": 54,
+            "building": 525,
+            "dependencies": 7
           },
           "failed": false,
           "errors": 0,
@@ -970,7 +1113,7 @@ Webpack is watching the files…
           "providedExports": null,
           "optimizationBailout": [],
           "depth": 1,
-          "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _button = require('antd/lib/button');\n\nvar _button2 = _interopRequireDefault(_button);\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRedux = require('react-redux');\n\nvar _action = require('../../data/action');\n\nrequire('./test.scss');\n\nvar _testimg = require('../../../../img/testimg.jpg');\n\nvar testimg = _interopRequireWildcard(_testimg);\n\nvar _fn = require('../dynamic/fn');\n\nvar _fn2 = _interopRequireDefault(_fn);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n// import Dynmaic from '../dynamic';\n\n\n// syntax-dynamic-import 采用babel的这个组件来启动 动态import\n// import('./dynamic.js').then((dynamic) => {\n//     // 采用动态import方式构建 异步路由\n//     console.log(dynamic.default);\n// });\n\n\nvar App = function (_Component) {\n    _inherits(App, _Component);\n\n    //添加生命周期测试\n    /**\n     * 初始化构造器\n     * @param {*} props \n     */\n    function App(props) {\n        _classCallCheck(this, App);\n\n        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));\n\n        console.log('constructor');\n        return _this;\n    }\n    /**\n     * 将要开始挂在\n     */\n\n\n    _createClass(App, [{\n        key: 'componentWillMount',\n        value: function componentWillMount() {\n            console.log('componentWillMount');\n            var getInfo = this.props.getInfo;\n\n            getInfo('hello');\n        }\n        /**\n         * 获取将要变更的props 与 store\n         */\n\n    }, {\n        key: 'componentWillReceiveProps',\n        value: function componentWillReceiveProps() {\n            console.log('componentWillReceiveProps');\n        }\n\n        /**\n         * 组件是否要变更，走渲染逻辑（渲染前，回进行dom比对）\n         */\n\n    }, {\n        key: 'shouldComponentUpdate',\n        value: function shouldComponentUpdate() {\n            console.log('shouldComponentUpdate');\n            return true;\n        }\n\n        /**\n         * 渲染进行中\n         */\n\n    }, {\n        key: 'render',\n        value: function render() {\n            var title = this.props.title;\n\n            var Demo = (0, _fn2.default)(import( /* webpackChunkName: \"dynamic\" */'./dynamic.jsx'), 'dynamic');\n            var HelloWorld = (0, _fn2.default)(import( /* webpackChunkName:\"other\"*/'./other.jsx'), 'other');\n            return _react2.default.createElement(\n                'div',\n                null,\n                _react2.default.createElement(\n                    'p',\n                    null,\n                    title\n                ),\n                _react2.default.createElement(\n                    'p',\n                    null,\n                    'hehe!2'\n                ),\n                _react2.default.createElement(\n                    _button2.default,\n                    { type: 'primary' },\n                    'hello jilong5!'\n                ),\n                _react2.default.createElement('img', { src: testimg.default, alt: '' }),\n                _react2.default.createElement('div', { className: 'demomao helloworld' }),\n                _react2.default.createElement(Demo, null),\n                _react2.default.createElement(HelloWorld, null)\n            );\n        }\n        /**\n         * 组件更新完毕\n         */\n\n    }, {\n        key: 'componentDidUpdate',\n        value: function componentDidUpdate() {\n            console.log('componentDidUpdate');\n        }\n\n        /**\n         * 挂载完毕\n         */\n\n    }, {\n        key: 'componentDidMount',\n        value: function componentDidMount() {\n            console.log('componentDidMount');\n        }\n    }]);\n\n    return App;\n}(_react.Component);\n\nfunction mapStateToProps(state) {\n    return {\n        title: state.info.title\n    };\n}\nfunction mapDispatchToProps(dispatch) {\n    return {\n        getInfo: function getInfo() {\n            for (var _len = arguments.length, rest = Array(_len), _key = 0; _key < _len; _key++) {\n                rest[_key] = arguments[_key];\n            }\n\n            dispatch((0, _action.getInfo)(rest));\n        }\n    };\n}\n\nvar _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);\n\nexports.default = _default;\n;\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(App, 'App', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n}();\n\n;"
+          "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _button = require('antd/lib/button');\n\nvar _button2 = _interopRequireDefault(_button);\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRedux = require('react-redux');\n\nvar _action = require('../../data/action');\n\nrequire('./test.scss');\n\nvar _testimg = require('../../../../img/testimg.jpg');\n\nvar testimg = _interopRequireWildcard(_testimg);\n\nvar _fn = require('../dynamic/fn');\n\nvar _fn2 = _interopRequireDefault(_fn);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n// import Dynmaic from '../dynamic';\n\n\n// syntax-dynamic-import 采用babel的这个组件来启动 动态import\n// import('./dynamic.js').then((dynamic) => {\n//     // 采用动态import方式构建 异步路由\n//     console.log(dynamic.default);\n// });\n\n\nvar App = function (_Component) {\n    _inherits(App, _Component);\n\n    //添加生命周期测试\n    /**\n     * 初始化构造器\n     * @param {*} props \n     */\n    function App(props) {\n        _classCallCheck(this, App);\n\n        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));\n\n        console.log('constructor');\n        return _this;\n    }\n    /**\n     * 将要开始挂在\n     */\n\n\n    _createClass(App, [{\n        key: 'componentWillMount',\n        value: function componentWillMount() {\n            console.log('componentWillMount');\n            var getInfo = this.props.getInfo;\n\n            getInfo('hello');\n        }\n        /**\n         * 获取将要变更的props 与 store\n         */\n\n    }, {\n        key: 'componentWillReceiveProps',\n        value: function componentWillReceiveProps() {\n            console.log('componentWillReceiveProps');\n        }\n\n        /**\n         * 组件是否要变更，走渲染逻辑（渲染前，回进行dom比对）\n         */\n\n    }, {\n        key: 'shouldComponentUpdate',\n        value: function shouldComponentUpdate() {\n            console.log('shouldComponentUpdate');\n            return true;\n        }\n\n        /**\n         * 渲染进行中\n         */\n\n    }, {\n        key: 'render',\n        value: function render() {\n            var title = this.props.title;\n\n            var Demo = (0, _fn2.default)(new Promise(function (resolve) {\n                require.ensure([], function (require) {\n                    var m = require( /* webpackChunkName: \"dynamic\" */'./dynamic.jsx');\n\n                    m = m.default || m;\n                    m.chunkName = 'dynamic';\n                    m.sourceFilePath = '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx';\n                    resolve(m);\n                }, 'dynamic');\n            }), 'dynamic');\n            var Demo2 = (0, _fn2.default)(new Promise(function (resolve) {\n                require.ensure([], function (require) {\n                    var m = require( /* webpackChunkName: \"dynamic\" */'../testDynamic/dynamic.jsx');\n\n                    m = m.default || m;\n                    m.chunkName = 'dynamic';\n                    m.sourceFilePath = '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testDynamic/dynamic.jsx';\n                    resolve(m);\n                }, 'dynamic');\n            }), 'dynamic');\n            var Testjsx = (0, _fn2.default)(new Promise(function (resolve) {\n                require.ensure([], function (require) {\n                    var m = require( /* webpackChunkName: \"dynamic\" */'./test.jsx');\n\n                    m = m.default || m;\n                    m.chunkName = 'dynamic';\n                    m.sourceFilePath = '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/test.jsx';\n                    resolve(m);\n                }, 'dynamic');\n            }), 'dynamic');\n            var HelloWorld = (0, _fn2.default)(new Promise(function (resolve) {\n                require.ensure([], function (require) {\n                    var m = require( /* webpackChunkName:\"other\"*/'./other.jsx');\n\n                    m = m.default || m;\n                    m.chunkName = 'other';\n                    m.sourceFilePath = '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/other.jsx';\n                    resolve(m);\n                }, 'other');\n            }), 'other');\n            return _react2.default.createElement(\n                'div',\n                null,\n                _react2.default.createElement(\n                    'p',\n                    null,\n                    title\n                ),\n                _react2.default.createElement(\n                    'p',\n                    null,\n                    'hehe!2'\n                ),\n                _react2.default.createElement(\n                    _button2.default,\n                    { type: 'primary' },\n                    'hello jilong5!'\n                ),\n                _react2.default.createElement('img', { src: testimg.default, alt: '' }),\n                _react2.default.createElement('div', { className: 'demomao helloworld' }),\n                _react2.default.createElement(Demo, null),\n                _react2.default.createElement(HelloWorld, null)\n            );\n        }\n        /**\n         * 组件更新完毕\n         */\n\n    }, {\n        key: 'componentDidUpdate',\n        value: function componentDidUpdate() {\n            console.log('componentDidUpdate');\n        }\n\n        /**\n         * 挂载完毕\n         */\n\n    }, {\n        key: 'componentDidMount',\n        value: function componentDidMount() {\n            console.log('componentDidMount');\n        }\n    }]);\n\n    return App;\n}(_react.Component);\n\nfunction mapStateToProps(state) {\n    return {\n        title: state.info.title\n    };\n}\nfunction mapDispatchToProps(dispatch) {\n    return {\n        getInfo: function getInfo() {\n            for (var _len = arguments.length, rest = Array(_len), _key = 0; _key < _len; _key++) {\n                rest[_key] = arguments[_key];\n            }\n\n            dispatch((0, _action.getInfo)(rest));\n        }\n    };\n}\n\nvar _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);\n\nexports.default = _default;\n;\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(App, 'App', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n}();\n\n;"
         },
         {
           "id": 16,
@@ -991,7 +1134,7 @@ Webpack is watching the files…
           "issuerId": 15,
           "issuerName": "../client/js/mods/ui/testapp/index.jsx",
           "profile": {
-            "factory": 0,
+            "factory": 1,
             "building": 0
           },
           "failed": false,
@@ -1033,7 +1176,7 @@ Webpack is watching the files…
           "issuerName": "../client/js/mods/data/action.js",
           "profile": {
             "factory": 0,
-            "building": 0
+            "building": 1
           },
           "failed": false,
           "errors": 0,
@@ -1073,8 +1216,8 @@ Webpack is watching the files…
           "issuerId": 15,
           "issuerName": "../client/js/mods/ui/testapp/index.jsx",
           "profile": {
-            "factory": 171,
-            "building": 447
+            "factory": 91,
+            "building": 426
           },
           "failed": false,
           "errors": 0,
@@ -1115,8 +1258,8 @@ Webpack is watching the files…
           "issuerId": 15,
           "issuerName": "../client/js/mods/ui/testapp/index.jsx",
           "profile": {
-            "factory": 620,
-            "building": 10
+            "factory": 563,
+            "building": 11
           },
           "failed": false,
           "errors": 0,
@@ -1142,8 +1285,8 @@ Webpack is watching the files…
           "id": 20,
           "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/data/store.js",
           "name": "../client/js/mods/data/store.js",
-          "index": 21,
-          "index2": 23,
+          "index": 24,
+          "index2": 26,
           "size": 1107,
           "cacheable": true,
           "built": true,
@@ -1157,8 +1300,8 @@ Webpack is watching the files…
           "issuerId": 8,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 13,
-            "building": 271
+            "factory": 17,
+            "building": 267
           },
           "failed": false,
           "errors": 0,
@@ -1184,8 +1327,8 @@ Webpack is watching the files…
           "id": 21,
           "identifier": "external \"redux-thunk\"",
           "name": "external \"redux-thunk\"",
-          "index": 22,
-          "index2": 20,
+          "index": 25,
+          "index2": 23,
           "size": 42,
           "cacheable": false,
           "built": false,
@@ -1200,7 +1343,7 @@ Webpack is watching the files…
           "issuerName": "../client/js/mods/data/store.js",
           "profile": {
             "factory": 0,
-            "building": 0
+            "building": 1
           },
           "failed": false,
           "errors": 0,
@@ -1225,8 +1368,8 @@ Webpack is watching the files…
           "id": 22,
           "identifier": "external \"redux\"",
           "name": "external \"redux\"",
-          "index": 23,
-          "index2": 21,
+          "index": 26,
+          "index2": 24,
           "size": 42,
           "cacheable": false,
           "built": false,
@@ -1240,7 +1383,7 @@ Webpack is watching the files…
           "issuerId": 20,
           "issuerName": "../client/js/mods/data/store.js",
           "profile": {
-            "factory": 0,
+            "factory": 1,
             "building": 0
           },
           "failed": false,
@@ -1266,8 +1409,8 @@ Webpack is watching the files…
           "id": 23,
           "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/data/reducers.js",
           "name": "../client/js/mods/data/reducers.js",
-          "index": 24,
-          "index2": 22,
+          "index": 27,
+          "index2": 25,
           "size": 646,
           "cacheable": true,
           "built": true,
@@ -1281,8 +1424,8 @@ Webpack is watching the files…
           "issuerId": 20,
           "issuerName": "../client/js/mods/data/store.js",
           "profile": {
-            "factory": 3,
-            "building": 256
+            "factory": 2,
+            "building": 320
           },
           "failed": false,
           "errors": 0,
@@ -1308,9 +1451,9 @@ Webpack is watching the files…
           "id": 24,
           "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/pre-load-module.js",
           "name": "./pre-load-module.js",
-          "index": 25,
-          "index2": 30,
-          "size": 2303,
+          "index": 28,
+          "index2": 33,
+          "size": 2546,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -1323,8 +1466,8 @@ Webpack is watching the files…
           "issuerId": 8,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 10,
-            "building": 51,
+            "factory": 13,
+            "building": 38,
             "dependencies": 1
           },
           "failed": false,
@@ -1345,14 +1488,14 @@ Webpack is watching the files…
           "providedExports": null,
           "optimizationBailout": [],
           "depth": 1,
-          "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _co = require('co');\n\nvar _co2 = _interopRequireDefault(_co);\n\nvar _fs = require('fs');\n\nvar _fs2 = _interopRequireDefault(_fs);\n\nvar _thunkify = require('thunkify');\n\nvar _thunkify2 = _interopRequireDefault(_thunkify);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _vm = require('vm');\n\nvar _vm2 = _interopRequireDefault(_vm);\n\nvar _util = require('util');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// import('./demo');\n// console.log(__webpack_require__(35));\n// 可以通过 采用webpack的内置方法，进行操作\nexports.default = (0, _co2.default)(function* () {\n    let feFiles = yield (0, _thunkify2.default)(_fs2.default.readdir)(_path2.default.resolve(__dirname, '../static/js'));\n    let files = yield (0, _thunkify2.default)(_fs2.default.readdir)(_path2.default.resolve(__dirname, 'js'));\n    let modulesNameReg = /^(.*)-chunk-[a-f0-9]{6}\\.js$/;\n    //获取异步加载模块的id\n    let eIdReg = /exports.ids\\s=\\s\\[(\\d+)\\]/;\n    //模块的id\n    let moduleId = /\\/\\*\\*\\*\\/\\s+(\\d+):/;\n    let moduleList = [];\n    for (let fileName of files) {\n        let __feFileName;\n        let result = modulesNameReg.exec(fileName);\n        if (!result) {\n            continue;\n        }\n        for (let feFileName of feFiles) {\n            let feResult = modulesNameReg.exec(feFileName);\n            if (feResult && feResult[1] === result[1]) {\n                __feFileName = feFileName;\n            }\n        }\n\n        let codeContent = yield (0, _thunkify2.default)(_fs2.default.readFile)('js/' + fileName, 'utf-8');\n        // console.log(codeContent);\n        let listContent = codeContent.split(/\\n/);\n        //chunkId\n        let chunkId = eIdReg.exec(listContent[0])[1];\n        //chunkId中的moduleId\n        let __moduleId = moduleId.exec(listContent[3])[1];\n        //利用webpack的内部方法__webpack_require__ 将依赖进行提前加载\n        let __module = yield __webpack_require__.e(chunkId).then(__webpack_require__.bind(null, __moduleId));\n        //将该模块放入到代理list中，进行按需替换到对应的class中\n        // put(result[1],__module);\n        moduleList.push({\n            key: result[1],\n            module: __module,\n            fileName: __feFileName\n        });\n    }\n    return moduleList;\n});"
+          "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _co = require('co');\n\nvar _co2 = _interopRequireDefault(_co);\n\nvar _fs = require('fs');\n\nvar _fs2 = _interopRequireDefault(_fs);\n\nvar _thunkify = require('thunkify');\n\nvar _thunkify2 = _interopRequireDefault(_thunkify);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _vm = require('vm');\n\nvar _vm2 = _interopRequireDefault(_vm);\n\nvar _util = require('util');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = (0, _co2.default)(function* () {\n    let serverBundle = yield (0, _thunkify2.default)(_fs2.default.readFile)(_path2.default.resolve(__dirname, '../server-dynamic-bundle.json'));\n    console.log(serverBundle);\n});\n// import('./demo');\n// console.log(__webpack_require__(35));\n// 可以通过 采用webpack的内置方法，进行操作\n// export default co(function *(){\n//     let feFiles = yield thunkify(fs.readdir)(path.resolve(__dirname,'../static/js'));\n//     let files = yield thunkify(fs.readdir)(path.resolve(__dirname,'js'));\n//     let modulesNameReg = /^(.*)-chunk-[a-f0-9]{6}\\.js$/;\n//     //获取异步加载模块的id\n//     let eIdReg = /exports.ids\\s=\\s\\[(\\d+)\\]/;\n//     //模块的id\n//     let moduleId = /\\/\\*\\*\\*\\/\\s+(\\d+):/;\n//     let moduleList = [];\n//     for(let fileName of files){\n//         let __feFileName;\n//         let result = modulesNameReg.exec(fileName);\n//         if (!result) {\n//             continue;\n//         }\n//         for (let feFileName of feFiles){\n//             let feResult = modulesNameReg.exec(feFileName);\n//             if (feResult && feResult[1] === result[1]){\n//                 __feFileName = feFileName;\n//             }\n//         }\n\n//         let codeContent = yield thunkify(fs.readFile)('js/' + fileName,'utf-8');\n//         // console.log(codeContent);\n//         let listContent = codeContent.split(/\\n/);\n//         //chunkId\n//         let chunkId = eIdReg.exec(listContent[0])[1];\n//         //chunkId中的moduleId\n//         let __moduleId = moduleId.exec(listContent[3])[1];\n//         //利用webpack的内部方法__webpack_require__ 将依赖进行提前加载\n//         let __module = yield __webpack_require__.e(chunkId).then(__webpack_require__.bind(null, __moduleId));\n//         //将该模块放入到代理list中，进行按需替换到对应的class中\n//         // put(result[1],__module);\n//         moduleList.push({\n//             key: result[1],\n//             module: __module,\n//             fileName: __feFileName            \n//         });\n//     }\n//     return moduleList;\n\n// });"
         },
         {
           "id": 25,
           "identifier": "external \"co\"",
           "name": "external \"co\"",
-          "index": 26,
-          "index2": 24,
+          "index": 29,
+          "index2": 27,
           "size": 42,
           "cacheable": false,
           "built": false,
@@ -1392,8 +1535,8 @@ Webpack is watching the files…
           "id": 26,
           "identifier": "external \"fs\"",
           "name": "external \"fs\"",
-          "index": 27,
-          "index2": 25,
+          "index": 30,
+          "index2": 28,
           "size": 42,
           "cacheable": false,
           "built": false,
@@ -1433,8 +1576,8 @@ Webpack is watching the files…
           "id": 27,
           "identifier": "external \"thunkify\"",
           "name": "external \"thunkify\"",
-          "index": 28,
-          "index2": 26,
+          "index": 31,
+          "index2": 29,
           "size": 42,
           "cacheable": false,
           "built": false,
@@ -1449,7 +1592,7 @@ Webpack is watching the files…
           "issuerName": "./pre-load-module.js",
           "profile": {
             "factory": 0,
-            "building": 0
+            "building": 1
           },
           "failed": false,
           "errors": 0,
@@ -1474,8 +1617,8 @@ Webpack is watching the files…
           "id": 28,
           "identifier": "external \"vm\"",
           "name": "external \"vm\"",
-          "index": 30,
-          "index2": 28,
+          "index": 33,
+          "index2": 31,
           "size": 42,
           "cacheable": false,
           "built": false,
@@ -1515,8 +1658,8 @@ Webpack is watching the files…
           "id": 29,
           "identifier": "external \"util\"",
           "name": "external \"util\"",
-          "index": 31,
-          "index2": 29,
+          "index": 34,
+          "index2": 32,
           "size": 42,
           "cacheable": false,
           "built": false,
@@ -1556,129 +1699,6 @@ Webpack is watching the files…
           "id": 30,
           "identifier": "external \"koa-logger\"",
           "name": "external \"koa-logger\"",
-          "index": 32,
-          "index2": 31,
-          "size": 42,
-          "cacheable": false,
-          "built": false,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            2
-          ],
-          "assets": [],
-          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-          "issuerId": 8,
-          "issuerName": "./index.js",
-          "profile": {
-            "factory": 4,
-            "building": 1
-          },
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": 8,
-              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-              "module": "./index.js",
-              "moduleName": "./index.js",
-              "type": "cjs require",
-              "userRequest": "koa-logger",
-              "loc": "27:15-36"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 1
-        },
-        {
-          "id": 31,
-          "identifier": "external \"koa\"",
-          "name": "external \"koa\"",
-          "index": 33,
-          "index2": 32,
-          "size": 42,
-          "cacheable": false,
-          "built": false,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            2
-          ],
-          "assets": [],
-          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-          "issuerId": 8,
-          "issuerName": "./index.js",
-          "profile": {
-            "factory": 5,
-            "building": 0
-          },
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": 8,
-              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-              "module": "./index.js",
-              "moduleName": "./index.js",
-              "type": "cjs require",
-              "userRequest": "koa",
-              "loc": "28:12-26"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 1
-        },
-        {
-          "id": 32,
-          "identifier": "external \"koa-router\"",
-          "name": "external \"koa-router\"",
-          "index": 34,
-          "index2": 33,
-          "size": 42,
-          "cacheable": false,
-          "built": false,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            2
-          ],
-          "assets": [],
-          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-          "issuerId": 8,
-          "issuerName": "./index.js",
-          "profile": {
-            "factory": 5,
-            "building": 0
-          },
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "reasons": [
-            {
-              "moduleId": 8,
-              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-              "module": "./index.js",
-              "moduleName": "./index.js",
-              "type": "cjs require",
-              "userRequest": "koa-router",
-              "loc": "30:15-36"
-            }
-          ],
-          "usedExports": true,
-          "providedExports": null,
-          "optimizationBailout": [],
-          "depth": 1
-        },
-        {
-          "id": 33,
-          "identifier": "external \"koa-static\"",
-          "name": "external \"koa-static\"",
           "index": 35,
           "index2": 34,
           "size": 42,
@@ -1707,6 +1727,129 @@ Webpack is watching the files…
               "module": "./index.js",
               "moduleName": "./index.js",
               "type": "cjs require",
+              "userRequest": "koa-logger",
+              "loc": "27:15-36"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1
+        },
+        {
+          "id": 31,
+          "identifier": "external \"koa\"",
+          "name": "external \"koa\"",
+          "index": 36,
+          "index2": 35,
+          "size": 42,
+          "cacheable": false,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            2
+          ],
+          "assets": [],
+          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+          "issuerId": 8,
+          "issuerName": "./index.js",
+          "profile": {
+            "factory": 5,
+            "building": 1
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 8,
+              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+              "module": "./index.js",
+              "moduleName": "./index.js",
+              "type": "cjs require",
+              "userRequest": "koa",
+              "loc": "28:12-26"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1
+        },
+        {
+          "id": 32,
+          "identifier": "external \"koa-router\"",
+          "name": "external \"koa-router\"",
+          "index": 37,
+          "index2": 36,
+          "size": 42,
+          "cacheable": false,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            2
+          ],
+          "assets": [],
+          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+          "issuerId": 8,
+          "issuerName": "./index.js",
+          "profile": {
+            "factory": 6,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 8,
+              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+              "module": "./index.js",
+              "moduleName": "./index.js",
+              "type": "cjs require",
+              "userRequest": "koa-router",
+              "loc": "30:15-36"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1
+        },
+        {
+          "id": 33,
+          "identifier": "external \"koa-static\"",
+          "name": "external \"koa-static\"",
+          "index": 38,
+          "index2": 37,
+          "size": 42,
+          "cacheable": false,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            2
+          ],
+          "assets": [],
+          "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+          "issuerId": 8,
+          "issuerName": "./index.js",
+          "profile": {
+            "factory": 6,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 8,
+              "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+              "module": "./index.js",
+              "moduleName": "./index.js",
+              "type": "cjs require",
               "userRequest": "koa-static",
               "loc": "31:14-35"
             }
@@ -1720,8 +1863,8 @@ Webpack is watching the files…
           "id": 34,
           "identifier": "external \"koa-ejs\"",
           "name": "external \"koa-ejs\"",
-          "index": 36,
-          "index2": 35,
+          "index": 39,
+          "index2": 38,
           "size": 42,
           "cacheable": false,
           "built": false,
@@ -1761,8 +1904,8 @@ Webpack is watching the files…
           "id": 35,
           "identifier": "external \"react-dom/server\"",
           "name": "external \"react-dom/server\"",
-          "index": 37,
-          "index2": 36,
+          "index": 40,
+          "index2": 39,
           "size": 42,
           "cacheable": false,
           "built": false,
@@ -1776,7 +1919,7 @@ Webpack is watching the files…
           "issuerId": 8,
           "issuerName": "./index.js",
           "profile": {
-            "factory": 6,
+            "factory": 7,
             "building": 0
           },
           "failed": false,
@@ -1829,9 +1972,9 @@ Webpack is watching the files…
         2
       ],
       "assets": [],
-      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
-      "issuerId": 15,
-      "issuerName": "../client/js/mods/ui/testapp/index.jsx",
+      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/dynamic/fn.jsx",
+      "issuerId": 6,
+      "issuerName": "../client/js/mods/ui/dynamic/fn.jsx",
       "profile": {
         "factory": 0,
         "building": 0
@@ -1868,7 +2011,7 @@ Webpack is watching the files…
           "loc": "11:13-29"
         },
         {
-          "moduleId": 37,
+          "moduleId": 39,
           "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/other.jsx",
           "module": "../client/js/mods/ui/testapp/other.jsx",
           "moduleName": "../client/js/mods/ui/testapp/other.jsx",
@@ -1901,8 +2044,8 @@ Webpack is watching the files…
       "issuerId": 10,
       "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/cjs/react.production.min.js",
       "profile": {
-        "factory": 0,
-        "building": 1
+        "factory": 1,
+        "building": 0
       },
       "failed": false,
       "errors": 0,
@@ -1951,7 +2094,7 @@ Webpack is watching the files…
       "issuerId": 10,
       "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/cjs/react.production.min.js",
       "profile": {
-        "factory": 2,
+        "factory": 1,
         "building": 0
       },
       "failed": false,
@@ -2001,8 +2144,8 @@ Webpack is watching the files…
       "issuerId": 10,
       "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/cjs/react.production.min.js",
       "profile": {
-        "factory": 2,
-        "building": 1
+        "factory": 1,
+        "building": 0
       },
       "failed": false,
       "errors": 0,
@@ -2051,7 +2194,7 @@ Webpack is watching the files…
       "issuerId": 8,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 1,
+        "factory": 2,
         "building": 1
       },
       "failed": false,
@@ -2101,8 +2244,8 @@ Webpack is watching the files…
       "issuerId": 8,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 13,
-        "building": 251
+        "factory": 17,
+        "building": 238
       },
       "failed": false,
       "errors": 0,
@@ -2152,9 +2295,8 @@ Webpack is watching the files…
       "issuerId": 8,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 63,
-        "building": 453,
-        "dependencies": 0
+        "factory": 54,
+        "building": 359
       },
       "failed": false,
       "errors": 0,
@@ -2189,8 +2331,8 @@ Webpack is watching the files…
       "id": 7,
       "identifier": "external \"path\"",
       "name": "external \"path\"",
-      "index": 29,
-      "index2": 27,
+      "index": 32,
+      "index2": 30,
       "size": 42,
       "cacheable": false,
       "built": false,
@@ -2204,7 +2346,7 @@ Webpack is watching the files…
       "issuerId": 8,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 5,
+        "factory": 6,
         "building": 0
       },
       "failed": false,
@@ -2240,8 +2382,8 @@ Webpack is watching the files…
       "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
       "name": "./index.js",
       "index": 0,
-      "index2": 37,
-      "size": 4731,
+      "index2": 40,
+      "size": 4965,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -2254,8 +2396,8 @@ Webpack is watching the files…
       "issuerId": null,
       "issuerName": null,
       "profile": {
-        "factory": 31,
-        "building": 700
+        "factory": 27,
+        "building": 1287
       },
       "failed": false,
       "errors": 0,
@@ -2265,7 +2407,7 @@ Webpack is watching the files…
       "providedExports": null,
       "optimizationBailout": [],
       "depth": 0,
-      "source": "'use strict';\n\nvar _React = require('React');\n\nvar _React2 = _interopRequireDefault(_React);\n\nvar _reactRedux = require('react-redux');\n\nvar _index = require('../client/js/mods/ui/testapp/index');\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _store = require('../client/js/mods/data/store');\n\nvar _store2 = _interopRequireDefault(_store);\n\nvar _action = require('../client/js/mods/data/action');\n\nvar _preLoadModule = require('./pre-load-module');\n\nvar _preLoadModule2 = _interopRequireDefault(_preLoadModule);\n\nvar _fn = require('../client/js/mods/ui/dynamic/fn');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst logger = require('koa-logger');\nconst koa = require('koa');\nconst app = koa();\nconst router = require('koa-router')();\nconst serve = require('koa-static');\nconst path = require('path');\nconst render = require('koa-ejs');\nconst ReactDOMServer = require('react-dom/server');\n\n//中间件配置位置\napp.use(logger());\n//ejs配置\n// render(app, {\n//     root: path.join(__dirname, 'static','assets'),\n//     layout: false,\n//     viewExt: 'html',\n//     cache: false,\n//     debug: true,\n//     open:'{{',\n//     close:'}}'\n// });\napp.use(serve(path.resolve(__dirname, '..', 'static')));\nlet modules = [];\n// app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));\nrouter.get('/', function* (next) {\n\n    let __modules = modules.map(item => {\n        let __item = {\n            key: item.key,\n            module: item.module,\n            fileName: item.fileName,\n            isMark: false,\n            marked: function () {\n                this.isMark = true;\n            }\n        };\n        return __item;\n    });\n    // 异步模块\n    console.log(__modules);\n\n    // console.log('get req!');\n    let store = (0, _store2.default)({ info: { title: 'hello world!' } });\n    //想要在redux-thunk中完全的同构，需要进行在action中，return promise\n    yield store.dispatch((0, _action.getInfo)('haha'));\n    console.log(store.getState());\n    //redux 异步同构\n\n    //这里是一个同步操作啊 这里可以进行可以将异步模块注入到dynamic模块中，然后进行渲染标记。之后直出要加载的script标签。\n    (0, _fn.initDynamicModule)(__modules);\n    let html = ReactDOMServer.renderToString(_React2.default.createElement(\n        _reactRedux.Provider,\n        { store: store },\n        _React2.default.createElement(_index2.default, null)\n    ));\n    //TODO: 判定出来 具体哪个异步模块被使用到了，之后给他的script内容动态插入到页面内，从而实现，整体静态直出。 \n    let dynamicScript = [];\n    for (let dynamicMoudle of __modules) {\n        if (dynamicMoudle.isMark) {\n            //这里版本号是不同步的 我勒个槽啊，注册的moduleid也是不同的，不过内容是一样的，我们来替换一下这里的版本号\n            dynamicScript.push('<script src=\"http://test.sina.com.cn/js/' + dynamicMoudle.fileName + '\"></script>');\n        }\n    }\n\n    // console.log(store.getState());\n    // console.log(html);\n    // yield this.render('index',{data:{\n    //     text:'<span>hello world</span>',\n    //     num:1\n    // }});\n    this.body = `\n        <!DOCTYPE html>\n            <html>\n                <head>\n                    <meta charset=\"utf-8\">\n                    <title>TODO</title>\n                    <link href=\"http://test.sina.com.cn/css/index.css\" rel=\"stylesheet\">\n                    <script>\n                        __initState__ = ${JSON.stringify(store.getState())};\n                    </script>\n                </head>\n                <body>\n                    <div id=\"root\">${html}</div>\n                    <script>\n                        // 添加这个click事件，进行测试，是否body上的节点进行渲染了2次。 实际证明上述节点并没有渲染2次。\n                        // 但是react的生命周期走了两次，一次是在服务器端，一次是在浏览器端，节点还能响应点击事件，证明react进行了vdom节点的比较对，发现没有不一致，所以不进行实际dom的渲染操作。\n                        document.querySelector('p').addEventListener('click',function(){\n                            console.log('click...');\n                        },false);\n                    </script>\n                    <script src=\"http://test.sina.com.cn/js/manifest.js\"></script>\n                    <script src=\"http://test.sina.com.cn/js/vendor.js\"></script>\n                    <!-- \n                    <script src=\"http://test.sina.com.cn/js/dynamic-chunk-697ebf.js\"></script>\n                    -->\n                    ${dynamicScript.join('')}\n                    <script src=\"http://test.sina.com.cn/js/index.js\"></script>\n                </body>\n            </html>\n    `;\n    yield next;\n});\nrouter.get('/api/info', function* (next) {\n    this.body = JSON.stringify({\n        'code': 200,\n        'data': 'hello jilong5!'\n    });\n    yield next;\n});\n\napp.use(router.routes());\napp.use(router.allowedMethods());\n\n//提前保证加载完毕异步modules\n_preLoadModule2.default.then(function (data) {\n    modules = data;\n    //要是将这里的内容\n    app.listen(80, () => {\n        console.log('server start on: http://localhost:80');\n    });\n}, function () {});"
+      "source": "'use strict';\n\nvar _React = require('React');\n\nvar _React2 = _interopRequireDefault(_React);\n\nvar _reactRedux = require('react-redux');\n\nvar _index = require('../client/js/mods/ui/testapp/index');\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _store = require('../client/js/mods/data/store');\n\nvar _store2 = _interopRequireDefault(_store);\n\nvar _action = require('../client/js/mods/data/action');\n\nvar _preLoadModule = require('./pre-load-module');\n\nvar _preLoadModule2 = _interopRequireDefault(_preLoadModule);\n\nvar _fn = require('../client/js/mods/ui/dynamic/fn');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst logger = require('koa-logger');\nconst koa = require('koa');\nconst app = koa();\nconst router = require('koa-router')();\nconst serve = require('koa-static');\nconst path = require('path');\nconst render = require('koa-ejs');\nconst ReactDOMServer = require('react-dom/server');\n\n\n// import(/* webpackChunkName: \"dynamic\" */'../client/js/mods/ui/testapp/dynamic.jsx').then(function(){\n//     console.log('sss');\n// });\n// import(/*webpackChunkName: \"dynamic\"*/'./demo.js').then(function(){\n\n// });\n\n//中间件配置位置\napp.use(logger());\n//ejs配置\n// render(app, {\n//     root: path.join(__dirname, 'static','assets'),\n//     layout: false,\n//     viewExt: 'html',\n//     cache: false,\n//     debug: true,\n//     open:'{{',\n//     close:'}}'\n// });\napp.use(serve(path.resolve(__dirname, '..', 'static')));\nlet modules = [];\n// app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));\nrouter.get('/', function* (next) {\n\n    let __modules = modules.map(item => {\n        let __item = {\n            key: item.key,\n            module: item.module,\n            fileName: item.fileName,\n            isMark: false,\n            marked: function () {\n                this.isMark = true;\n            }\n        };\n        return __item;\n    });\n    // 异步模块\n    console.log(__modules);\n\n    // console.log('get req!');\n    let store = (0, _store2.default)({ info: { title: 'hello world!' } });\n    //想要在redux-thunk中完全的同构，需要进行在action中，return promise\n    yield store.dispatch((0, _action.getInfo)('haha'));\n    console.log(store.getState());\n    //redux 异步同构\n\n    //这里是一个同步操作啊 这里可以进行可以将异步模块注入到dynamic模块中，然后进行渲染标记。之后直出要加载的script标签。\n    (0, _fn.initDynamicModule)(__modules);\n    let html = ReactDOMServer.renderToString(_React2.default.createElement(\n        _reactRedux.Provider,\n        { store: store },\n        _React2.default.createElement(_index2.default, null)\n    ));\n    //TODO: 判定出来 具体哪个异步模块被使用到了，之后给他的script内容动态插入到页面内，从而实现，整体静态直出。 \n    let dynamicScript = [];\n    for (let dynamicMoudle of __modules) {\n        if (dynamicMoudle.isMark) {\n            //这里版本号是不同步的 我勒个槽啊，注册的moduleid也是不同的，不过内容是一样的，我们来替换一下这里的版本号\n            dynamicScript.push('<script src=\"http://test.sina.com.cn/js/' + dynamicMoudle.fileName + '\"></script>');\n        }\n    }\n\n    // console.log(store.getState());\n    // console.log(html);\n    // yield this.render('index',{data:{\n    //     text:'<span>hello world</span>',\n    //     num:1\n    // }});\n    this.body = `\n        <!DOCTYPE html>\n            <html>\n                <head>\n                    <meta charset=\"utf-8\">\n                    <title>TODO</title>\n                    <link href=\"http://test.sina.com.cn/css/index.css\" rel=\"stylesheet\">\n                    <script>\n                        __initState__ = ${JSON.stringify(store.getState())};\n                    </script>\n                </head>\n                <body>\n                    <div id=\"root\">${html}</div>\n                    <script>\n                        // 添加这个click事件，进行测试，是否body上的节点进行渲染了2次。 实际证明上述节点并没有渲染2次。\n                        // 但是react的生命周期走了两次，一次是在服务器端，一次是在浏览器端，节点还能响应点击事件，证明react进行了vdom节点的比较对，发现没有不一致，所以不进行实际dom的渲染操作。\n                        document.querySelector('p').addEventListener('click',function(){\n                            console.log('click...');\n                        },false);\n                    </script>\n                    <script src=\"http://test.sina.com.cn/js/manifest.js\"></script>\n                    <script src=\"http://test.sina.com.cn/js/vendor.js\"></script>\n                    <!-- \n                    <script src=\"http://test.sina.com.cn/js/dynamic-chunk-697ebf.js\"></script>\n                    -->\n                    ${dynamicScript.join('')}\n                    <script src=\"http://test.sina.com.cn/js/index.js\"></script>\n                </body>\n            </html>\n    `;\n    yield next;\n});\nrouter.get('/api/info', function* (next) {\n    this.body = JSON.stringify({\n        'code': 200,\n        'data': 'hello jilong5!'\n    });\n    yield next;\n});\n\napp.use(router.routes());\napp.use(router.allowedMethods());\n\n//提前保证加载完毕异步modules\n_preLoadModule2.default.then(function (data) {\n    // modules = data;\n    // //要是将这里的内容\n    // app.listen(80, () => {\n    //     console.log('server start on: http://localhost:80');\n    // });\n}, function () {});"
     },
     {
       "id": 9,
@@ -2286,8 +2428,8 @@ Webpack is watching the files…
       "issuerId": 8,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 581,
-        "building": 429
+        "factory": 608,
+        "building": 25
       },
       "failed": false,
       "errors": 0,
@@ -2328,8 +2470,8 @@ Webpack is watching the files…
       "issuerId": 9,
       "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/index.js",
       "profile": {
-        "factory": 21,
-        "building": 32
+        "factory": 37,
+        "building": 442
       },
       "failed": false,
       "errors": 0,
@@ -2370,8 +2512,8 @@ Webpack is watching the files…
       "issuerId": 9,
       "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/index.js",
       "profile": {
-        "factory": 21,
-        "building": 80,
+        "factory": 37,
+        "building": 469,
         "dependencies": 1
       },
       "failed": false,
@@ -2454,8 +2596,8 @@ Webpack is watching the files…
       "issuerId": 11,
       "issuerName": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/React/cjs/react.development.js",
       "profile": {
-        "factory": 0,
-        "building": 1
+        "factory": 1,
+        "building": 0
       },
       "failed": false,
       "errors": 0,
@@ -2522,8 +2664,8 @@ Webpack is watching the files…
       "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
       "name": "../client/js/mods/ui/testapp/index.jsx",
       "index": 11,
-      "index2": 19,
-      "size": 6690,
+      "index2": 22,
+      "size": 8607,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -2536,9 +2678,9 @@ Webpack is watching the files…
       "issuerId": 8,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 63,
-        "building": 349,
-        "dependencies": 17
+        "factory": 54,
+        "building": 525,
+        "dependencies": 7
       },
       "failed": false,
       "errors": 0,
@@ -2558,7 +2700,7 @@ Webpack is watching the files…
       "providedExports": null,
       "optimizationBailout": [],
       "depth": 1,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _button = require('antd/lib/button');\n\nvar _button2 = _interopRequireDefault(_button);\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRedux = require('react-redux');\n\nvar _action = require('../../data/action');\n\nrequire('./test.scss');\n\nvar _testimg = require('../../../../img/testimg.jpg');\n\nvar testimg = _interopRequireWildcard(_testimg);\n\nvar _fn = require('../dynamic/fn');\n\nvar _fn2 = _interopRequireDefault(_fn);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n// import Dynmaic from '../dynamic';\n\n\n// syntax-dynamic-import 采用babel的这个组件来启动 动态import\n// import('./dynamic.js').then((dynamic) => {\n//     // 采用动态import方式构建 异步路由\n//     console.log(dynamic.default);\n// });\n\n\nvar App = function (_Component) {\n    _inherits(App, _Component);\n\n    //添加生命周期测试\n    /**\n     * 初始化构造器\n     * @param {*} props \n     */\n    function App(props) {\n        _classCallCheck(this, App);\n\n        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));\n\n        console.log('constructor');\n        return _this;\n    }\n    /**\n     * 将要开始挂在\n     */\n\n\n    _createClass(App, [{\n        key: 'componentWillMount',\n        value: function componentWillMount() {\n            console.log('componentWillMount');\n            var getInfo = this.props.getInfo;\n\n            getInfo('hello');\n        }\n        /**\n         * 获取将要变更的props 与 store\n         */\n\n    }, {\n        key: 'componentWillReceiveProps',\n        value: function componentWillReceiveProps() {\n            console.log('componentWillReceiveProps');\n        }\n\n        /**\n         * 组件是否要变更，走渲染逻辑（渲染前，回进行dom比对）\n         */\n\n    }, {\n        key: 'shouldComponentUpdate',\n        value: function shouldComponentUpdate() {\n            console.log('shouldComponentUpdate');\n            return true;\n        }\n\n        /**\n         * 渲染进行中\n         */\n\n    }, {\n        key: 'render',\n        value: function render() {\n            var title = this.props.title;\n\n            var Demo = (0, _fn2.default)(import( /* webpackChunkName: \"dynamic\" */'./dynamic.jsx'), 'dynamic');\n            var HelloWorld = (0, _fn2.default)(import( /* webpackChunkName:\"other\"*/'./other.jsx'), 'other');\n            return _react2.default.createElement(\n                'div',\n                null,\n                _react2.default.createElement(\n                    'p',\n                    null,\n                    title\n                ),\n                _react2.default.createElement(\n                    'p',\n                    null,\n                    'hehe!2'\n                ),\n                _react2.default.createElement(\n                    _button2.default,\n                    { type: 'primary' },\n                    'hello jilong5!'\n                ),\n                _react2.default.createElement('img', { src: testimg.default, alt: '' }),\n                _react2.default.createElement('div', { className: 'demomao helloworld' }),\n                _react2.default.createElement(Demo, null),\n                _react2.default.createElement(HelloWorld, null)\n            );\n        }\n        /**\n         * 组件更新完毕\n         */\n\n    }, {\n        key: 'componentDidUpdate',\n        value: function componentDidUpdate() {\n            console.log('componentDidUpdate');\n        }\n\n        /**\n         * 挂载完毕\n         */\n\n    }, {\n        key: 'componentDidMount',\n        value: function componentDidMount() {\n            console.log('componentDidMount');\n        }\n    }]);\n\n    return App;\n}(_react.Component);\n\nfunction mapStateToProps(state) {\n    return {\n        title: state.info.title\n    };\n}\nfunction mapDispatchToProps(dispatch) {\n    return {\n        getInfo: function getInfo() {\n            for (var _len = arguments.length, rest = Array(_len), _key = 0; _key < _len; _key++) {\n                rest[_key] = arguments[_key];\n            }\n\n            dispatch((0, _action.getInfo)(rest));\n        }\n    };\n}\n\nvar _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);\n\nexports.default = _default;\n;\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(App, 'App', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n}();\n\n;"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _button = require('antd/lib/button');\n\nvar _button2 = _interopRequireDefault(_button);\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRedux = require('react-redux');\n\nvar _action = require('../../data/action');\n\nrequire('./test.scss');\n\nvar _testimg = require('../../../../img/testimg.jpg');\n\nvar testimg = _interopRequireWildcard(_testimg);\n\nvar _fn = require('../dynamic/fn');\n\nvar _fn2 = _interopRequireDefault(_fn);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n// import Dynmaic from '../dynamic';\n\n\n// syntax-dynamic-import 采用babel的这个组件来启动 动态import\n// import('./dynamic.js').then((dynamic) => {\n//     // 采用动态import方式构建 异步路由\n//     console.log(dynamic.default);\n// });\n\n\nvar App = function (_Component) {\n    _inherits(App, _Component);\n\n    //添加生命周期测试\n    /**\n     * 初始化构造器\n     * @param {*} props \n     */\n    function App(props) {\n        _classCallCheck(this, App);\n\n        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));\n\n        console.log('constructor');\n        return _this;\n    }\n    /**\n     * 将要开始挂在\n     */\n\n\n    _createClass(App, [{\n        key: 'componentWillMount',\n        value: function componentWillMount() {\n            console.log('componentWillMount');\n            var getInfo = this.props.getInfo;\n\n            getInfo('hello');\n        }\n        /**\n         * 获取将要变更的props 与 store\n         */\n\n    }, {\n        key: 'componentWillReceiveProps',\n        value: function componentWillReceiveProps() {\n            console.log('componentWillReceiveProps');\n        }\n\n        /**\n         * 组件是否要变更，走渲染逻辑（渲染前，回进行dom比对）\n         */\n\n    }, {\n        key: 'shouldComponentUpdate',\n        value: function shouldComponentUpdate() {\n            console.log('shouldComponentUpdate');\n            return true;\n        }\n\n        /**\n         * 渲染进行中\n         */\n\n    }, {\n        key: 'render',\n        value: function render() {\n            var title = this.props.title;\n\n            var Demo = (0, _fn2.default)(new Promise(function (resolve) {\n                require.ensure([], function (require) {\n                    var m = require( /* webpackChunkName: \"dynamic\" */'./dynamic.jsx');\n\n                    m = m.default || m;\n                    m.chunkName = 'dynamic';\n                    m.sourceFilePath = '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx';\n                    resolve(m);\n                }, 'dynamic');\n            }), 'dynamic');\n            var Demo2 = (0, _fn2.default)(new Promise(function (resolve) {\n                require.ensure([], function (require) {\n                    var m = require( /* webpackChunkName: \"dynamic\" */'../testDynamic/dynamic.jsx');\n\n                    m = m.default || m;\n                    m.chunkName = 'dynamic';\n                    m.sourceFilePath = '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testDynamic/dynamic.jsx';\n                    resolve(m);\n                }, 'dynamic');\n            }), 'dynamic');\n            var Testjsx = (0, _fn2.default)(new Promise(function (resolve) {\n                require.ensure([], function (require) {\n                    var m = require( /* webpackChunkName: \"dynamic\" */'./test.jsx');\n\n                    m = m.default || m;\n                    m.chunkName = 'dynamic';\n                    m.sourceFilePath = '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/test.jsx';\n                    resolve(m);\n                }, 'dynamic');\n            }), 'dynamic');\n            var HelloWorld = (0, _fn2.default)(new Promise(function (resolve) {\n                require.ensure([], function (require) {\n                    var m = require( /* webpackChunkName:\"other\"*/'./other.jsx');\n\n                    m = m.default || m;\n                    m.chunkName = 'other';\n                    m.sourceFilePath = '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/other.jsx';\n                    resolve(m);\n                }, 'other');\n            }), 'other');\n            return _react2.default.createElement(\n                'div',\n                null,\n                _react2.default.createElement(\n                    'p',\n                    null,\n                    title\n                ),\n                _react2.default.createElement(\n                    'p',\n                    null,\n                    'hehe!2'\n                ),\n                _react2.default.createElement(\n                    _button2.default,\n                    { type: 'primary' },\n                    'hello jilong5!'\n                ),\n                _react2.default.createElement('img', { src: testimg.default, alt: '' }),\n                _react2.default.createElement('div', { className: 'demomao helloworld' }),\n                _react2.default.createElement(Demo, null),\n                _react2.default.createElement(HelloWorld, null)\n            );\n        }\n        /**\n         * 组件更新完毕\n         */\n\n    }, {\n        key: 'componentDidUpdate',\n        value: function componentDidUpdate() {\n            console.log('componentDidUpdate');\n        }\n\n        /**\n         * 挂载完毕\n         */\n\n    }, {\n        key: 'componentDidMount',\n        value: function componentDidMount() {\n            console.log('componentDidMount');\n        }\n    }]);\n\n    return App;\n}(_react.Component);\n\nfunction mapStateToProps(state) {\n    return {\n        title: state.info.title\n    };\n}\nfunction mapDispatchToProps(dispatch) {\n    return {\n        getInfo: function getInfo() {\n            for (var _len = arguments.length, rest = Array(_len), _key = 0; _key < _len; _key++) {\n                rest[_key] = arguments[_key];\n            }\n\n            dispatch((0, _action.getInfo)(rest));\n        }\n    };\n}\n\nvar _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);\n\nexports.default = _default;\n;\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(App, 'App', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n\n    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx');\n}();\n\n;"
     },
     {
       "id": 16,
@@ -2579,7 +2721,7 @@ Webpack is watching the files…
       "issuerId": 15,
       "issuerName": "../client/js/mods/ui/testapp/index.jsx",
       "profile": {
-        "factory": 0,
+        "factory": 1,
         "building": 0
       },
       "failed": false,
@@ -2621,7 +2763,7 @@ Webpack is watching the files…
       "issuerName": "../client/js/mods/data/action.js",
       "profile": {
         "factory": 0,
-        "building": 0
+        "building": 1
       },
       "failed": false,
       "errors": 0,
@@ -2661,8 +2803,8 @@ Webpack is watching the files…
       "issuerId": 15,
       "issuerName": "../client/js/mods/ui/testapp/index.jsx",
       "profile": {
-        "factory": 171,
-        "building": 447
+        "factory": 91,
+        "building": 426
       },
       "failed": false,
       "errors": 0,
@@ -2703,8 +2845,8 @@ Webpack is watching the files…
       "issuerId": 15,
       "issuerName": "../client/js/mods/ui/testapp/index.jsx",
       "profile": {
-        "factory": 620,
-        "building": 10
+        "factory": 563,
+        "building": 11
       },
       "failed": false,
       "errors": 0,
@@ -2730,8 +2872,8 @@ Webpack is watching the files…
       "id": 20,
       "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/data/store.js",
       "name": "../client/js/mods/data/store.js",
-      "index": 21,
-      "index2": 23,
+      "index": 24,
+      "index2": 26,
       "size": 1107,
       "cacheable": true,
       "built": true,
@@ -2745,8 +2887,8 @@ Webpack is watching the files…
       "issuerId": 8,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 13,
-        "building": 271
+        "factory": 17,
+        "building": 267
       },
       "failed": false,
       "errors": 0,
@@ -2772,8 +2914,8 @@ Webpack is watching the files…
       "id": 21,
       "identifier": "external \"redux-thunk\"",
       "name": "external \"redux-thunk\"",
-      "index": 22,
-      "index2": 20,
+      "index": 25,
+      "index2": 23,
       "size": 42,
       "cacheable": false,
       "built": false,
@@ -2788,7 +2930,7 @@ Webpack is watching the files…
       "issuerName": "../client/js/mods/data/store.js",
       "profile": {
         "factory": 0,
-        "building": 0
+        "building": 1
       },
       "failed": false,
       "errors": 0,
@@ -2813,8 +2955,8 @@ Webpack is watching the files…
       "id": 22,
       "identifier": "external \"redux\"",
       "name": "external \"redux\"",
-      "index": 23,
-      "index2": 21,
+      "index": 26,
+      "index2": 24,
       "size": 42,
       "cacheable": false,
       "built": false,
@@ -2828,7 +2970,7 @@ Webpack is watching the files…
       "issuerId": 20,
       "issuerName": "../client/js/mods/data/store.js",
       "profile": {
-        "factory": 0,
+        "factory": 1,
         "building": 0
       },
       "failed": false,
@@ -2854,8 +2996,8 @@ Webpack is watching the files…
       "id": 23,
       "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/data/reducers.js",
       "name": "../client/js/mods/data/reducers.js",
-      "index": 24,
-      "index2": 22,
+      "index": 27,
+      "index2": 25,
       "size": 646,
       "cacheable": true,
       "built": true,
@@ -2869,8 +3011,8 @@ Webpack is watching the files…
       "issuerId": 20,
       "issuerName": "../client/js/mods/data/store.js",
       "profile": {
-        "factory": 3,
-        "building": 256
+        "factory": 2,
+        "building": 320
       },
       "failed": false,
       "errors": 0,
@@ -2896,9 +3038,9 @@ Webpack is watching the files…
       "id": 24,
       "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/pre-load-module.js",
       "name": "./pre-load-module.js",
-      "index": 25,
-      "index2": 30,
-      "size": 2303,
+      "index": 28,
+      "index2": 33,
+      "size": 2546,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -2911,8 +3053,8 @@ Webpack is watching the files…
       "issuerId": 8,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 10,
-        "building": 51,
+        "factory": 13,
+        "building": 38,
         "dependencies": 1
       },
       "failed": false,
@@ -2933,14 +3075,14 @@ Webpack is watching the files…
       "providedExports": null,
       "optimizationBailout": [],
       "depth": 1,
-      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _co = require('co');\n\nvar _co2 = _interopRequireDefault(_co);\n\nvar _fs = require('fs');\n\nvar _fs2 = _interopRequireDefault(_fs);\n\nvar _thunkify = require('thunkify');\n\nvar _thunkify2 = _interopRequireDefault(_thunkify);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _vm = require('vm');\n\nvar _vm2 = _interopRequireDefault(_vm);\n\nvar _util = require('util');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// import('./demo');\n// console.log(__webpack_require__(35));\n// 可以通过 采用webpack的内置方法，进行操作\nexports.default = (0, _co2.default)(function* () {\n    let feFiles = yield (0, _thunkify2.default)(_fs2.default.readdir)(_path2.default.resolve(__dirname, '../static/js'));\n    let files = yield (0, _thunkify2.default)(_fs2.default.readdir)(_path2.default.resolve(__dirname, 'js'));\n    let modulesNameReg = /^(.*)-chunk-[a-f0-9]{6}\\.js$/;\n    //获取异步加载模块的id\n    let eIdReg = /exports.ids\\s=\\s\\[(\\d+)\\]/;\n    //模块的id\n    let moduleId = /\\/\\*\\*\\*\\/\\s+(\\d+):/;\n    let moduleList = [];\n    for (let fileName of files) {\n        let __feFileName;\n        let result = modulesNameReg.exec(fileName);\n        if (!result) {\n            continue;\n        }\n        for (let feFileName of feFiles) {\n            let feResult = modulesNameReg.exec(feFileName);\n            if (feResult && feResult[1] === result[1]) {\n                __feFileName = feFileName;\n            }\n        }\n\n        let codeContent = yield (0, _thunkify2.default)(_fs2.default.readFile)('js/' + fileName, 'utf-8');\n        // console.log(codeContent);\n        let listContent = codeContent.split(/\\n/);\n        //chunkId\n        let chunkId = eIdReg.exec(listContent[0])[1];\n        //chunkId中的moduleId\n        let __moduleId = moduleId.exec(listContent[3])[1];\n        //利用webpack的内部方法__webpack_require__ 将依赖进行提前加载\n        let __module = yield __webpack_require__.e(chunkId).then(__webpack_require__.bind(null, __moduleId));\n        //将该模块放入到代理list中，进行按需替换到对应的class中\n        // put(result[1],__module);\n        moduleList.push({\n            key: result[1],\n            module: __module,\n            fileName: __feFileName\n        });\n    }\n    return moduleList;\n});"
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _co = require('co');\n\nvar _co2 = _interopRequireDefault(_co);\n\nvar _fs = require('fs');\n\nvar _fs2 = _interopRequireDefault(_fs);\n\nvar _thunkify = require('thunkify');\n\nvar _thunkify2 = _interopRequireDefault(_thunkify);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _vm = require('vm');\n\nvar _vm2 = _interopRequireDefault(_vm);\n\nvar _util = require('util');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = (0, _co2.default)(function* () {\n    let serverBundle = yield (0, _thunkify2.default)(_fs2.default.readFile)(_path2.default.resolve(__dirname, '../server-dynamic-bundle.json'));\n    console.log(serverBundle);\n});\n// import('./demo');\n// console.log(__webpack_require__(35));\n// 可以通过 采用webpack的内置方法，进行操作\n// export default co(function *(){\n//     let feFiles = yield thunkify(fs.readdir)(path.resolve(__dirname,'../static/js'));\n//     let files = yield thunkify(fs.readdir)(path.resolve(__dirname,'js'));\n//     let modulesNameReg = /^(.*)-chunk-[a-f0-9]{6}\\.js$/;\n//     //获取异步加载模块的id\n//     let eIdReg = /exports.ids\\s=\\s\\[(\\d+)\\]/;\n//     //模块的id\n//     let moduleId = /\\/\\*\\*\\*\\/\\s+(\\d+):/;\n//     let moduleList = [];\n//     for(let fileName of files){\n//         let __feFileName;\n//         let result = modulesNameReg.exec(fileName);\n//         if (!result) {\n//             continue;\n//         }\n//         for (let feFileName of feFiles){\n//             let feResult = modulesNameReg.exec(feFileName);\n//             if (feResult && feResult[1] === result[1]){\n//                 __feFileName = feFileName;\n//             }\n//         }\n\n//         let codeContent = yield thunkify(fs.readFile)('js/' + fileName,'utf-8');\n//         // console.log(codeContent);\n//         let listContent = codeContent.split(/\\n/);\n//         //chunkId\n//         let chunkId = eIdReg.exec(listContent[0])[1];\n//         //chunkId中的moduleId\n//         let __moduleId = moduleId.exec(listContent[3])[1];\n//         //利用webpack的内部方法__webpack_require__ 将依赖进行提前加载\n//         let __module = yield __webpack_require__.e(chunkId).then(__webpack_require__.bind(null, __moduleId));\n//         //将该模块放入到代理list中，进行按需替换到对应的class中\n//         // put(result[1],__module);\n//         moduleList.push({\n//             key: result[1],\n//             module: __module,\n//             fileName: __feFileName            \n//         });\n//     }\n//     return moduleList;\n\n// });"
     },
     {
       "id": 25,
       "identifier": "external \"co\"",
       "name": "external \"co\"",
-      "index": 26,
-      "index2": 24,
+      "index": 29,
+      "index2": 27,
       "size": 42,
       "cacheable": false,
       "built": false,
@@ -2980,8 +3122,8 @@ Webpack is watching the files…
       "id": 26,
       "identifier": "external \"fs\"",
       "name": "external \"fs\"",
-      "index": 27,
-      "index2": 25,
+      "index": 30,
+      "index2": 28,
       "size": 42,
       "cacheable": false,
       "built": false,
@@ -3021,8 +3163,8 @@ Webpack is watching the files…
       "id": 27,
       "identifier": "external \"thunkify\"",
       "name": "external \"thunkify\"",
-      "index": 28,
-      "index2": 26,
+      "index": 31,
+      "index2": 29,
       "size": 42,
       "cacheable": false,
       "built": false,
@@ -3037,7 +3179,7 @@ Webpack is watching the files…
       "issuerName": "./pre-load-module.js",
       "profile": {
         "factory": 0,
-        "building": 0
+        "building": 1
       },
       "failed": false,
       "errors": 0,
@@ -3062,8 +3204,8 @@ Webpack is watching the files…
       "id": 28,
       "identifier": "external \"vm\"",
       "name": "external \"vm\"",
-      "index": 30,
-      "index2": 28,
+      "index": 33,
+      "index2": 31,
       "size": 42,
       "cacheable": false,
       "built": false,
@@ -3103,8 +3245,8 @@ Webpack is watching the files…
       "id": 29,
       "identifier": "external \"util\"",
       "name": "external \"util\"",
-      "index": 31,
-      "index2": 29,
+      "index": 34,
+      "index2": 32,
       "size": 42,
       "cacheable": false,
       "built": false,
@@ -3144,129 +3286,6 @@ Webpack is watching the files…
       "id": 30,
       "identifier": "external \"koa-logger\"",
       "name": "external \"koa-logger\"",
-      "index": 32,
-      "index2": 31,
-      "size": 42,
-      "cacheable": false,
-      "built": false,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        2
-      ],
-      "assets": [],
-      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-      "issuerId": 8,
-      "issuerName": "./index.js",
-      "profile": {
-        "factory": 4,
-        "building": 1
-      },
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "reasons": [
-        {
-          "moduleId": 8,
-          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-          "module": "./index.js",
-          "moduleName": "./index.js",
-          "type": "cjs require",
-          "userRequest": "koa-logger",
-          "loc": "27:15-36"
-        }
-      ],
-      "usedExports": true,
-      "providedExports": null,
-      "optimizationBailout": [],
-      "depth": 1
-    },
-    {
-      "id": 31,
-      "identifier": "external \"koa\"",
-      "name": "external \"koa\"",
-      "index": 33,
-      "index2": 32,
-      "size": 42,
-      "cacheable": false,
-      "built": false,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        2
-      ],
-      "assets": [],
-      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-      "issuerId": 8,
-      "issuerName": "./index.js",
-      "profile": {
-        "factory": 5,
-        "building": 0
-      },
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "reasons": [
-        {
-          "moduleId": 8,
-          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-          "module": "./index.js",
-          "moduleName": "./index.js",
-          "type": "cjs require",
-          "userRequest": "koa",
-          "loc": "28:12-26"
-        }
-      ],
-      "usedExports": true,
-      "providedExports": null,
-      "optimizationBailout": [],
-      "depth": 1
-    },
-    {
-      "id": 32,
-      "identifier": "external \"koa-router\"",
-      "name": "external \"koa-router\"",
-      "index": 34,
-      "index2": 33,
-      "size": 42,
-      "cacheable": false,
-      "built": false,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        2
-      ],
-      "assets": [],
-      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-      "issuerId": 8,
-      "issuerName": "./index.js",
-      "profile": {
-        "factory": 5,
-        "building": 0
-      },
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "reasons": [
-        {
-          "moduleId": 8,
-          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
-          "module": "./index.js",
-          "moduleName": "./index.js",
-          "type": "cjs require",
-          "userRequest": "koa-router",
-          "loc": "30:15-36"
-        }
-      ],
-      "usedExports": true,
-      "providedExports": null,
-      "optimizationBailout": [],
-      "depth": 1
-    },
-    {
-      "id": 33,
-      "identifier": "external \"koa-static\"",
-      "name": "external \"koa-static\"",
       "index": 35,
       "index2": 34,
       "size": 42,
@@ -3295,6 +3314,129 @@ Webpack is watching the files…
           "module": "./index.js",
           "moduleName": "./index.js",
           "type": "cjs require",
+          "userRequest": "koa-logger",
+          "loc": "27:15-36"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1
+    },
+    {
+      "id": 31,
+      "identifier": "external \"koa\"",
+      "name": "external \"koa\"",
+      "index": 36,
+      "index2": 35,
+      "size": 42,
+      "cacheable": false,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "assets": [],
+      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+      "issuerId": 8,
+      "issuerName": "./index.js",
+      "profile": {
+        "factory": 5,
+        "building": 1
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 8,
+          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+          "module": "./index.js",
+          "moduleName": "./index.js",
+          "type": "cjs require",
+          "userRequest": "koa",
+          "loc": "28:12-26"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1
+    },
+    {
+      "id": 32,
+      "identifier": "external \"koa-router\"",
+      "name": "external \"koa-router\"",
+      "index": 37,
+      "index2": 36,
+      "size": 42,
+      "cacheable": false,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "assets": [],
+      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+      "issuerId": 8,
+      "issuerName": "./index.js",
+      "profile": {
+        "factory": 6,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 8,
+          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+          "module": "./index.js",
+          "moduleName": "./index.js",
+          "type": "cjs require",
+          "userRequest": "koa-router",
+          "loc": "30:15-36"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1
+    },
+    {
+      "id": 33,
+      "identifier": "external \"koa-static\"",
+      "name": "external \"koa-static\"",
+      "index": 38,
+      "index2": 37,
+      "size": 42,
+      "cacheable": false,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "assets": [],
+      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+      "issuerId": 8,
+      "issuerName": "./index.js",
+      "profile": {
+        "factory": 6,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 8,
+          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/server/index.js",
+          "module": "./index.js",
+          "moduleName": "./index.js",
+          "type": "cjs require",
           "userRequest": "koa-static",
           "loc": "31:14-35"
         }
@@ -3308,8 +3450,8 @@ Webpack is watching the files…
       "id": 34,
       "identifier": "external \"koa-ejs\"",
       "name": "external \"koa-ejs\"",
-      "index": 36,
-      "index2": 35,
+      "index": 39,
+      "index2": 38,
       "size": 42,
       "cacheable": false,
       "built": false,
@@ -3349,8 +3491,8 @@ Webpack is watching the files…
       "id": 35,
       "identifier": "external \"react-dom/server\"",
       "name": "external \"react-dom/server\"",
-      "index": 37,
-      "index2": 36,
+      "index": 40,
+      "index2": 39,
       "size": 42,
       "cacheable": false,
       "built": false,
@@ -3364,7 +3506,7 @@ Webpack is watching the files…
       "issuerId": 8,
       "issuerName": "./index.js",
       "profile": {
-        "factory": 6,
+        "factory": 7,
         "building": 0
       },
       "failed": false,
@@ -3391,51 +3533,8 @@ Webpack is watching the files…
       "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx",
       "name": "../client/js/mods/ui/testapp/dynamic.jsx",
       "index": 19,
-      "index2": 17,
-      "size": 912,
-      "cacheable": true,
-      "built": true,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        1
-      ],
-      "assets": [],
-      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
-      "issuerId": 15,
-      "issuerName": "../client/js/mods/ui/testapp/index.jsx",
-      "profile": {
-        "factory": 107,
-        "building": 61,
-        "dependencies": 0
-      },
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "reasons": [
-        {
-          "moduleId": 15,
-          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
-          "module": "../client/js/mods/ui/testapp/index.jsx",
-          "moduleName": "../client/js/mods/ui/testapp/index.jsx",
-          "type": "import()",
-          "userRequest": "./dynamic.jsx",
-          "loc": "109:41-98"
-        }
-      ],
-      "usedExports": true,
-      "providedExports": null,
-      "optimizationBailout": [],
-      "depth": 2,
-      "source": "'use strict';\n// export default function say(){\n//     return 'hello world';\n// }\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.default = Wtf;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// export default class Wtf extends PureComponent{\n//     render(){\n//         return (\n//             <div>\n//                 wtf!!!!!!\n//             </div>\n//         );\n//     }\n// }\nfunction Wtf() {\n    return _react2.default.createElement(\n        'div',\n        null,\n        'wtf!!!!'\n    );\n};\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(Wtf, 'Wtf', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx');\n}();\n\n;"
-    },
-    {
-      "id": 37,
-      "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/other.jsx",
-      "name": "../client/js/mods/ui/testapp/other.jsx",
-      "index": 20,
       "index2": 18,
-      "size": 927,
+      "size": 950,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -3448,8 +3547,8 @@ Webpack is watching the files…
       "issuerId": 15,
       "issuerName": "../client/js/mods/ui/testapp/index.jsx",
       "profile": {
-        "factory": 108,
-        "building": 39,
+        "factory": 30,
+        "building": 23,
         "dependencies": 0
       },
       "failed": false,
@@ -3461,9 +3560,136 @@ Webpack is watching the files…
           "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
           "module": "../client/js/mods/ui/testapp/index.jsx",
           "moduleName": "../client/js/mods/ui/testapp/index.jsx",
-          "type": "import()",
+          "type": "cjs require",
+          "userRequest": "./dynamic.jsx",
+          "loc": "111:28-86"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "'use strict';\n// export default function say(){\n//     return 'hello world';\n// }\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.default = Wtf;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _demo = require('./demo2.jsx');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// export default class Wtf extends PureComponent{\n//     render(){\n//         return (\n//             <div>\n//                 wtf!!!!!!\n//             </div>\n//         );\n//     }\n// }\nfunction Wtf() {\n    return _react2.default.createElement(\n        'div',\n        null,\n        'wtf!!!!'\n    );\n}\n;\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(Wtf, 'Wtf', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx');\n}();\n\n;"
+    },
+    {
+      "id": 37,
+      "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testDynamic/dynamic.jsx",
+      "name": "../client/js/mods/ui/testDynamic/dynamic.jsx",
+      "index": 21,
+      "index2": 19,
+      "size": 171,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+      "issuerId": 15,
+      "issuerName": "../client/js/mods/ui/testapp/index.jsx",
+      "profile": {
+        "factory": 33,
+        "building": 56
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 15,
+          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "module": "../client/js/mods/ui/testapp/index.jsx",
+          "moduleName": "../client/js/mods/ui/testapp/index.jsx",
+          "type": "cjs require",
+          "userRequest": "../testDynamic/dynamic.jsx",
+          "loc": "121:28-99"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "'use strict';\n\nconsole.log('hello this is test dynamic module!');\n;\n\nvar _temp = function () {\n  if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n    return;\n  }\n}();\n\n;"
+    },
+    {
+      "id": 38,
+      "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/test.jsx",
+      "name": "../client/js/mods/ui/testapp/test.jsx",
+      "index": 22,
+      "index2": 20,
+      "size": 153,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+      "issuerId": 15,
+      "issuerName": "../client/js/mods/ui/testapp/index.jsx",
+      "profile": {
+        "factory": 31,
+        "building": 49
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 15,
+          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "module": "../client/js/mods/ui/testapp/index.jsx",
+          "moduleName": "../client/js/mods/ui/testapp/index.jsx",
+          "type": "cjs require",
+          "userRequest": "./test.jsx",
+          "loc": "131:28-83"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "'use strict';\n\nconsole.log('this is test.jsx');\n;\n\nvar _temp = function () {\n  if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n    return;\n  }\n}();\n\n;"
+    },
+    {
+      "id": 39,
+      "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/other.jsx",
+      "name": "../client/js/mods/ui/testapp/other.jsx",
+      "index": 23,
+      "index2": 21,
+      "size": 927,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+      "issuerId": 15,
+      "issuerName": "../client/js/mods/ui/testapp/index.jsx",
+      "profile": {
+        "factory": 32,
+        "building": 40,
+        "dependencies": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 15,
+          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/index.jsx",
+          "module": "../client/js/mods/ui/testapp/index.jsx",
+          "moduleName": "../client/js/mods/ui/testapp/index.jsx",
+          "type": "cjs require",
           "userRequest": "./other.jsx",
-          "loc": "110:47-98"
+          "loc": "141:28-80"
         }
       ],
       "usedExports": true,
@@ -3471,6 +3697,48 @@ Webpack is watching the files…
       "optimizationBailout": [],
       "depth": 2,
       "source": "'use strict';\n// export default function say(){\n//     return 'hello world';\n// }\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.default = Wtf;\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// export default class Wtf extends PureComponent{\n//     render(){\n//         return (\n//             <div>\n//                 wtf!!!!!!\n//             </div>\n//         );\n//     }\n// }\nfunction Wtf() {\n    return _react2.default.createElement(\n        'div',\n        null,\n        'hello world!!!!!xxxxxxxx'\n    );\n};\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(Wtf, 'Wtf', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/other.jsx');\n}();\n\n;"
+    },
+    {
+      "id": 40,
+      "identifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/demo2.jsx",
+      "name": "../client/js/mods/ui/testapp/demo2.jsx",
+      "index": 20,
+      "index2": 17,
+      "size": 404,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx",
+      "issuerId": 36,
+      "issuerName": "../client/js/mods/ui/testapp/dynamic.jsx",
+      "profile": {
+        "factory": 37,
+        "building": 409
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 36,
+          "moduleIdentifier": "/Users/jilong5/git-workspace/react-server-render-demo/node_modules/babel-loader/lib/index.js!/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/dynamic.jsx",
+          "module": "../client/js/mods/ui/testapp/dynamic.jsx",
+          "moduleName": "../client/js/mods/ui/testapp/dynamic.jsx",
+          "type": "cjs require",
+          "userRequest": "./demo2.jsx",
+          "loc": "15:12-34"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 3,
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.test = test;\nconsole.log('demo2');\nfunction test() {}\n;\n\nvar _temp = function () {\n    if (typeof __REACT_HOT_LOADER__ === 'undefined') {\n        return;\n    }\n\n    __REACT_HOT_LOADER__.register(test, 'test', '/Users/jilong5/git-workspace/react-server-render-demo/src/client/js/mods/ui/testapp/demo2.jsx');\n}();\n\n;"
     }
   ],
   "filteredModules": 0,

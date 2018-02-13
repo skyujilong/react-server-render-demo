@@ -3,6 +3,7 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 const webpack = require('webpack');
+const WebpackDynamicBundle = require('../../../webpack-dynamic-bundle/index');
 module.exports = {
     entry: {
         index: path.resolve(__dirname, '../server/index.js')
@@ -43,6 +44,9 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             __isomorphic__ : true
+        }),
+        new WebpackDynamicBundle({
+            filePath: path.resolve(__dirname, '../../assets/server/server-dynamic-bundle.json')
         })
     ],
     target: 'node',

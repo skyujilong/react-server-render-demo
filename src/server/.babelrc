@@ -3,13 +3,14 @@
         "react"
     ],
     "plugins": [
+        "dynamic-import-bundle",
         "transform-es2015-modules-commonjs",
         [
             "import",
             {
                 "libraryName": "antd"
             }
-        ],
-        "syntax-dynamic-import"
+        ]
+        
     ]
 }

@@ -14,6 +14,14 @@ import create from '../client/js/mods/data/store';
 import {getInfo} from '../client/js/mods/data/action';
 import preload from './pre-load-module';
 import { initDynamicModule } from '../client/js/mods/ui/dynamic/fn';
+
+// import(/* webpackChunkName: "dynamic" */'../client/js/mods/ui/testapp/dynamic.jsx').then(function(){
+//     console.log('sss');
+// });
+// import(/*webpackChunkName: "dynamic"*/'./demo.js').then(function(){
+
+// });
+
 //中间件配置位置
 app.use(logger());
 //ejs配置
@@ -33,9 +41,10 @@ router.get('/',function * (next){
     
     let __modules = modules.map((item)=>{
         let __item = {
-            key:item.key,
+            sourceFilePath: item.sourceFilePath,
             module: item.module,
-            fileName: item.fileName,
+            bundleFileOnlinePath: item.bundleFileOnlinePath,
+            // ...item,
             isMark:false,
             marked: function(){
                 this.isMark = true;
@@ -44,7 +53,7 @@ router.get('/',function * (next){
         return __item;
     });
     // 异步模块
-    console.log(__modules);
+    // console.log(__modules);
 
     // console.log('get req!');
     let store = create({ info: { title:'hello world!'}});
@@ -65,7 +74,7 @@ router.get('/',function * (next){
     for (let dynamicMoudle of __modules){
         if (dynamicMoudle.isMark){
             //这里版本号是不同步的 我勒个槽啊，注册的moduleid也是不同的，不过内容是一样的，我们来替换一下这里的版本号
-            dynamicScript.push('<script src="http://test.sina.com.cn/js/' + dynamicMoudle.fileName + '"></script>');
+            dynamicScript.push('<script src="http://test.sina.com.cn/' + dynamicMoudle.bundleFileOnlinePath + '"></script>');
         }
     }
 
@@ -118,12 +127,14 @@ router.get('/api/info',function*(next){
 
 app.use(router.routes());
 app.use(router.allowedMethods());
-
 //提前保证加载完毕异步modules
 preload.then(function(data){
+    // console.log(data);
     modules = data;
     //要是将这里的内容
     app.listen(80, () => {
         console.log('server start on: http://localhost:80');
     });
-},function(){})
+},function(e){
+    console.log(e.stack);
+})

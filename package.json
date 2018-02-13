@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "npx babel-node ./src/server/index.js",
         "build-server": "node ./node_modules/webpack/bin/webpack.js --config ./src/server-config/webpack.config.js --color --progress ",
-        "watch-server": "node ./node_modules/webpack/bin/webpack.js --config ./src/server-config/webpack.config.js --color --progress --watch --profile --json >stats.json",
+        "watch-server": "node ./node_modules/webpack/bin/webpack.js --config ./src/server-config/webpack.config.js --color --progress --watch",
         "dev-build": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./src/client-config/webpack.config.js --host test.sina.com.cn --port 80 --env.NODE_ENV=dev-server",
         "dev-hmr-build": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./src/client-config/webpack.config.js --host test.sina.com.cn --port 80 --hot --env.NODE_ENV=dev-hmr",
         "build": "node ./node_modules/webpack/bin/webpack.js --config ./src/client-config/webpack.config.js --color --progress --env.NODE_ENV=prod",
@@ -91,6 +91,7 @@
         "gulp": "^3.9.1",
         "gulp-babel": "^7.0.0",
         "webpack-node-externals": "^1.6.0",
-        "babel-plugin-syntax-dynamic-import": "^6.18.0"
+        "babel-plugin-syntax-dynamic-import": "^6.18.0",
+        "babel-plugin-dynamic-import-bundle": "git@github.com:skyujilong/babel-plugin-dynamic-import-bundle.git"
     }
 }

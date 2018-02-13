@@ -11,6 +11,6 @@
             "libraryName": "antd",
             "style": "css"
         }],
-        "syntax-dynamic-import"
+        "dynamic-import-bundle"
     ]
 }

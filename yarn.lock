@@ -400,7 +400,7 @@ aws4@^1.2.1, aws4@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
-babel-cli@^6.0.0:
+babel-cli@^6.0.0, babel-cli@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-cli/-/babel-cli-6.26.0.tgz#502ab54874d7db88ad00b887a06383ce03d002f1"
   dependencies:
@@ -594,6 +594,16 @@ babel-plugin-check-es2015-constants@^6.22.0:
   resolved "https://registry.yarnpkg.com/babel-plugin-check-es2015-constants/-/babel-plugin-check-es2015-constants-6.22.0.tgz#35157b101426fd2ffd3da3f75c7d1e91835bbf8a"
   dependencies:
     babel-runtime "^6.22.0"
+
+"babel-plugin-dynamic-import-bundle@file:../babel-plugin-dynamic-import-bundle":
+  version "1.0.0"
+  dependencies:
+    babel-cli "^6.26.0"
+    babel-core "^6.26.0"
+    babel-plugin-syntax-dynamic-import "^6.18.0"
+    babel-preset-env "^1.6.1"
+    babel-template "^6.26.0"
+    babel-types "^6.26.0"
 
 babel-plugin-import@^1.6.3:
   version "1.6.3"

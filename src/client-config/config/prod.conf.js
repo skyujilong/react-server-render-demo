@@ -11,6 +11,8 @@ let imgName = config.md5 ? 'img/[name]-[hash:6].[ext]' : 'img/[name].[ext]';
 let extractTextPlugin = new ExtractTextPlugin(cssName);
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const TinyPngWebpackPlugin = require('tinypng-webpack-plugin');
+const WebpackDynamicBundle = require('../../../../webpack-dynamic-bundle/index');
+
 const webpack = require('webpack');
 module.exports = {
     module: {
@@ -99,22 +101,22 @@ module.exports = {
             minChunks: Infinity
         }),
         /* 简单注销压缩系统*/
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
-                drop_console: true,
-                drop_debugger: true,
-                //支持ie8
-                screw_ie8: false
-            },
-            output: {
-                comments: false
-            },
-            mangle: {
-                // 以下内容原样输出
-                except: ['$', 'exports', 'require']
-            },
-        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false,
+        //         drop_console: true,
+        //         drop_debugger: true,
+        //         //支持ie8
+        //         screw_ie8: false
+        //     },
+        //     output: {
+        //         comments: false
+        //     },
+        //     mangle: {
+        //         // 以下内容原样输出
+        //         except: ['$', 'exports', 'require']
+        //     },
+        // }),
         //新版本loader中的内容不进行UglifyJsPlugin压缩了，这里兼容一下老版本的loader
         new webpack.LoaderOptionsPlugin({
             minimize: true,
@@ -126,6 +128,9 @@ module.exports = {
         new webpack.DefinePlugin({
             __isomorphic__: false
         }),
+        new WebpackDynamicBundle({
+            filePath: path.resolve(__dirname, '../../../assets/static/client-dynamic-bundle.json')
+        })
         // 压缩本地图片的方法
         // new TinyPngWebpackPlugin({
         //     key: config.tinyPngKeys

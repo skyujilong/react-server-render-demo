@@ -8,7 +8,7 @@ import React, {
 let moduleList = [];
 
 export default function dynamic(p,key) {
-
+    console.log(p.keyPath);
     class Dynamic extends Component {
         constructor(props) {
             super(props);
@@ -23,15 +23,21 @@ export default function dynamic(p,key) {
         load() {
             if(__isomorphic__){
                 for (let item of moduleList){
-                    console.log('-----------------');
-                    console.log(item);
-                    if (item.key === key){
+                    if (item.sourceFilePath === p.keyPath){
+                        console.log('faxxxxx');
                         this.state.Component = item.module.default || item.module;
                         item.marked();
-                        console.log('faxxxxx');
-                        console.log(item);
                         break;
                     }
+                    // console.log('-----------------');
+                    // console.log(item);
+                    // if (item.key === key){
+                    //     this.state.Component = item.module.default || item.module;
+                    //     item.marked();
+                    //     console.log('faxxxxx');
+                    //     console.log(item);
+                    //     break;
+                    // }
                 }
             }else{
                 p.then((m) => {

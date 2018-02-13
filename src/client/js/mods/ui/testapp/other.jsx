@@ -3,7 +3,7 @@
 //     return 'hello world';
 // }
 import React, { PureComponent } from 'react'
-
+import { test } from './demo2.jsx'
 // export default class Wtf extends PureComponent{
 //     render(){
 //         return (
