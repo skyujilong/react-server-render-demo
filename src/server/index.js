@@ -59,6 +59,7 @@ router.get('/',function * (next){
     let store = create({ info: { title:'hello world!'}});
     //想要在redux-thunk中完全的同构，需要进行在action中，return promise
     yield store.dispatch(getInfo('haha'));
+    //并发的时候可以用Promise.all的这个方法来进行。
     console.log(store.getState());
     //redux 异步同构
 
