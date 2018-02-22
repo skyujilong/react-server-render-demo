@@ -15,6 +15,10 @@ import { test } from './demo2.jsx'
 // }
 export default function Wtf() {
     return (
-        <div>hello world!!!!!xxxxxxxx</div>
+        <div>
+            <p>
+                <span>hello world!!!!!xxxxxxxx</span>
+            </p>
+        </div>
     );
 }

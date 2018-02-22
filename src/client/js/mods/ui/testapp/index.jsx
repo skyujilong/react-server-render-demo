@@ -54,10 +54,9 @@ class App extends Component{
      */
     render(){
         let { title } = this.props;
-        let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.jsx'), 'dynamic');
-        let Demo2 = dynamic(import(/* webpackChunkName: "dynamic" */'../testDynamic/dynamic.jsx'), 'dynamic');
-        let Testjsx = dynamic(import(/* webpackChunkName: "dynamic" */'./test.jsx'), 'dynamic');
-        let HelloWorld = dynamic(import(/* webpackChunkName:"other"*/'./other.jsx'),'other');
+        let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.jsx'));
+        // let Testjsx = dynamic(import(/* webpackChunkName: "dynamic" */'./test.jsx'));
+        let HelloWorld = dynamic(import(/* webpackChunkName:"other"*/'./other.jsx'));
         return (
             <div>
                 <p>{title}</p>
@@ -66,7 +65,7 @@ class App extends Component{
                 {/* suppressHydrationWarning 为true的时候不尽兴详细的dom或者属性对比，这个只能用在展示层的组件，就是没有children的组件 */}
                 {/* <img suppressHydrationWarning={true} src={testimg.default} alt=""/> */}
                 <img src={testimg.default} alt="" />
-                <div className={'demomao helloworld'}></div>
+                {/* <div className={'demomao helloworld'}></div> */}
                 {/* <Dynmaic pComponent={import('./dynamic.js')}/> */}
                 <Demo></Demo>
                 <HelloWorld></HelloWorld>

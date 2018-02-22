@@ -9,6 +9,7 @@ import "../../scss/base.scss";
 const render = Component => {
     // 当判断是 hot模式的时候 不是服务器渲染模式 采用render api
     if(module.hot){
+        console.log('hot......');
         ReactDOM.render(
             // 全局函数  初始化的state内容
             <Provider store={create(window.__initState__)}>

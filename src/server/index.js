@@ -131,6 +131,15 @@ router.get('/',function * (next){
                     -->
                     ${dynamicScript.join('')}
                     <script src="http://test.sina.com.cn/js/index.js"></script>
+                    <script>
+                        for(let i = 0; i<document.querySelectorAll('span').length; i++){
+                            let node = document.querySelectorAll('span')[i];
+                            node.addEventListener('click',function(){
+                                console.log(123456);
+                            },false);
+                        }
+                        
+                    </script>
                 </body>
             </html>
     `

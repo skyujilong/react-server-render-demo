@@ -53,7 +53,7 @@ export default function dynamic(p,key) {
             let { Component } = this.state;
             return (
                 <div>
-                    {Component ? <Component /> : <p>loading.......</p>}
+                    {Component ? <Component {...this.props}/> : <p>loading.......</p>}
                 </div>
             );
         }
