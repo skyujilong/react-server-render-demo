@@ -54,9 +54,13 @@ class App extends Component{
      */
     render(){
         let { title } = this.props;
-        let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.jsx'));
+        let Demo = dynamic(import(/* webpackChunkName: "dynamic" */'./dynamic.jsx'),{
+            isSSR: true
+        });
         // let Testjsx = dynamic(import(/* webpackChunkName: "dynamic" */'./test.jsx'));
-        let HelloWorld = dynamic(import(/* webpackChunkName:"other"*/'./other.jsx'));
+        let HelloWorld = dynamic(import(/* webpackChunkName:"other"*/'./other.jsx'),{
+            isSSR: false
+        });
         return (
             <div>
                 <p>{title}</p>

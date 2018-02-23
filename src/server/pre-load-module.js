@@ -30,7 +30,7 @@ export default co(function *(){
         }
     }
 
-    return moduleList;
+    return [moduleList, clientBundleListStr];
 
 });
 // import('./demo');

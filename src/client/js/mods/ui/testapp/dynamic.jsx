@@ -3,7 +3,8 @@
 //     return 'hello world';
 // }
 import React, { PureComponent} from 'react'
-import {test} from './demo2.jsx'
+import {test} from './demo2.jsx';
+import * as abcdImg from './abcd.jpeg';
 // export default class Wtf extends PureComponent{
 //     render(){
 //         return (
@@ -18,6 +19,7 @@ export default function Wtf(){
         <div>
             <p>
                 <span>wtf!!!!</span>
+                <img src={abcdImg.default} alt=""/>
             </p>
         </div>
     );

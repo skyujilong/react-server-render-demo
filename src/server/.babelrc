@@ -3,8 +3,8 @@
         "react"
     ],
     "plugins": [
-        "dynamic-import-bundle",
         "transform-es2015-modules-commonjs",
+        "dynamic-import-bundle",
         [
             "import",
             {

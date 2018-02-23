@@ -52,7 +52,7 @@ app.use(function *(next){
     this.__modules = __modules;
     yield* next;
 });
-let modules = [];
+let modules = [], clientModuleInfo;
 // app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));
 router.get('/',function * (next){
     // console.log(this.__modules);
@@ -113,6 +113,7 @@ router.get('/',function * (next){
                     <link href="http://test.sina.com.cn/css/index.css" rel="stylesheet">
                     <script>
                         __initState__ = ${JSON.stringify(store.getState())};
+                        __clientModuleInfo__ = ${clientModuleInfo};
                     </script>
                 </head>
                 <body>
@@ -130,9 +131,10 @@ router.get('/',function * (next){
                     <script src="http://test.sina.com.cn/js/dynamic-chunk-697ebf.js"></script>
                     -->
                     ${dynamicScript.join('')}
-                    <script src="http://test.sina.com.cn/js/index.js"></script>
                     <script>
+                    // 测试
                         for(let i = 0; i<document.querySelectorAll('span').length; i++){
+                            console.log(i);
                             let node = document.querySelectorAll('span')[i];
                             node.addEventListener('click',function(){
                                 console.log(123456);
@@ -140,6 +142,8 @@ router.get('/',function * (next){
                         }
                         
                     </script>
+                    <script src="http://test.sina.com.cn/js/index.js"></script>
+                    
                 </body>
             </html>
     `
@@ -158,7 +162,8 @@ app.use(router.allowedMethods());
 //提前保证加载完毕异步modules
 preload.then(function(data){
     // console.log(data);
-    modules = data;
+    modules = data[0];
+    clientModuleInfo = data[1];
     //要是将这里的内容
     app.listen(80, () => {
         console.log('server start on: http://localhost:80');

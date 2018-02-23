@@ -7,8 +7,9 @@ import React, {
  */
 let moduleList = [];
 
-export default function dynamic(p,key) {
+export default function dynamic(p,opts) {
     console.log(p.keyPath);
+    let {isSSR} = opts;
     class Dynamic extends Component {
         constructor(props) {
             super(props);
@@ -16,44 +17,46 @@ export default function dynamic(p,key) {
                 loaded: false,
                 Component: null
             };
-            if(__isomorphic__){
+            if (isSSR){
                 this.load();
             }
         }
         load() {
-            if(__isomorphic__){
+            if (__isomorphic__ && isSSR){
                 for (let item of moduleList){
                     if (item.sourceFilePath === p.keyPath){
-                        console.log('faxxxxx');
                         this.state.Component = item.module.default || item.module;
                         item.marked();
                         break;
                     }
-                    // console.log('-----------------');
-                    // console.log(item);
-                    // if (item.key === key){
-                    //     this.state.Component = item.module.default || item.module;
-                    //     item.marked();
-                    //     console.log('faxxxxx');
-                    //     console.log(item);
-                    //     break;
-                    // }
                 }
-            }else{
-                p.then((m) => {
-                    this.setState({
-                        Component: m.default || m
-                    });
-                }, () => {
-                    console.log('error........');
-                });
+                return;
+            }else if(isSSR){
+                //读取 客户端module信息，直接本地加载内容
+                if (window.__clientModuleInfo__ && window.__clientModuleInfo__.length > 0){
+                    for (let clientInfo of window.__clientModuleInfo__){
+                        if(clientInfo.keyPath === p.keyPath){
+                            let __module__ = __webpack_require__(clientInfo.id);
+                            this.state.Component = __module__.default || __module__;
+                            return;
+                        }
+                    }
+                }
             }
+            //最后行不通了走 p加载方式
+            p.then((m) => {
+                this.setState({
+                    Component: m.default || m
+                });
+            }, () => {
+                console.log('error........');
+            });
         }
         render() {
             let { Component } = this.state;
             return (
                 <div>
-                    {Component ? <Component {...this.props}/> : <p>loading.......</p>}
+                    {Component ? <Component {...this.props} /> : <p>loading.......</p>}
                 </div>
             );
         }
