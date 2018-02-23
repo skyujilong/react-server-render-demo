@@ -22,6 +22,11 @@ export default function dynamic(p,opts) {
             }
         }
         load() {
+            //防止二次加载
+            if (this.state.Component){
+                return;
+            }
+
             if (__isomorphic__ && isSSR){
                 for (let item of moduleList){
                     if (item.sourceFilePath === p.keyPath){
