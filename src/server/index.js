@@ -50,7 +50,7 @@ app.use(function *(next){
         return __item;
     });
     this.__modules = __modules;
-    yield* next;
+    yield next;
 });
 let modules = [], clientModuleInfo;
 // app.use(serve(path.resolve(__dirname, '..', 'static', 'dll')));

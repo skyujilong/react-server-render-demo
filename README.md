@@ -40,3 +40,37 @@ react server render demo
 
 ## 采用路径的方式作为key值，的替换方案。
 看看能否采用计算文件内容的md5值进行。这样不同机器打包出来的key值是一致的
+
+## react router 方案
+### server 端采用react router应该如下：
+```javascript
+import { createServer } from 'http'
+import React from 'react'
+import ReactDOMServer from 'react-dom/server'
+import { StaticRouter } from 'react-router'
+
+createServer((req, res) => {
+
+  // This context object contains the results of the render
+  const context = {}
+
+  const html = ReactDOMServer.renderToString(
+    {/*这里将访问的url注入到这里，在外侧可以集成store相关内容，考虑根绝url的参数变换，更换组件的状态，可能都需要写在componentDidMount这个回调上面了，因为，写在这个生命周期之前，可能会产生不同的问题，这里的renderToString方法是一个同步的方法*/}
+    <StaticRouter location={req.url} context={context}>
+      <App/>
+    </StaticRouter>
+  )
+
+  // context.url will contain the URL to redirect to if a <Redirect> was used
+  if (context.url) {
+    res.writeHead(302, {
+      Location: context.url
+    })
+    res.end()
+  } else {
+    res.write(html)
+    res.end()
+  }
+}).listen(3000)
+
+```
