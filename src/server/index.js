@@ -5,11 +5,12 @@ const app = koa();
 const router = require('koa-router')();
 const serve = require('koa-static');
 const path = require('path');
-const render = require('koa-ejs');
+// const render = require('koa-ejs');
 const ReactDOMServer = require('react-dom/server');
 import React from 'React';
 import { Provider } from 'react-redux';
-import App from '../client/js/mods/ui/testapp/index';
+import { StaticRouter } from 'react-router-dom'
+import App from '../client/js/mods/ui/app-container';
 import create from '../client/js/mods/data/store';
 import {getInfo} from '../client/js/mods/data/action';
 import preload from './pre-load-module';
@@ -82,16 +83,26 @@ router.get('/',function * (next){
 
     //这里是一个同步操作啊 这里可以进行可以将异步模块注入到dynamic模块中，然后进行渲染标记。之后直出要加载的script标签。
     // initDynamicModule(__modules);
+    // render.call(this, store);
+
+    render.call(this,store);
+    yield next;
+});
+
+function render(store){
     initDynamicModule(this.__modules);
+    let context = {};
     let html = ReactDOMServer.renderToString(
         <Provider store={store}>
-            <App />
+            <StaticRouter location={this.request.url} context={context}>
+                <App />
+            </StaticRouter>
         </Provider>
     );
     //TODO: 判定出来 具体哪个异步模块被使用到了，之后给他的script内容动态插入到页面内，从而实现，整体静态直出。 
     let dynamicScript = [];
-    for (let dynamicMoudle of this.__modules){
-        if (dynamicMoudle.isMark){
+    for (let dynamicMoudle of this.__modules) {
+        if (dynamicMoudle.isMark) {
             //这里版本号是不同步的 我勒个槽啊，注册的moduleid也是不同的，不过内容是一样的，我们来替换一下这里的版本号
             dynamicScript.push('<script src="http://test.sina.com.cn/' + dynamicMoudle.bundleFileOnlinePath + '"></script>');
         }
@@ -118,37 +129,38 @@ router.get('/',function * (next){
                 </head>
                 <body>
                     <div id="root">${html}</div>
-                    <script>
-                        // 添加这个click事件，进行测试，是否body上的节点进行渲染了2次。 实际证明上述节点并没有渲染2次。
-                        // 但是react的生命周期走了两次，一次是在服务器端，一次是在浏览器端，节点还能响应点击事件，证明react进行了vdom节点的比较对，发现没有不一致，所以不进行实际dom的渲染操作。
-                        document.querySelector('p').addEventListener('click',function(){
-                            console.log('click...');
-                        },false);
-                    </script>
                     <script src="http://test.sina.com.cn/js/manifest.js"></script>
                     <script src="http://test.sina.com.cn/js/vendor.js"></script>
-                    <!-- 
-                    <script src="http://test.sina.com.cn/js/dynamic-chunk-697ebf.js"></script>
-                    -->
                     ${dynamicScript.join('')}
                     <script>
                     // 测试
-                        for(let i = 0; i<document.querySelectorAll('span').length; i++){
-                            console.log(i);
-                            let node = document.querySelectorAll('span')[i];
-                            node.addEventListener('click',function(){
-                                console.log(123456);
-                            },false);
-                        }
+                        // for(let i = 0; i<document.querySelectorAll('span').length; i++){
+                        //     console.log(i);
+                        //     let node = document.querySelectorAll('span')[i];
+                        //     node.addEventListener('click',function(){
+                        //         console.log(123456);
+                        //     },false);
+                        // }
                         
                     </script>
                     <script src="http://test.sina.com.cn/js/index.js"></script>
                     
                 </body>
             </html>
-    `
+    `;
+}
+
+
+router.get('/dir',function*(next){
+    let store = create({ info: { title: 'hello world!' } });
+    render.call(this, store);
+    // console.log(this.request.url);
+    // this.body = JSON.stringify({code:200,data:'haha'});
     yield next;
 });
+
+
+
 router.get('/api/info',function*(next){
     this.body = JSON.stringify({
         'code':200,
