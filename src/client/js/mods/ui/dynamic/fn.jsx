@@ -7,8 +7,8 @@ import React, {
  */
 let moduleList = [];
 
-export default function dynamic(p,opts) {
-    console.log(p.keyPath);
+export default function dynamic(p, opts) {
+    // console.log(p.keyPath);
     let {isSSR} = opts;
     class Dynamic extends Component {
         constructor(props) {
