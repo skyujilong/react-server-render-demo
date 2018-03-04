@@ -37,3 +37,36 @@ export function getInfo(args){
         }); 
     }
 }
+
+
+/**article  */
+export function getArticle(){
+    return function(dispatch){
+        dispatch(reqArt());
+        return fetch('http://test.sina.com.cn/api/article').then(function(res){
+            return res.json();
+        }).then(function(res){
+            let {data} = res;
+            dispatch(reqSuccArt(data));
+        },function(){
+            dispatch(reqErrArt());
+        })
+    }
+}
+
+function reqArt(){
+    return {
+        type: 'reqArt'
+    }
+}
+function reqSuccArt(data){
+    return {
+        type:'reqSuccArt',
+        data: data
+    }
+}
+function reqErrArt(){
+    return {
+        type:'reqErrArt'
+    }
+}

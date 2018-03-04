@@ -6,10 +6,12 @@ import {
     combineReducers
 } from 'redux';
 import {
-    info
+    info,
+    article
 } from './reducers';
 let rootReducers = combineReducers({
-    info
+    info,
+    article
 });
 // let store = createStore(rootReducers, applyMiddleware(ReduxThunk));
 export default function create(preloadedState) {

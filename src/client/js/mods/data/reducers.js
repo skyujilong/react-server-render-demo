@@ -8,3 +8,11 @@ export function info(state = {title:'hello world2333'},action){
         return state;   
     }
 }
+
+export function article(state='',action){
+    if (action.type === 'reqSuccArt'){
+        return action.data;
+    }else {
+        return state;
+    }
+}

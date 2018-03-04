@@ -12,10 +12,10 @@ import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router-dom'
 import App from '../client/js/mods/ui/app-container';
 import create from '../client/js/mods/data/store';
-import {getInfo} from '../client/js/mods/data/action';
+import {getInfo,getArticle} from '../client/js/mods/data/action';
 import preload from './pre-load-module';
 import { initDynamicModule } from '../client/js/mods/ui/dynamic/fn';
-
+import articleText from './article';
 // import(/* webpackChunkName: "dynamic" */'../client/js/mods/ui/testapp/dynamic.jsx').then(function(){
 //     console.log('sss');
 // });
@@ -77,6 +77,7 @@ router.get('/',function * (next){
     let store = create({ info: { title:'hello world!'}});
     //想要在redux-thunk中完全的同构，需要进行在action中，return promise
     yield store.dispatch(getInfo('haha'));
+    yield store.dispatch(getArticle());
     //并发的时候可以用Promise.all的这个方法来进行。
     console.log(store.getState());
     //redux 异步同构
@@ -166,6 +167,14 @@ router.get('/api/info',function*(next){
         'code':200,
         'data':'hello jilong5!'
     })
+    yield next;
+});
+
+router.get('/api/article',function* (next){
+    this.body = JSON.stringify({
+        'code':200,
+        'data': articleText
+    });
     yield next;
 });
 
