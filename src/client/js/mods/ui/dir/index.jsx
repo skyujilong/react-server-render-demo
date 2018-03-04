@@ -21,10 +21,16 @@ export default class Dir extends Component{
             ));
             key++;
         }
+        //2000个节点进行测试
+        let list2 = [];
+        for ( let i = 0; i< 1000 ; i++){
+            list2.push((<li key={'new-key' + i}>i</li>));
+        }
         return (
             <div>
                 <ul>
                     {array}
+                    {list2}
                 </ul>
             </div>
         );

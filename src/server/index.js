@@ -79,7 +79,7 @@ router.get('/',function * (next){
     yield store.dispatch(getInfo('haha'));
     yield store.dispatch(getArticle());
     //并发的时候可以用Promise.all的这个方法来进行。
-    console.log(store.getState());
+    // console.log(store.getState());
     //redux 异步同构
 
     //这里是一个同步操作啊 这里可以进行可以将异步模块注入到dynamic模块中，然后进行渲染标记。之后直出要加载的script标签。
@@ -185,10 +185,12 @@ preload.then(function(data){
     // console.log(data);
     modules = data[0];
     clientModuleInfo = data[1];
-    //要是将这里的内容
     app.listen(80, () => {
         console.log('server start on: http://localhost:80');
     });
+    // app.listen(3000,()=>{
+    //     console.log('server start on: http://localhost:3000');
+    // });
 },function(e){
     console.log(e.stack);
 })
