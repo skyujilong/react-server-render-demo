@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 export default class Dir extends Component{
     render(){
-        console.log(this.props);
+        // console.log(this.props);
         let list = [
             '一个学生的开学典礼，任性不是人性',
             '海南“天价机票”是“趁雾打劫”吗?',

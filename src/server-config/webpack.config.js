@@ -45,7 +45,7 @@ module.exports = {
         new webpack.DefinePlugin({
             __isomorphic__ : true,
             //启动production 进行提高性能
-            // 'process.env.NODE_ENV': JSON.stringify('production')
+            'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new WebpackDynamicBundle({
             filePath: path.resolve(__dirname, '../../assets/server/server-dynamic-bundle.json')

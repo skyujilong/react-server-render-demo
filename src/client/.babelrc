@@ -4,11 +4,12 @@
             "module": false,
             "targets": {
                 "browsers": [
-                    "last 2 versions",
-                    "safari >= 7",
-                    "ie 8"
+                    ">= 0.5%",
+                    "ie >= 8"
                 ]
-            }
+            },
+            "useBuiltIns":"entry",
+            "forceAllTransforms":true
         }],
         "react"
     ],
@@ -18,6 +19,14 @@
             "libraryName": "antd",
             "style": "css"
         }],
-        "dynamic-import-bundle"
+        "dynamic-import-bundle",
+        [
+            "transform-runtime",
+            {
+                "helpers": true,
+                "polyfill": true,
+                "regenerator": true
+            }
+        ]
     ]
 }

@@ -1,3 +1,4 @@
+// import 'core-js';
 import 'babel-polyfill';//兼容旧版本
 // main.js
 import React from 'react';

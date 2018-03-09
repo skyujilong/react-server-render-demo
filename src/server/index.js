@@ -130,8 +130,12 @@ function render(store){
                 </head>
                 <body>
                     <div id="root">${html}</div>
-                    <script src="http://test.sina.com.cn/js/manifest.js"></script>
-                    <script src="http://test.sina.com.cn/js/vendor.js"></script>
+                    <script src="https://cdn.bootcss.com/es5-shim/4.5.10/es5-shim.js"></script>
+                    <script src="https://cdn.bootcss.com/es5-shim/4.5.10/es5-sham.js"></script>
+                    <script src="http://test.sina.com.cn/js/manifest.js?_=${new Date().getTime()}"></script>
+                    <!--
+                    <script src="http://test.sina.com.cn/js/vendor.js?_=${new Date().getTime()}"></script>
+                    -->
                     ${dynamicScript.join('')}
                     <script>
                     // 测试
@@ -144,7 +148,7 @@ function render(store){
                         // }
                         
                     </script>
-                    <script src="http://test.sina.com.cn/js/index.js"></script>
+                    <script src="http://test.sina.com.cn/js/index.js?_=${new Date().getTime()}"></script>
                     
                 </body>
             </html>
@@ -185,12 +189,12 @@ preload.then(function(data){
     // console.log(data);
     modules = data[0];
     clientModuleInfo = data[1];
-    app.listen(80, () => {
-        console.log('server start on: http://localhost:80');
-    });
-    // app.listen(3000,()=>{
-    //     console.log('server start on: http://localhost:3000');
+    // app.listen(80, () => {
+    //     console.log('server start on: http://localhost:80');
     // });
+    app.listen(80,()=>{
+        console.log('server start on: http://localhost:3008');
+    });
 },function(e){
     console.log(e.stack);
 })

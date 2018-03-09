@@ -79,7 +79,7 @@ export default function dynamic(p, opts) {
         }
         componentDidMount() {
             let { loaded } = this.state;
-            if(loaded){
+            if(!loaded){
                 this.load();
             }
         }
