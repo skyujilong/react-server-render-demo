@@ -25,6 +25,7 @@ export default co(function *(){
                     //线上文件对应的地址
                     bundleFileOnlinePath: clientModule.chunk.path
                 });
+                break;
             }
         }
     }
