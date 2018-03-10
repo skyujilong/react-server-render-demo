@@ -39,7 +39,7 @@ app.use(serve(path.resolve(__dirname, '..', 'static')));
 app.use(function *(next){
     let __modules = modules.map((item) => {
         let __item = {
-            sourceFilePath: item.sourceFilePath,
+            keyPath: item.keyPath,
             module: item.module,
             bundleFileOnlinePath: item.bundleFileOnlinePath,
             // ...item,

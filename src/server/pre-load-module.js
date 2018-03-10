@@ -8,29 +8,28 @@ import { inspect } from 'util';
 
 export default co(function *(){
     let moduleList = [];
-    let serverBundleListStr = yield thunkify(fs.readFile)(path.resolve(__dirname,'./server-dynamic-bundle.json'));
-    let serverBundleList = JSON.parse(serverBundleListStr.toString());
-    let clientBundleListStr = yield thunkify(fs.readFile)(path.resolve(__dirname, '../static/client-dynamic-bundle.json'));
-    let clientBundleList = JSON.parse(clientBundleListStr.toString());
-    
-    for (let serverBundle of serverBundleList){
-        for (let clientBundle of clientBundleList){
-            if (serverBundle.keyPath === clientBundle.keyPath){
+    let serverModuleListStr = yield thunkify(fs.readFile)(path.resolve(__dirname,'./server-dynamic-module.json'));
+    let serverModuleList = JSON.parse(serverModuleListStr.toString());
+    let clientModuleListStr = yield thunkify(fs.readFile)(path.resolve(__dirname, '../static/client-dynamic-module.json'));
+    let clientModuleList = JSON.parse(clientModuleListStr.toString());
+    for (let serverModule of serverModuleList){
+        for (let clientModule of clientModuleList){
+            if (serverModule.keyPath === clientModule.keyPath){
                 //利用webpack的内部方法__webpack_require__ 将依赖进行提前加载
-                let __module = yield __webpack_require__.e(serverBundle.chunk.id).then(__webpack_require__.bind(null, serverBundle.id));
+                let __module = yield __webpack_require__.e(serverModule.chunk.id).then(__webpack_require__.bind(null, serverModule.id));
                 moduleList.push({
                     //比对的key值 位置
-                    sourceFilePath: serverBundle.keyPath,
+                    keyPath: serverModule.keyPath,
                     //异步module对象
                     module: __module,
                     //线上文件对应的地址
-                    bundleFileOnlinePath: clientBundle.chunk.path
+                    bundleFileOnlinePath: clientModule.chunk.path
                 });
             }
         }
     }
 
-    return [moduleList, clientBundleListStr];
+    return [moduleList, clientModuleListStr];
 
 });
 // import('./demo');

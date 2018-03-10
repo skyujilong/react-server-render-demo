@@ -130,7 +130,7 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new WebpackDynamicBundle({
-            filePath: path.resolve(__dirname, '../../../assets/static/client-dynamic-bundle.json')
+            filePath: path.resolve(__dirname, '../../../assets/static/client-dynamic-module.json')
         })
         // 压缩本地图片的方法
         // new TinyPngWebpackPlugin({

@@ -48,7 +48,7 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new WebpackDynamicBundle({
-            filePath: path.resolve(__dirname, '../../assets/server/server-dynamic-bundle.json')
+            filePath: path.resolve(__dirname, '../../assets/server/server-dynamic-module.json')
         })
     ],
     target: 'node',

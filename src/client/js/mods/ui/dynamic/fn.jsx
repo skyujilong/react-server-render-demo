@@ -29,7 +29,7 @@ export default function dynamic(p, opts) {
             if (__isomorphic__ && isSSR){
                 //mark作用是标记需要客户端直接输出到页面上的script
                 for (let item of moduleList){
-                    if (item.sourceFilePath === p.keyPath){
+                    if (item.keyPath === p.keyPath){
                         this.state.Component = item.module.default || item.module;
                         item.marked();
                         break;
