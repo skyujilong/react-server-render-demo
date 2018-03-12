@@ -19,6 +19,14 @@
             "libraryName": "antd",
             "style": "css"
         }],
-        "dynamic-import-bundle"
+        "dynamic-import-bundle",
+        [
+            "transform-runtime",
+            {
+                "helpers": true,
+                "polyfill": false,
+                "regenerator": false
+            }
+        ]
     ]
 }
