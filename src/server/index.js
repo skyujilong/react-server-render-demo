@@ -24,7 +24,7 @@ import articleText from './article';
 // });
 
 //中间件配置位置
-app.use(logger());
+// app.use(logger());
 //ejs配置
 // render(app, {
 //     root: path.join(__dirname, 'static','assets'),
@@ -192,7 +192,7 @@ preload.then(function(data){
     // app.listen(80, () => {
     //     console.log('server start on: http://localhost:80');
     // });
-    app.listen(80,()=>{
+    app.listen(3008,()=>{
         console.log('server start on: http://localhost:3008');
     });
 },function(e){
