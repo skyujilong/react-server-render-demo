@@ -192,8 +192,8 @@ preload.then(function(data){
     // app.listen(80, () => {
     //     console.log('server start on: http://localhost:80');
     // });
-    app.listen(3008,()=>{
-        console.log('server start on: http://localhost:3008');
+    app.listen(80,()=>{
+        console.log('server start on: http://localhost:80');
     });
 },function(e){
     console.log(e.stack);
