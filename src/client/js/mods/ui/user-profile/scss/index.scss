@@ -1,0 +1,21 @@
+.user-profile{
+    width: 210px;
+    &>div{
+        margin: 15px;
+    }
+}
+.level-info{
+    li{
+        overflow: hidden;
+        height: 20px;
+        line-height: 20px;
+    }
+    li div:nth-child(1){
+        float: left;
+        width: 50%;
+    }
+    li div:nth-child(2){
+        float:left;
+        width: 50%;
+    }
+}

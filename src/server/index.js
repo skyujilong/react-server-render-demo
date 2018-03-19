@@ -174,6 +174,13 @@ router.get('/api/info',function*(next){
     yield next;
 });
 
+router.get('/api/solgen',function*(next){
+    this.body = JSON.stringify({
+        'code':200,
+        'data':'http://simg.sinajs.cn/blog7newtpl/image/33/33_7/images/sinablogb.jpg'
+    });
+})
+
 router.get('/api/article',function* (next){
     this.body = JSON.stringify({
         'code':200,
@@ -192,8 +199,8 @@ preload.then(function(data){
     // app.listen(80, () => {
     //     console.log('server start on: http://localhost:80');
     // });
-    app.listen(80,()=>{
-        console.log('server start on: http://localhost:80');
+    app.listen(3000,()=>{
+        console.log('server start on: http://localhost:3000');
     });
 },function(e){
     console.log(e.stack);

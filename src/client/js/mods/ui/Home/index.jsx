@@ -2,22 +2,20 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
-import {getArticle} from '../../data/action'
+import {getArticle} from '../../data/action';
+import UserProfile from '../user-profile';
 class Home extends Component{
     constructor(props){
         super(props);
-        this.textChange = this.textChange.bind(this);
-        this.state = {
-            inputValue:''
-        };
+
     }
     render(){
         let {article} = this.props;
-        let {inputValue} = this.state;
         return (
-            <div>
-                <input type="text" value={inputValue} onChange={this.textChange}/>
-                <p><b>{inputValue}</b></p>
+            <div className={'clearfix'}>
+                <UserProfile style={{
+                    'float':'left'
+                }}></UserProfile>
                 <div style={{
                     width: '1100px',
                     margin: '20px auto'
@@ -28,13 +26,6 @@ class Home extends Component{
             
         );
     }
-
-    textChange(e){
-        this.setState({
-            inputValue: e.target.value
-        });
-    }
-    
     componentDidMount(){
         let {getArticle} = this.props;
         getArticle();

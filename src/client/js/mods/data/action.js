@@ -70,3 +70,36 @@ function reqErrArt(){
         type:'reqErrArt'
     }
 }
+
+
+export function getSolgen(){
+    return function(dispatch){
+        dispatch(reqSolgen());
+        return fetch('http://test.sina.com.cn/api/solgen').then(function(res){
+            return res.json();
+        }).then(function (res){
+            let {data} = res;
+            dispatch(reqSuccSolgen(data));
+        },function(err){
+            dispatch(reqFailSolgen(err));
+        })
+    }
+}
+
+function reqSolgen(){
+    return {
+        type:'reqSolgen'
+    }
+}
+function reqSuccSolgen(data){
+    return {
+        type:'reqSolgenSucc',
+        data:data
+    }
+}
+function reqFailSolgen(data){
+    return {
+        type:'reqSolgenFail',
+        data:data
+    }
+}

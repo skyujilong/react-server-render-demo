@@ -3,25 +3,31 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {Link,Switch,Route} from 'react-router-dom';
 import { withRouter } from 'react-router'
-import Home from '../Home';
+import Home from '../home';
+import Solgen from '../solgen';
 import dynamic from '../dynamic/fn';
+import './scss/container.scss';
 class App extends Component {
     constructor(props){
         super(props);
     }
     render(){
         return (
-            <div className={"wrapper"}>
-                <nav>
-                    <Link to="/">首页</Link>        
-                    <Link to="/dir">博文目录</Link>
-                    <Link to="/pic">图片</Link>
-                    <Link to="/about">关于我</Link>
-                </nav>
-                <div>
+            <div>
+                <Solgen>
+                    <div className={"wrapper"}>
+                        <nav>
+                            <Link to="/">首页</Link>
+                            <Link to="/dir">博文目录</Link>
+                            <Link to="/pic">图片</Link>
+                            <Link to="/about">关于我</Link>
+                        </nav>
+                    </div>
+                </Solgen>
+                <div className={"wrapper"}>
                     <Switch>
                         <Route exact path="/" component={Home}></Route>
-                        <Route exact path="/dir" render={(props)=>{
+                        <Route exact path="/dir" render={(props) => {
                             // 将 props 对象传递到里面
                             let Dir = dynamic(import(/* webpackChunkName: "dir" */'../dir/index.jsx'), {
                                 isSSR: true

@@ -7,7 +7,13 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "start-server",
+            "program": "${workspaceFolder}/assets/server/index.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "build-config",
             "program": "${workspaceFolder}/node_modules/webpack/bin/webpack.js",
             "args": [
                 "--config",

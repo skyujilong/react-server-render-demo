@@ -7,11 +7,13 @@ import {
 } from 'redux';
 import {
     info,
-    article
+    article,
+    solgen
 } from './reducers';
 let rootReducers = combineReducers({
     info,
-    article
+    article,
+    solgen
 });
 // let store = createStore(rootReducers, applyMiddleware(ReduxThunk));
 export default function create(preloadedState) {

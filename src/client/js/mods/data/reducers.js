@@ -16,3 +16,12 @@ export function article(state='',action){
         return state;
     }
 }
+
+//solgen
+export function solgen(state={},action){
+    if (action.type === 'reqSolgenSucc'){
+        return action.data;
+    }else{
+        return state;
+    }
+}
