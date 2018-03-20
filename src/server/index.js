@@ -12,7 +12,7 @@ import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router-dom'
 import App from '../client/js/mods/ui/app-container';
 import create from '../client/js/mods/data/store';
-import {getInfo,getArticle} from '../client/js/mods/data/action';
+import {getInfo,getArticle,getDir} from '../client/js/mods/data/action';
 import preload from './pre-load-module';
 import { initDynamicModule } from '../client/js/mods/ui/dynamic/fn';
 import articleText from './article';
@@ -158,6 +158,7 @@ function render(store){
 
 router.get('/dir',function*(next){
     let store = create({ info: { title: 'hello world!' } });
+    yield store.dispatch(getDir());
     render.call(this, store);
     // console.log(this.request.url);
     // this.body = JSON.stringify({code:200,data:'haha'});
@@ -206,8 +207,8 @@ preload.then(function(data){
     // app.listen(80, () => {
     //     console.log('server start on: http://localhost:80');
     // });
-    app.listen(3000,()=>{
-        console.log('server start on: http://localhost:3000');
+    app.listen(80,()=>{
+        console.log('server start on: http://localhost:80');
     });
 },function(e){
     console.log(e.stack);

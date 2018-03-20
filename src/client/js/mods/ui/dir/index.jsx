@@ -11,8 +11,9 @@ class Dir extends Component{
     render(){
         let {dir} = this.props;
         let dirList = dir.map(function(item){
+            let key = 'art-key-' + item.url;
             return (
-                <li>
+                <li key={key}>
                     <div>
                         <a href={item.url}>{item.title}</a>
                     </div>
@@ -24,7 +25,7 @@ class Dir extends Component{
         });
         return(
             <div style={this.props.style}>
-                {!!dir ? (<ul className={'dir-list'}>{dirList}</ul>) : 'loading.......'}
+                {dir.length > 0 ? (<ul className={'dir-list'}>{dirList}</ul>) : 'loading.......'}
             </div>
         );
     }
