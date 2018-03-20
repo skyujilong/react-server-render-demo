@@ -29,7 +29,7 @@ class App extends Component {
                         <Route exact path="/" component={Home}></Route>
                         <Route exact path="/dir" render={(props) => {
                             // 将 props 对象传递到里面
-                            let Dir = dynamic(import(/* webpackChunkName: "dir" */'../dir/index.jsx'), {
+                            let Dir = dynamic(import(/* webpackChunkName: "dir-container" */'../dir-container/index.jsx'), {
                                 isSSR: true
                             });
                             return (

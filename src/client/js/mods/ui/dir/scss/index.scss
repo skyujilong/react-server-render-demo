@@ -1,0 +1,28 @@
+.dir-list{
+    font-size: 18px;
+    
+    color: #efefef;
+    padding-top: 20px;
+    li{
+        position: relative;
+        overflow: hidden;
+        height: 34px;
+        line-height: 34px;
+        & + li{
+            border-bottom: 1px solid #eeeeee;
+        }
+    }
+    li:nth-child(1){
+        border-bottom: 1px solid #eeeeee;
+    }
+    li>div:nth-child(1){
+        margin-right: 150px;
+    }
+    li>div:nth-child(2){
+        position: absolute;
+        right: 0;
+        top: 0;
+        widows: 150px;
+        height: 34px;
+    }
+}

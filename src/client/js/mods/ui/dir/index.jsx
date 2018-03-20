@@ -1,38 +1,50 @@
-'use strict';
-import React, {
-    Component
-} from 'react';
-export default class Dir extends Component{
+import React,{Component} from 'react';
+import {connect} from 'react-redux';
+import {withRouter} from 'react-router';
+import { getDir } from '../../data/action';
+import './scss/index.scss';
+
+class Dir extends Component{
+    constructor(props){
+        super(props);
+    }
     render(){
-        // console.log(this.props);
-        let list = [
-            '一个学生的开学典礼，任性不是人性',
-            '海南“天价机票”是“趁雾打劫”吗?',
-            '新春祝福：因为烦恼，所以幸福',
-            '茅台酒限价与首套房利率大涨',
-            '饭店有人抽烟，你要不要管一管?'
-        ];
-        let array = [], key = 1;
-        for (let item of list){
-            array.push((
-                <li key={'dir-'+ key}>
-                    <a href="javascript:void(0);">{item}</a>
+        let {dir} = this.props;
+        let dirList = dir.map(function(item){
+            return (
+                <li>
+                    <div>
+                        <a href={item.url}>{item.title}</a>
+                    </div>
+                    <div>
+                        2017年12月11日
+                    </div>
                 </li>
-            ));
-            key++;
-        }
-        //2000个节点进行测试
-        let list2 = [];
-        for ( let i = 0; i< 1000 ; i++){
-            list2.push((<li key={'new-key' + i}>i</li>));
-        }
-        return (
-            <div>
-                <ul>
-                    {array}
-                    {list2}
-                </ul>
+            );
+        });
+        return(
+            <div style={this.props.style}>
+                {!!dir ? (<ul className={'dir-list'}>{dirList}</ul>) : 'loading.......'}
             </div>
         );
     }
+    componentDidMount(){
+        let {getDir} = this.props;
+        getDir();
+    }
 }
+function mapStateToProps(state){
+    let {dir} = state;
+    return {
+        dir: dir
+    }
+}
+function mapDispatchToProps(dispatch){
+    return {
+        getDir:function(){
+            dispatch(getDir());
+        }
+    }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Dir));

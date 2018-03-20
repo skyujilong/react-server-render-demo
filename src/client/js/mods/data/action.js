@@ -103,3 +103,34 @@ function reqFailSolgen(data){
         data:data
     }
 }
+
+export function getDir(){
+    return (dispatch)=>{
+        dispatch(reqDir());
+        return fetch('http://test.sina.com.cn/api/artList').then(res => res.json()).then(function (res) {
+            let { data, code } = res;
+            if (code === 200) {
+                dispatch(reqDirSucc(data));
+            } else {
+                dispatch(reqDirErr());
+            }
+        })
+    }
+    
+}
+function reqDir(){
+    return {
+        type:'reqDir'
+    }
+}
+function reqDirSucc(data){
+    return {
+        type:'reqDirSucc',
+        data:data
+    }
+}
+function reqDirErr(){
+    return {
+        type:'reqDirErr'
+    }
+}

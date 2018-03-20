@@ -25,3 +25,13 @@ export function solgen(state={},action){
         return state;
     }
 }
+
+//dir
+export function dir(state=[],action){
+    console.log(action.type);
+    if (action.type === 'reqDirSucc'){
+        return action.data;
+    }else{
+        return state;
+    }
+}
