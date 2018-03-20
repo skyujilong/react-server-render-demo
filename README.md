@@ -74,3 +74,7 @@ createServer((req, res) => {
 }).listen(3000)
 
 ```
+
+
+# react ssr优化
+* 缓存ajax内容采用lru算法，这样能够减少请求次数。
