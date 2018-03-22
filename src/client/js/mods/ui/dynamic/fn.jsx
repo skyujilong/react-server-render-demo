@@ -2,6 +2,9 @@
 import React, {
     Component
 } from 'react';
+
+import { CSSTransition,TransitionGroup } from 'react-transition-group';
+
 /**
  * 异步模块聚合
  */
@@ -70,11 +73,22 @@ export default function dynamic(p, opts) {
             });
         }
         render() {
-            let { Component } = this.state;
+            let { Component,loaded } = this.state;
             return (
-                <div>
-                    {Component ? <Component {...this.props} /> : <p>loading.......</p>}
-                </div>
+                <TransitionGroup>
+                    {loaded ? 
+                        (<CSSTransition key={'2323'}
+                            classNames={'example'}
+                            timeout={5500}>
+                            <Component {...this.props} />
+                        </CSSTransition>) : 
+                        (<CSSTransition
+                            key={'23231'}
+                            classNames={'example23'}
+                            timeout={5500}>
+                            <p>loading..........</p>
+                        </CSSTransition>)}
+                </TransitionGroup>
             );
         }
         componentDidMount() {
