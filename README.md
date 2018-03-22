@@ -78,3 +78,7 @@ createServer((req, res) => {
 
 # react ssr优化
 * 缓存ajax内容采用lru算法，这样能够减少请求次数。
+
+# react animate
+## react-transition-group CSSTransition
+根据in属性来进行动画的。在路由上不适合用这个作为显示动画

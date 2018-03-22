@@ -2,3 +2,14 @@
     width: 1000px;
     margin: 0 auto;
 }
+.testH1{
+    opacity: 0;
+}
+.example-enter {
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 5000ms ease-in;
+}

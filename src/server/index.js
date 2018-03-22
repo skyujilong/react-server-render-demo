@@ -16,6 +16,10 @@ import {getInfo,getArticle,getDir} from '../client/js/mods/data/action';
 import preload from './pre-load-module';
 import { initDynamicModule } from '../client/js/mods/ui/dynamic/fn';
 import articleText from './article';
+//TODO:简单处理
+const port = process.argv[process.argv.length - 1];
+
+
 // import(/* webpackChunkName: "dynamic" */'../client/js/mods/ui/testapp/dynamic.jsx').then(function(){
 //     console.log('sss');
 // });
@@ -207,8 +211,8 @@ preload.then(function(data){
     // app.listen(80, () => {
     //     console.log('server start on: http://localhost:80');
     // });
-    app.listen(80,()=>{
-        console.log('server start on: http://localhost:80');
+    app.listen(port,()=>{
+        console.log('server start on: http://localhost:' + port);
     });
 },function(e){
     console.log(e.stack);

@@ -4,11 +4,13 @@ import React, {
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { getArticle } from '../../data/action';
+
 import './scss/index.scss';
+
+
 class Article extends Component {
     constructor(props) {
         super(props);
-
     }
     render() {
         let { article } = this.props;
