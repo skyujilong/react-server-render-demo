@@ -1,5 +1,25 @@
 # react-server-render-demo
 react server render demo
+
+## 启动
+```bash
+#安装
+$ npm install
+#打包client端
+$ npm run build
+#打包server端
+$ npm run build-server
+#删除index.html
+$ rm ./assets/static/index.html
+#启动服务器
+$ cd ./assets/server
+$ sudo node index.js --port 80
+#启动开发服务
+$ cd ./assets/server
+$ node index.js --port 3000
+$ sudo npm run dev-hmr-build
+```
+
 ## 同构应用结论
 
 *适用版本 16.2.0*
