@@ -8,6 +8,7 @@ import Solgen from '../solgen';
 import dynamic from '../dynamic/fn';
 import './scss/container.scss';
 import { CSSTransition, TransitionGroup,Transition } from 'react-transition-group';
+import DragContainer from '../drag-container';
 class App extends Component {
     constructor(props){
         super(props);
@@ -22,9 +23,14 @@ class App extends Component {
                             <Link to="/dir">博文目录</Link>
                             <Link to="/pic">图片</Link>
                             <Link to="/about">关于我</Link>
+                            <Link to="/drag">拖拽测试</Link>
                         </nav>
                     </div>
                 </Solgen>
+                <div className={'wrapper'}>
+                    <Route exact path="/dir" render={(props) => (<h1>hello world!!!</h1>)}></Route>
+                    <Route exact path="/" component={DragContainer}></Route>
+                </div>
                 <div className={"wrapper"}>
                     <Switch>
                         <Route exact path="/" component={Home}></Route>
@@ -37,15 +43,14 @@ class App extends Component {
                                 <Dir {...props}></Dir>
                             );
                         }}></Route>
+                        
                         {/* <Route exact path="/pic" component={Pic}></Route> */}
                         {/* <Route exact path="/about" component={About}></Route> */}
                         {/* <Route exact path="/:articleId" component={Article}></Route> */}
                         {/* <Route component={Notmatch}></Route> */}
                     </Switch>
                 </div>
-                <div className={'wrapper'}>
-                    <Route exact path="/dir" render={(props)=>(<h1>hello world!!!</h1>)}></Route>
-                </div>
+                
             </div>
         );
     }
