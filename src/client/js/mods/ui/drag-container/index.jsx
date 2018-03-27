@@ -26,7 +26,7 @@ class DragContainer extends Component{
         this.el = null;
         this.state = {
             list: list,//可拖拽组件对象列表
-            currentMove:null,//当前拖拽的对象
+            currentMoveId:null,//当前拖拽的对象的id
             currentMoveIn:null,//当前所处拖拽的对象
             isDrag: false,//是否处于拖拽状态
             top:0,//拖拽对象 位置
@@ -75,7 +75,7 @@ class DragContainer extends Component{
     //TODO: 点击之后，生成一个小框，然后这个框与鼠标一同移动，松开鼠标，更改要更换位置的标签位置
     mouseMove(e){
         // console.log(e.clientY);
-        let { isDrag, mouseLeft, mouseTop, list} = this.state;
+        let { isDrag, mouseLeft, mouseTop, list, currentMoveId} = this.state;
         if(!isDrag){
             return ;
         }
@@ -89,16 +89,32 @@ class DragContainer extends Component{
             offsetLeft:e.clientX + window.pageXOffset
         };
         list.forEach((item,index)=>{
-            if (item.el.offsetTop + item.el.offsetParent.offsetTop <= mousePos.offsetTop && mousePos.offsetTop < item.el.offsetTop + item.el.offsetParent.offsetTop + (window.getComputedStyle(item.el).height.replace('px','') - 0) ){
-                this.setState({
-                    currentMoveIn: index
-                });
+            if (item.el.offsetTop + item.el.offsetParent.offsetTop <= mousePos.offsetTop && mousePos.offsetTop < item.el.offsetTop + item.el.offsetParent.offsetTop + (window.getComputedStyle(item.el).height.replace('px','')/2)){
+                if (item.id === currentMoveId || list[index - 1 < 0 ? 0 : index - 1].id === currentMoveId){
+                    this.setState({
+                        currentMoveIn: null
+                    });
+                }else{
+                    this.setState({
+                        currentMoveIn: index
+                    });
+                }
+            } else if (item.el.offsetTop + item.el.offsetParent.offsetTop + (window.getComputedStyle(item.el).height.replace('px', '') / 2) <= mousePos.offsetTop && mousePos.offsetTop < item.el.offsetTop + item.el.offsetParent.offsetTop + (window.getComputedStyle(item.el).height.replace('px', '') - 0)) {
+                if (item.id === currentMoveId || list[index + 1 > list.length - 1 ? list.length - 1 : index + 1].id === currentMoveId) {
+                    this.setState({
+                        currentMoveIn: null
+                    });
+                } else {
+                    this.setState({
+                        currentMoveIn: index + 1
+                    });   
+                }
             }
         });
     }
-    mouseDown(msg){
+    mouseDown(id){
         this.setState({
-            currentMove: msg
+            currentMoveId: id
         });
     }
     _mouseDown(e){
@@ -117,7 +133,7 @@ class DragContainer extends Component{
             tranTop:0,
             tranLeft:0,
             currentMoveIn:null,
-            currentMove:null
+            currentMoveId:null
         });
     }
     dragItemDidMount(id,el){
