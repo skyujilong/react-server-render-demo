@@ -27,7 +27,7 @@ class DragContainer extends Component{
         this.state = {
             list: list,//可拖拽组件对象列表
             currentMoveId:null,//当前拖拽的对象的id
-            currentMoveIn:null,//当前所处拖拽的对象
+            currentMoveIn:null,//当前拖拽对象进入的下标
             isDrag: false,//是否处于拖拽状态
             top:0,//拖拽对象 位置
             left: 0,//拖拽对象 位置
@@ -63,6 +63,9 @@ class DragContainer extends Component{
                 {list.map((item,index) => {
                     if (currentMoveIn === index){
                         return <div key={item.id}><DragDownView></DragDownView><DragItem dragItemDidMount={this.dragItemDidMount}  id={item.id} color={item.color} mouseDown={this.mouseDown}>{item.name}</DragItem></div>
+                    }
+                    if(currentMoveIn === list.length && index === list.length - 1){
+                        return <div key={item.id}><DragItem dragItemDidMount={this.dragItemDidMount} id={item.id} color={item.color} mouseDown={this.mouseDown}>{item.name}</DragItem><DragDownView></DragDownView></div>
                     }
                     return <DragItem dragItemDidMount={this.dragItemDidMount} key={item.id} id={item.id} color={item.color} mouseDown={this.mouseDown}>{item.name}</DragItem>
                 })}
