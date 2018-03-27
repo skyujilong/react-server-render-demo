@@ -4,12 +4,15 @@ import React,{Component} from 'react';
 class DragItem extends Component{
     constructor(props){
         super(props);
+        this.el = null;
         this.mouseDown = this.mouseDown.bind(this);
     }
     render(){
         let { name,color} = this.props;
         return (
-            <div onMouseDown={this.mouseDown} style={{
+            <div ref={(el)=>{
+                this.el = el;
+            }} onMouseDown={this.mouseDown} style={{
                 backgroundColor: color,
                 height:'60px',
                 fontSize:'34px',
@@ -20,6 +23,11 @@ class DragItem extends Component{
                 {this.props.children}
             </div>
         );
+    }
+    componentDidMount(){
+        let { dragItemDidMount,id} = this.props;
+        //这里初始化 这个对象的高度与位置
+        dragItemDidMount(id, this.el);
     }
     mouseDown(e){
         let {mouseDown,id} = this.props;

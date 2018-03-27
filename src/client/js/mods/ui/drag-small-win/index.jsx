@@ -5,7 +5,7 @@ let styles = {
     'height':'40px',
     'background':'red',
     'width':'120px',
-    'transition':'transform 100ms ease-out'
+    'transition':'transform 10ms ease-out'
 };
 export default class DragSmallWin extends PureComponent{
     constructor(props){
@@ -22,4 +22,15 @@ export default class DragSmallWin extends PureComponent{
             }}></div>
         );
     }
+}
+
+export function DragDownView(){
+    let styles = {
+        height:'60px',
+        background:'#fff',
+        border:'1px soild #eee'
+    }
+    return (
+        <div style={styles}></div>
+    );
 }
