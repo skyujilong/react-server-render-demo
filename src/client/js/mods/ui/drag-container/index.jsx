@@ -138,6 +138,7 @@ class DragContainer extends Component{
             currentMoveIn:null,
             currentMoveId:null
         });
+        //TODO: 这个时候可以调整拖拽的位置了
     }
     dragItemDidMount(id,el){
         let {list} = this.state;
