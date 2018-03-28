@@ -131,12 +131,50 @@ class DragContainer extends Component{
         });
     }
     mouseUp(){
+        let { currentMoveId, currentMoveIn, list} = this.state;
+        let markDelIndex = null;
+        let insertIndex = null;
+        //在当前对向下松开鼠标，不尽兴拖拽移动等操作
+        if (Object.prototype.toString.call(currentMoveIn) === '[object Null]') {
+            this.setState({
+                isDrag: false,
+                tranTop: 0,
+                tranLeft: 0,
+                currentMoveIn: null,
+                currentMoveId: null
+            });
+            return;
+        }
+        //下标
+        for(let i = 0; i<list.length; i++){
+            let item = list[i];
+            if(item.id === currentMoveId){
+                markDelIndex = i;
+            }
+            //向上移动
+            if (Object.prototype.toString.call(markDelIndex) === '[object Null]' && Object.prototype.toString.call(currentMoveIn) !== '[object Null]' && currentMoveIn === i){
+                console.log('a');
+                insertIndex = i;
+            }
+            //向下移动
+            if (Object.prototype.toString.call(markDelIndex) !== '[object Null]' && Object.prototype.toString.call(currentMoveIn) !== '[object Null]' && currentMoveIn - 1 === i){
+                console.log('b');
+                insertIndex = i;
+            }
+        }
+
+        let moveItem = list.splice(markDelIndex,1);
+        list.splice(insertIndex,0,moveItem[0]);
+
+        console.log(currentMoveIn);
+
         this.setState({
             isDrag:false,
             tranTop:0,
             tranLeft:0,
             currentMoveIn:null,
-            currentMoveId:null
+            currentMoveId:null,
+            list:[...list]
         });
         //TODO: 这个时候可以调整拖拽的位置了
     }
