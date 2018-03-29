@@ -153,12 +153,10 @@ class DragContainer extends Component{
             }
             //向上移动
             if (Object.prototype.toString.call(markDelIndex) === '[object Null]' && Object.prototype.toString.call(currentMoveIn) !== '[object Null]' && currentMoveIn === i){
-                console.log('a');
                 insertIndex = i;
             }
             //向下移动
             if (Object.prototype.toString.call(markDelIndex) !== '[object Null]' && Object.prototype.toString.call(currentMoveIn) !== '[object Null]' && currentMoveIn - 1 === i){
-                console.log('b');
                 insertIndex = i;
             }
         }
